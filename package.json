@@ -35,6 +35,7 @@
     "sass": "^1.56.1"
   },
   "dependencies": {
+    "gulp-avif": "^1.1.1",
     "gulp-webp": "^4.0.1"
   },
   "browserslist": [
