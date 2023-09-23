@@ -1,0 +1,19 @@
+html, body {
+  background-color: #D3ECFD;
+  height: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+}
+
