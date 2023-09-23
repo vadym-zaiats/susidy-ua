@@ -22,6 +22,7 @@
         "gulp-csso": "^4.0.1",
         "gulp-htmlmin": "^5.0.1",
         "gulp-imagemin": "^7.1.0",
+        "gulp-include": "^2.4.1",
         "gulp-newer": "^1.4.0",
         "gulp-notify": "^4.0.0",
         "gulp-plumber": "^1.2.1",
@@ -34,6 +35,7 @@
         "sass": "^1.56.1"
     },
     "dependencies": {
+        "gulp-avif": "^1.1.1",
         "gulp-webp": "^4.0.1"
     },
     "browserslist": [

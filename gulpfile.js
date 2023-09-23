@@ -18,6 +18,7 @@ const imagesmin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
+const gulpAvif = require("gulp-avif");
 
 const path = {
   src: {
@@ -133,6 +134,7 @@ function styles() {
 function images() {
   return gulp
     .src(`${path.src.img}/**/*.{png,jpg,jpeg,gif,svg}`)
+    .pipe(gulpAvif())
     .pipe(newer(path.dist.img))
     .pipe(
       imagesmin([
