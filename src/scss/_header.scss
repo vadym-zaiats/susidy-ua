@@ -1,0 +1,22 @@
+@import "./mixines.scss";
+
+.header {
+  height: 63px;
+  width: 95%;
+  background-color: $header-color;
+  position: relative;
+  top: 15px;
+  border-radius: 23px;
+  padding: 0 25px;
+  @include display-flex($jc: "space-between");
+  color: #fff;
+}
+
+// @media (min-width: 480px) {
+// }
+// @media (min-width: 768px) {
+// }
+// @media (min-width: 1024px) {
+// }
+// @media (min-width: 1440px) {
+// }
