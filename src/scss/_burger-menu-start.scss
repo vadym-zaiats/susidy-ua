@@ -2,21 +2,50 @@
   height: 90%;
   @include display-flex($fd: column, $jc: space-between, $ai: flex-start);
   &__title {
+    font-family: "TT Firs Neue Trl", sans-serif;
+    line-height: 18px;
+    // font-family: "TT Firs Neue Trial Var Roman", sans-serif;
+    // font-family: 'TT Firs Neue Trial Var Italic', sans-serif;
   }
-}
-.burger-menu-start {
   &__nav {
+    height: 60%;
   }
-}
-.burger-menu-start {
+  &__list {
+    height: 100%;
+    @include display-flex($fd: column, $jc: space-between, $ai: flex-start);
+  }
+  &__item {
+    font-family: "TT Firs Neue Trl", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    @include hover-anim($ml: 17px);
+  }
   &__lang {
+    @include display-flex();
+    text-transform: uppercase;
+    font-size: 1.35rem;
+    &--ua {
+      font-family: "TT Firs Neue Trl", sans-serif;
+      color: rgb(230, 48, 21);
+      @include hover-anim();
+    }
+    &--eng {
+      font-family: "TT Firs Neue Trl", sans-serif;
+      color: rgb(241, 171, 168);
+      margin-left: 20px;
+      @include hover-anim($ml: 20px);
+    }
   }
-}
-.burger-menu-start {
   &__button {
-  }
-}
-.burger-menu-start {
-  &__button {
+    width: 100%;
+    border: 0;
+    background-color: $header-color;
+    color: #fff;
+    border-radius: 20px;
+    height: 50px;
+    font-family: "TT Firs Neue Trl", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    font-weight: 200;
   }
 }

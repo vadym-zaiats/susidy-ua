@@ -10,7 +10,14 @@
   opacity: 0.97;
   &__footer {
     position: absolute;
-    bottom: 4%;
-    left: 7%;
+    bottom: 2.5%;
+    left: 6%;
+  }
+  &__list {
+    line-height: 30px;
+  }
+  &__link {
+    font-family: "TT Firs Neue Trl", sans-serif;
+    cursor: pointer;
   }
 }

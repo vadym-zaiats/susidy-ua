@@ -1,5 +1,4 @@
 @import "./mixines.scss";
-
 .header {
   height: 63px;
   width: 95%;
@@ -10,7 +9,12 @@
   border-radius: 23px;
   padding: 0 25px;
   @include display-flex($jc: "space-between");
-  color: #fff;
+  &__title {
+    font-family: "TT Firs Neue Trl", sans-serif;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 200;
+  }
 }
 
 .burger-active {
