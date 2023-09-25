@@ -1,4 +1,6 @@
 .burger-menu-start {
+  height: 90%;
+  @include display-flex($fd: column, $jc: space-between, $ai: flex-start);
   &__title {
   }
 }
