@@ -1,21 +1,59 @@
-.build-section {
+.build {
   display: flex;
+  flex-direction: column-reverse;
   flex-grow: 3;
   justify-content: center;
   align-items: end;
   padding: 0 20px;
+  position: relative;
+  align-self: flex-end;
+  margin-bottom: -1px;
+  z-index: 15;
+  width: 330px;
+  max-width: 100%;
 
-  &-first-floor {
-    position: relative;
-    align-self: flex-end;
-    display: flex;
-    margin-bottom: -1px;
-    z-index: 10;
-
-    &-img {
-      max-width: 100%;
-      height: auto;
-    }
+  &__first-floor-img {
+    max-width: 100%;
+    height: auto;
   }
 
+  &__another-floors {
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 72.1% 27.9%;
+    position: relative;
+    bottom: -1px;
+  }
+}
+
+.build__windows{
+  display: flex;
+  align-items: end;
+  background-color: #E13030;
+  padding: 0 5px;
+}
+.build__balcony{
+  background-color: #A23840;
+}
+
+.build__windows-list{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.build__windows-el{
+  width: 47px;
+  height: 55px;
+  background-image: url("../img/simple-window.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.build__balcony{
+  background-image: url("../img/big-balcony.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
