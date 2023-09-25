@@ -1,5 +1,6 @@
-html, body {
-  background-color: #D3ECFD;
+html,
+body {
+  background-color: #d3ecfd;
   height: 100%;
 }
 
@@ -17,3 +18,6 @@ html, body {
   display: flex;
 }
 
+.hide {
+  display: none;
+}

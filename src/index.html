@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/svg+xml" href="./img/favicon.ico"/>
     <link rel="stylesheet" href="./css/styles.min.css"/>
+    <link
+            href="https://fonts.cdnfonts.com/css/tt-firs-neue-trl"
+            rel="stylesheet"
+    />
     <script src="./js/scripts.min.js" defer></script>
     <title>Сусіди UA</title>
 </head>
 <body>
 <div class="wrapper">
-    <header></header>
     <main class="main">
+        @@include('./html/header.html')
+        @@include('./html/burger-menu.html')
         @@include('./html/cloud.html')
         @@include('./html/build.html')
         @@include('./html/outdoor-decor.html')
     </main>
     <footer class="footer"></footer>
-
 </div>
 </body>
 </html>

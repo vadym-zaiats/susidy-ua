@@ -1,0 +1,60 @@
+.burger-menu-about {
+  height: 80%;
+  @include display-flex($fd: column, $jc: space-between);
+  &__title {
+    // &h6 {
+    //   font-family: "TT Firs Neue Trl", sans-serif;
+    // }
+    // &p {
+    //   font-family: "TT Firs Neue Trl", sans-serif;
+    // }
+  }
+  &__list {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 600px;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item3";
+  }
+  &__item {
+    background-color: rgb(236, 236, 236);
+    &--1 {
+      grid-area: item1;
+      border-radius: 15px;
+      position: relative;
+      height: 130px;
+    }
+    &--2 {
+      grid-area: item2;
+      border-radius: 15px;
+      position: relative;
+    }
+    &--3 {
+      grid-area: item3;
+      border-radius: 15px;
+      position: relative;
+    }
+  }
+  &__window {
+    // padding: 10px;
+    // @include display-flex($ai: flex-start, $jc: space-evenly);
+    &--3 {
+      // @include display-flex($fd: column);
+    }
+  }
+  &__price {
+    padding: 14px 0;
+    background-color: $header-color;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
