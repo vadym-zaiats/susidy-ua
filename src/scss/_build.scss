@@ -26,34 +26,34 @@
     bottom: -1px;
   }
 }
-//Уточнити у Романа деякі моменти
-//.build__windows{
-//  display: flex;
-//  align-items: end;
-//  background-color: #E13030;
-//  padding: 0 5px;
-//}
-//.build__balcony{
-//  background-color: #A23840;
-//}
-//
-//.build__windows-list{
-//  display: flex;
-//  width: 100%;
-//  justify-content: space-between;
-//  margin-bottom: 8px;
-//}
-//
-//.build__windows-el{
-//  width: 47px;
-//  height: 55px;
-//  background-image: url("../img/simple-window.svg");
-//  background-size: contain;
-//  background-repeat: no-repeat;
-//}
-//
-//.build__balcony{
-//  background-image: url("../img/big-balcony.svg");
-//  background-size: cover;
-//  background-repeat: no-repeat;
-//}
+
+.build__windows{
+  display: flex;
+  align-items: end;
+  background-color: #E13030;
+  padding: 0 5px;
+}
+.build__balcony{
+  background-color: #A23840;
+}
+
+.build__windows-list{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.build__windows-el{
+  width: 47px;
+  height: 55px;
+  background-image: url("../img/simple-window.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.build__balcony{
+  background-image: url("../img/big-balcony.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
