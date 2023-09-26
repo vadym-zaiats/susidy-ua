@@ -2,6 +2,8 @@
   padding: 0px 18px;
   position: absolute;
   top: 78px;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 99;
   width: 95%;
   background-color: $burger-menu-color;
