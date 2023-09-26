@@ -1,14 +1,14 @@
 .burger-menu-start {
   height: 90%;
+  padding: 25px 0;
   @include display-flex($fd: column, $jc: space-between, $ai: flex-start);
   &__title {
     font-family: "TT Firs Neue Trl", sans-serif;
     line-height: 18px;
-    // font-family: "TT Firs Neue Trial Var Roman", sans-serif;
-    // font-family: 'TT Firs Neue Trial Var Italic', sans-serif;
+    font-size: 0.8rem;
   }
   &__nav {
-    height: 60%;
+    height: 58%;
   }
   &__list {
     height: 100%;
@@ -17,13 +17,13 @@
   &__item {
     font-family: "TT Firs Neue Trl", sans-serif;
     font-weight: 400;
-    font-size: 1.6rem;
-    @include hover-anim($ml: 17px);
+    font-size: 1.2rem;
+    @include hover-anim($ml: 0.7rem);
   }
   &__lang {
     @include display-flex();
     text-transform: uppercase;
-    font-size: 1.35rem;
+
     &--ua {
       font-family: "TT Firs Neue Trl", sans-serif;
       color: rgb(230, 48, 21);
@@ -47,6 +47,23 @@
     font-size: 1.1rem;
     letter-spacing: 0.2rem;
     font-weight: 200;
+  }
+}
+
+@media (min-width: 360px) {
+  .burger-menu-start {
+    &__title {
+      font-size: 1rem;
+    }
+    &__item {
+      font-size: 1.5rem;
+      @include hover-anim($ml: 0.8rem);
+    }
+    &__lang {
+      @include display-flex();
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
   }
 }
 

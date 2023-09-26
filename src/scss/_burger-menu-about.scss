@@ -1,60 +1,35 @@
 .burger-menu-about {
-  height: 80%;
-  @include display-flex($fd: column, $jc: space-between);
+  margin: 15px 0;
+  height: 83%;
+  @include display-flex($fd: column, $ai: flex-start, $jc: space-between);
   &__title {
-    // &h6 {
-    //   font-family: "TT Firs Neue Trl", sans-serif;
-    // }
-    // &p {
-    //   font-family: "TT Firs Neue Trl", sans-serif;
-    // }
+    font-family: "TT Firs Neue Trl", sans-serif;
+    color: $header-color;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
-  &__list {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    max-width: 600px;
-    grid-template-areas:
-      "item1 item2"
-      "item3 item3";
-  }
-  &__item {
-    background-color: rgb(236, 236, 236);
-    &--1 {
-      grid-area: item1;
-      border-radius: 15px;
-      position: relative;
-      height: 130px;
-    }
-    &--2 {
-      grid-area: item2;
-      border-radius: 15px;
-      position: relative;
-    }
-    &--3 {
-      grid-area: item3;
-      border-radius: 15px;
-      position: relative;
+  &__text {
+    height: 90%;
+    @include display-flex($fd: column, $ai: flex-start, $jc: space-evenly);
+    &--content {
+      width: 100%;
+      font-size: 0.9rem;
+      font-family: "TT Firs Neue Trl", sans-serif;
     }
   }
-  &__window {
-    // padding: 10px;
-    // @include display-flex($ai: flex-start, $jc: space-evenly);
-    &--3 {
-      // @include display-flex($fd: column);
+}
+
+@media (min-width: 360px) {
+  .burger-menu-about {
+    margin: 25px 0;
+    &__title {
+      font-size: 1.8rem;
     }
-  }
-  &__price {
-    padding: 14px 0;
-    background-color: $header-color;
-    border-radius: 0 0 15px 15px;
-    text-align: center;
-    color: #fff;
-    font-weight: 100;
-    letter-spacing: 2px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    &__text {
+      &--content {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+    }
   }
 }
