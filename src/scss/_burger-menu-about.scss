@@ -1,20 +1,22 @@
-.burger-menu-about {
-  height: 80%;
-  @include display-flex($fd: column, $jc: space-between);
+.burger-menu-general {
+  height: 85%;
+  @include display-flex($fd: column, $jc: space-evenly, $ai: flex-start);
   &__title {
-    // &h6 {
-    //   font-family: "TT Firs Neue Trl", sans-serif;
-    // }
-    // &p {
-    //   font-family: "TT Firs Neue Trl", sans-serif;
-    // }
+    font-size: 0.8rem;
+    &--h6 {
+      font-family: "TT Firs Neue Trl", sans-serif;
+      margin-bottom: 15px;
+    }
+    &--p {
+      font-family: "TT Firs Neue Trl", sans-serif;
+    }
   }
   &__list {
+    width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    max-width: 600px;
     grid-template-areas:
       "item1 item2"
       "item3 item3";
@@ -39,13 +41,23 @@
     }
   }
   &__window {
-    // padding: 10px;
-    // @include display-flex($ai: flex-start, $jc: space-evenly);
+    font-size: 0.6rem;
+    padding: 10px 0px;
+    @include display-flex($ai: flex-start, $jc: space-evenly);
+    &--p {
+      font-family: "TT Firs Neue Trl", sans-serif;
+      line-height: 0.8rem;
+      margin-bottom: 10px;
+    }
     &--3 {
-      // @include display-flex($fd: column);
+      font-size: 0.6rem;
+      margin: 10px;
+      font-family: "TT Firs Neue Trl", sans-serif;
+      @include display-flex($fd: column);
     }
   }
   &__price {
+    cursor: pointer;
     padding: 14px 0;
     background-color: $header-color;
     border-radius: 0 0 15px 15px;
@@ -56,5 +68,33 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    &--3 {
+      bottom: -25px;
+    }
   }
+}
+
+@media (min-width: 360px) {
+  .burger-menu-general {
+    &__title {
+      font-size: 1rem;
+    }
+    &__list {
+      row-gap: 25px;
+      column-gap: 10px;
+    }
+    &__window {
+      font-size: 0.8rem;
+      &--p {
+        line-height: 0.9rem;
+      }
+      &--3 {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
 }

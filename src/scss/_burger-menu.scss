@@ -1,5 +1,5 @@
 .burger-menu {
-  padding: 35px 18px;
+  padding: 0px 18px;
   position: absolute;
   top: 78px;
   z-index: 99;
@@ -12,12 +12,25 @@
     position: absolute;
     bottom: 2.5%;
     left: 6%;
+    font-size: 0.8rem;
   }
   &__list {
-    line-height: 30px;
+    line-height: 1.5rem;
   }
   &__link {
     font-family: "TT Firs Neue Trl", sans-serif;
     cursor: pointer;
+  }
+}
+@media (min-width: 360px) {
+  .burger-menu {
+    padding: 0px 20px;
+    &__footer {
+      left: 7%;
+      font-size: 1rem;
+    }
+    &__list {
+      line-height: 2rem;
+    }
   }
 }
