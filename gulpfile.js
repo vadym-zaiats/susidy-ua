@@ -206,7 +206,7 @@ function watch() {
   });
 
   gulp.watch("./src/**/*.html", html).on("change", browsersync.reload);
-  gulp.watch(path.src.scss, styles).on("change", browsersync.reload);
+  gulp.watch("./src/**/*.scss", styles).on("change", browsersync.reload);
   gulp.watch(path.src.js, scripts).on("change", browsersync.reload);
   gulp.watch(path.src.img, images).on("change", browsersync.reload);
 }
