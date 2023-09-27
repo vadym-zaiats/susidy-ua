@@ -4,19 +4,27 @@
   width: 95%;
   background-color: $header-color;
   position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  top: 10px;
+  // left: 50%;
+  // transform: translate(-50%, 0);
   z-index: 100;
   border-radius: 23px;
-  padding: 0 25px;
+  padding: 17px 21px;
   @include display-flex($jc: "space-between");
-  &__title {
-    font-family: "TT Firs Neue Trl", sans-serif;
-    color: #fff;
-    font-size: 1.7rem;
-    font-weight: 200;
-  }
+}
+
+.header__title {
+  color: white;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.header__button {
+  background-image: url(img/burger-icon.png);
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
 }
 
 .burger-active {
