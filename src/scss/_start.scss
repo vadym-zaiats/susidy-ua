@@ -1,0 +1,50 @@
+.start__title {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.start__nav {
+  margin: 20px 0;
+}
+
+.start__list {
+  font-size: 18.7px;
+  font-weight: 400;
+}
+
+.start__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.start__link {
+  @include hover();
+}
+
+.start__lang {
+  display: flex;
+  text-transform: uppercase;
+  &--ua {
+    @include hover();
+    color: rgb(230, 48, 21);
+  }
+  &--eng {
+    @include hover();
+    color: rgb(241, 171, 168);
+    margin-left: 10px;
+  }
+}
+.start__button {
+  margin: 15px auto;
+  padding: 12px 50px;
+  font-size: 18px;
+  font-weight: 200;
+  border: 0;
+  background-color: $header-color;
+  color: #fff;
+  border-radius: 16.9px;
+  display: block;
+}
+
+.hide {
+  display: none;
+}

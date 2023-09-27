@@ -1,0 +1,22 @@
+.how-it-works {
+  &__title {
+    color: $header-color;
+  }
+  &__content {
+  }
+  &__text {
+  }
+}
+
+@media (min-width: 360px) {
+  .how-it-works {
+    &__title {
+    }
+    &__text {
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
