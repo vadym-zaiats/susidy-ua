@@ -6,25 +6,96 @@
   align-self: end;
   bottom: -10px;
   z-index: 15;
-
-  &__images-list {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
-    max-height: 40%;
-    max-width: 400px;
-    min-width: 400px;
-  }
-
-  &__bench-img {
-    position: relative;
-    right: 75%;
-    z-index: 15;
-  }
-
-  &__tree-img {
-    position: relative;
-    right: 15%;
-  }
 }
+
+.outdoor-decor__images-list {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  max-height: 40%;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.outdoor-decor__bush-img {
+  position: relative;
+  left: 100px;
+}
+
+.outdoor-decor__flowers-list {
+  display: flex;
+  position: relative;
+  right: 100px;
+}
+
+.outdoor-decor__flowers-list-el {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+.outdoor-decor__mid-size-tree {
+  width: 100px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 0;
+}
+
+.outdoor-decor__mid-size-bush {
+  width: 70px;
+  position: absolute;
+  left: 45px;
+  bottom: 2px;
+  z-index: 2;
+}
+
+.outdoor-decor__bench-img {
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  z-index: 3;
+}
+
+.outdoor-decor__flashlight {
+  height: 100px;
+  position: absolute;
+  bottom: 4px;
+  z-index: 0;
+}
+
+.outdoor-decor__tree-with-bush-list {
+  display: flex;
+  position: relative;
+  left: 50px;
+}
+
+.outdoor-decor__tree-with-bush-el {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+.outdoor-decor__big-tree {
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  z-index: -10;
+}
+
+.outdoor-decor__layer-bush {
+  position: relative;
+  bottom: 6px;
+  z-index: 0;
+}
+
+.outdoor-decor__small-bush {
+  position: relative;
+  z-index: 10;
+  right: 65px;
+}
+
