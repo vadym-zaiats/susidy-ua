@@ -1,35 +1,51 @@
-.general {
-  &__title {
+.general__title {
+  font-size: 12px;
+  font-weight: 400;
+  &--text {
+    margin-top: 10px;
   }
-  &__list {
+}
+
+.general__list {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3"
+    "item3 item3";
+}
+
+.general__item {
+  border-radius: 13.208px;
+  background-color: rgb(236, 236, 236);
+  &--window {
+    grid-area: item1;
+  }
+  &--window-balcony {
+    grid-area: item2;
+  }
+  &--window-balcony-cat {
+    grid-area: item3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & > :first-child {
+    font-size: 9.509px;
+  }
+  & > :last-child {
+    border-radius: 0px 0px 13.208px 13.208px;
+    background: #f80000;
+    color: #fff;
+    font-size: 12.679px;
+    padding: 8px;
     width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr 0.5fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    grid-template-areas:
-      "item1 item2"
-      "item3 item3"
-      "item3 item3";
-  }
-  &__item {
-    background-color: rgb(236, 236, 236);
-    &--1 {
-      grid-area: item1;
-      border-radius: 15px;
-      position: relative;
-      height: 130px;
-    }
-    &--2 {
-      grid-area: item2;
-      border-radius: 15px;
-      position: relative;
-    }
-    &--3 {
-      grid-area: item3;
-      border-radius: 15px;
-      position: relative;
-    }
+    text-align: center;
+    cursor: pointer;
   }
 }
 
