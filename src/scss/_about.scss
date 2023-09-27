@@ -1,24 +1,17 @@
-.about {
-  &__title {
-    color: $header-color;
-  }
-  &__text {
-    &--content {
-    }
-  }
+.about__title {
+  color: $header-color;
+  font-size: 24px;
+}
+.about__content {
+  margin: 12px 0;
+}
+.about__text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-@media (min-width: 360px) {
-  .about {
-    &__title {
-    }
-    &__text {
-      &--content {
-      }
-    }
-  }
-}
-
-.hide {
-  display: none;
+.about__text:not(:last-child) {
+  margin-bottom: 13px;
 }
