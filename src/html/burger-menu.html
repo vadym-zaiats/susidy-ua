@@ -1,17 +1,12 @@
-<div class="burger-menu hide">
-  @@include('./burger-menu-start.html') @@include('./burger-menu-general.html')
-  @@include('./burger-menu-about.html')
-  @@include('./burger-menu-how-it-works.html')
+<section class="burger-menu">
+  @@include('./start.html') @@include('./general.html')
+  @@include('./about.html') @@include('./how-it-works.html')
   <div class="burger-menu__footer">
-    <ul class="burger-menu__list">
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#1"
-          >Політика збору та обробки даних</a
-        >
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#2">Договір публічної оферти </a>
-      </li>
-    </ul>
+    <p class="burger-menu__politic">
+      <a href="#1">Політика збору та обробки даних</a>
+    </p>
+    <p class="burger-menu__agreement">
+      <a href="#2">Договір публічної оферти</a>
+    </p>
   </div>
-</div>
+</section>

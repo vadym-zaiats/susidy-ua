@@ -10,8 +10,11 @@ html {
   tab-size: 4;
 }
 
-body {
+body,
+p,
+ul {
   margin: 0;
+  font-family: "TT Firs Neue Trl", sans-serif;
 }
 
 hr {
@@ -22,6 +25,7 @@ hr {
 button,
 select {
   text-transform: none;
+  font-family: "TT Firs Neue Trl", sans-serif;
 }
 
 button,
@@ -73,4 +77,8 @@ progress {
 ul {
   list-style: none;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
