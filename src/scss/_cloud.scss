@@ -1,6 +1,17 @@
 .cloud{
-  width: 1000px;
+  width: 100%;
   position: absolute;
   z-index: 0;
-top: 40px;
+  top: 0px;
+}
+
+
+.cloud__list-el{
+
+  position: absolute;
+  right: 0;
+}
+
+.cloud__list-el__1{
+
 }
