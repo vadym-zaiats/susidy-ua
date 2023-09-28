@@ -47,13 +47,14 @@
 }
 
 .build__windows-list {
-  display: flex;
-  align-items: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
   background-color: #E13030;
   background-image: url("../img/floors-with-simple-windows.svg");
   background-size: 290px 65px;
   background-repeat: no-repeat;
-  padding: 0 5px;
+  padding: 0 2px;
   height: 100%;
   width: 100%;
   justify-content: space-between;
@@ -65,4 +66,13 @@
   height: 55px;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.build__windows-el{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 5px;
+  //padding-right: 11px;
+  align-items: start;
 }
