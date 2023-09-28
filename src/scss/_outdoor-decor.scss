@@ -1,103 +1,69 @@
-//.outdoor-decor {
-//  width: 100vw;
-//  max-width: 300px; //для адаптива достаточно тут поменять max-width
-//  display: flex;
-//  position: absolute;
-//  align-self: end;
-//  bottom: -10px;
-//  z-index:15;
-//}
-
-.outdoor-decor__images-list {
-  position: absolute;
-  display: flex;
-  justify-content: space-around;
-  align-items: end;
-  bottom: -10px;
-  max-height: 40%;
-  max-width: 400px;
-  min-width: 400px;
-  z-index: 15;
-}
-
 .outdoor-decor__bush-img {
-  position: relative;
-  left: 100px;
-}
-
-.outdoor-decor__flowers-list {
-  display: flex;
-  position: relative;
-  right: 100px;
-}
-
-.outdoor-decor__flowers-list-el {
-  position: relative;
-  display: flex;
-  justify-content: start;
-  align-items: end;
+  position: absolute;
+  right: 75px;
+  z-index: 10;
+  bottom: 0;
 }
 
 .outdoor-decor__mid-size-tree {
   width: 100px;
   position: absolute;
-  bottom: 10px;
-  z-index: 0;
+  right: 85%;
+  bottom: 0;
+  z-index: -50;
 }
 
 .outdoor-decor__mid-size-bush {
   width: 70px;
   position: absolute;
-  left: 45px;
-  bottom: 2px;
-  z-index: 2;
+  right: 85%;
+  bottom: -10px;
+  z-index: 10;
 }
 
 .outdoor-decor__bench-img {
   width: 90px;
   height: 30px;
   position: absolute;
-  bottom: 0;
-  left: 0px;
-  z-index: 3;
+  bottom: -10px;
+  right: 90%;
+  z-index: 50;
 }
-
 .outdoor-decor__flashlight {
   height: 100px;
   position: absolute;
-  bottom: 4px;
-  z-index: 0;
+  bottom: 0px;
+  left: -40px;
 }
 
-.outdoor-decor__tree-with-bush-list {
-  display: flex;
-  position: relative;
-  left: 50px;
-}
+.outdoor-decor__flowers-el__flashlight{
+  max-width: 100px;
+;
 
-.outdoor-decor__tree-with-bush-el {
-  position: relative;
-  display: flex;
-  justify-content: start;
-  align-items: end;
+  //z-index: -50;
+  //
 }
 
 .outdoor-decor__big-tree {
   position: absolute;
-  left: 0;
-  bottom: 7px;
+  left: 80%;
+  bottom: -0px;
   z-index: -10;
 }
 
 .outdoor-decor__layer-bush {
-  position: relative;
-  bottom: 6px;
-  z-index: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 82%;
+  z-index: 10;
 }
 
 .outdoor-decor__small-bush {
-  position: relative;
+  position: absolute;
   z-index: 10;
+  bottom: -2px;
   right: 65px;
+  left: 82%;
+  z-index: 10;
 }
 

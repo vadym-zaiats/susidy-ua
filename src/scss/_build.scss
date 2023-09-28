@@ -3,14 +3,15 @@
   flex-direction: column-reverse;
   flex-grow: 3;
   justify-content: center;
-  align-items: end;
+  align-items: center; /* Центрирование по горизонтали */
   padding: 0 20px;
-  position: relative;
+  position: absolute;
   align-self: flex-end;
   margin-bottom: -1px;
   z-index: 15;
   width: 330px;
-  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .build__first-floor-img {
