@@ -1,0 +1,15 @@
+.about-integral {
+  overflow-y: scroll;
+  max-height: 72vh;
+}
+.about-integral__title {
+  color: $header-color;
+  font-size: 24px;
+}
+.about-integral__about {
+  font-size: 12px;
+  margin: 15px 0;
+  & :first-child {
+    margin-bottom: 15px;
+  }
+}
