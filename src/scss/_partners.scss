@@ -1,0 +1,42 @@
+.partners {
+  overflow-y: scroll;
+  max-height: 72vh;
+}
+
+.partners__title {
+  color: $header-color;
+  font-size: 24px;
+}
+.partners__about {
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.partners__list {
+  font-size: 13px;
+  & :not(:first-child) {
+    margin-top: 15px;
+  }
+}
+.partners__charity {
+  &--img {
+    margin-top: 10px;
+    zoom: 0.6;
+  }
+}
+.partners__media {
+  &--list {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    zoom: 0.62;
+    & :not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+.partners__design {
+  &--img {
+    zoom: 0.8;
+  }
+}
