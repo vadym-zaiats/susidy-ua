@@ -1,21 +1,23 @@
-.outdoor-decor {
-  width: 100vw;
-  max-width: 300px; //для адаптива достаточно тут поменять max-width
-  display: flex;
-  position: absolute;
-  align-self: end;
-  bottom: -10px;
-  z-index: 15;
-}
+//.outdoor-decor {
+//  width: 100vw;
+//  max-width: 300px; //для адаптива достаточно тут поменять max-width
+//  display: flex;
+//  position: absolute;
+//  align-self: end;
+//  bottom: -10px;
+//  z-index:15;
+//}
 
 .outdoor-decor__images-list {
   position: absolute;
   display: flex;
   justify-content: space-around;
   align-items: end;
+  bottom: -10px;
   max-height: 40%;
   max-width: 400px;
   min-width: 400px;
+  z-index: 15;
 }
 
 .outdoor-decor__bush-img {
