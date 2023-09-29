@@ -104,16 +104,10 @@ window.addEventListener("resize", () => {
     backToStartPage(partnersPage, "partners--hide");
     backToStartPage(aboutIntegralPage, "about-integral--hide");
   }
-  if (startPage.classList.contains("start--hide") && window.innerWidth < 768) {
+  if (window.innerWidth < 768 && startPage.classList.contains("start--hide")) {
     startPage.classList.remove("start--hide");
   }
-});
-
-function removeClassOnResize() {
-  if (window.innerWidth < 768) {
-    document.querySelector(".general").classList.add("general--hide");
-    // document.querySelector(".start").classList.remove("start--hide");
+  if (window.innerWidth > 768) {
+    startPage.classList.add("start--hide");
   }
-}
-
-window.addEventListener("load", removeClassOnResize);
+});
