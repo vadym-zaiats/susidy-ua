@@ -1,3 +1,9 @@
+.about {
+  &--hide {
+    display: none;
+  }
+}
+
 .about__title {
   color: $header-color;
   font-size: 24px;
@@ -12,12 +18,16 @@
   font-size: 12px;
 }
 
-.about__text:not(:last-child) {
-  margin-bottom: 13px;
+.about__text {
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
 }
 
-.about__text:first-child {
-  @media (min-width: 768px) {
-    margin-bottom: 0px;
+.about__text {
+  & :first-child {
+    @media (min-width: 768px) {
+      margin-bottom: 0px;
+    }
   }
 }

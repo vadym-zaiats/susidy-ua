@@ -1,9 +1,9 @@
 .partners {
   overflow-y: auto;
   max-height: 72vh;
-  margin-right: 50px;
-  // display: flex;
-  // flex-direction: column;
+  &--hide {
+    display: none;
+  }
 }
 
 .partners__title {
