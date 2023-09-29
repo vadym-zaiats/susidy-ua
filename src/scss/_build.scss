@@ -29,16 +29,17 @@
   position: relative;
   bottom: -1px;
 }
-.build__balcony-list-el{
+
+.build__balcony-list-el {
   display: flex;
   max-width: 92%;
   height: 100%;
   width: 80px;
   background-color: #A23840;
-}
 
-.build__balcony-list-el>img{
- width: 80px;
+  & > img {
+    width: 80px;
+  }
 }
 
 .build__balcony {
@@ -68,17 +69,16 @@
   background-repeat: no-repeat;
 }
 
-.build__windows-el{
+.build__windows-el {
   display: flex;
   justify-content: center;
   height: 100%;
   padding-top: 5px;
-  //padding-right: 11px;
   align-items: start;
 }
 
-.build__construction{
-position: absolute;
+.build__construction {
+  position: absolute;
   z-index: -1;
   bottom: 54%;
   left: 8%;
