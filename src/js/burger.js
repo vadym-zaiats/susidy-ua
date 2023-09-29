@@ -1,7 +1,7 @@
 const open = document.querySelector(".open");
 const close = document.querySelector(".close");
-const header = document.querySelector(".header");
-const burgerMenu = document.querySelector(".burger-menu");
+const header = document.querySelector(".burger-menu__header");
+const burgerMenu = document.querySelector(".burger-menu__content");
 
 open.addEventListener("click", (e) => {
   e.target.classList.add("hide");
