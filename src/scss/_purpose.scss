@@ -5,15 +5,31 @@
 .purpose__title {
   color: $header-color;
   font-size: 24px;
+  @media (min-width: 768px) {
+    font-size: 43px;
+  }
 }
-
+.about-integral__about {
+  &:first-child {
+    @media (min-width: 1200px) {
+      margin-bottom: 45px;
+    }
+  }
+}
 .purpose__text {
   margin: 20px 0;
   font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+    margin: 20px 30px 20px 0;
+  }
 }
 .purpose__img {
   margin: 0 auto;
   display: block;
+  @media (min-width: 768px) {
+    zoom: 1.54;
+  }
 }
 
 .purpose__bar {
@@ -25,6 +41,10 @@
   position: relative;
   overflow: hidden;
   display: block;
+  @media (min-width: 768px) {
+    zoom: 1.5;
+    width: 100%;
+  }
 }
 
 .purpose__fill {
@@ -57,17 +77,38 @@
 .purpose__rating {
   &--title {
     font-size: 37.075px;
+    @media (min-width: 1200px) {
+      font-size: 45px;
+    }
   }
   &--text {
     font-size: 11.73px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 22px;
+    }
   }
 }
 .purpose__buildings {
   &--title {
     font-size: 37.075px;
+    @media (min-width: 1200px) {
+      font-size: 45px;
+    }
   }
   &--text {
     font-size: 11.73px;
     margin-right: 20px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 22px;
+    }
+  }
+  @media (min-width: 1200px) {
+    margin-left: 5px;
   }
 }
