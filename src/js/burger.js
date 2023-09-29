@@ -90,3 +90,12 @@ window.addEventListener("resize", () => {
     startPage.classList.remove("start--hide");
   }
 });
+
+function removeClassOnResize() {
+  if (window.innerWidth < 767) {
+    document.querySelector(".general").classList.add("general--hide");
+  }
+}
+
+window.addEventListener("load", removeClassOnResize);
+window.addEventListener("resize", removeClassOnResize);
