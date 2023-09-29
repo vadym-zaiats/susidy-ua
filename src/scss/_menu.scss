@@ -1,5 +1,7 @@
 .menu {
   display: none;
+  overflow-y: auto;
+  max-height: 85%;
   @media (min-width: 768px) {
     display: block;
     z-index: 100;

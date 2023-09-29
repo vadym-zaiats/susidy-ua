@@ -1,5 +1,5 @@
 .partners {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 72vh;
 }
 
@@ -36,7 +36,8 @@
     }
   }
 }
-.partners__media {
+
+.partners__nomenclature {
   &--list {
     display: inline-flex;
     justify-content: space-between;
@@ -50,6 +51,7 @@
     }
   }
 }
+
 .partners__design {
   &--img {
     zoom: 0.8;
