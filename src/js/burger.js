@@ -30,8 +30,9 @@ document.querySelector(".close").addEventListener("click", (e) => {
 //   }
 // });
 
-// window.addEventListener("resize", () => {
-//   document.querySelector(".header__nav--list").classList.remove("active");
-//   open.classList.remove("hide");
-//   close.classList.add("hide");
-// });
+window.addEventListener("resize", () => {
+  document.querySelector(".burger-menu__content").classList.add("hide");
+  open.classList.remove("hide");
+  close.classList.add("hide");
+  header.classList.remove("burger-active");
+});
