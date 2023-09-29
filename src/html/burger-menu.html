@@ -1,15 +1,20 @@
 <header class="burger-menu__header">
   <h2 class="burger-menu__title">Сусіди UA</h2>
-  <!-- <button class="header__button"></button> -->
-  <img class="burger open" src="./img/burger-icon.png" alt="burger-icon" />
-  <img class="burger close hide" src="./img/close-icon.png" alt="close-icon" />
-  <img
-    class="burger close hide"
-    src="./img/back-arrow-icon.png"
-    alt="back-arrow-icon"
-  />
+  <button class="burger-menu__button">
+    <img class="burger-menu__open" src="./img/burger-icon.png" alt="відкрити" />
+    <img
+      class="burger-menu__close burger-menu__close--hide"
+      src="./img/close-icon.png"
+      alt="закрити"
+    />
+    <img
+      class="burger-menu__back burger-menu__back--hide"
+      src="./img/back-arrow-icon.png"
+      alt="назад"
+    />
+  </button>
 </header>
-<section class="burger-menu__content hide">
+<section class="burger-menu__content burger-menu__content--hide">
   @@include('./start.html') @@include('./general.html')
   @@include('./about.html') @@include('./how-it-works.html')
   @@include('./purpose.html') @@include('./about-integral.html')

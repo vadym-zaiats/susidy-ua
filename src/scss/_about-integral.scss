@@ -1,6 +1,9 @@
 .about-integral {
   overflow-y: auto;
   max-height: 72vh;
+  &--hide {
+    display: none;
+  }
 }
 .about-integral__title {
   color: $header-color;

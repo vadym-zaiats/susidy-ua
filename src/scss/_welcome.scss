@@ -1,3 +1,9 @@
+.welcome {
+  &--hide {
+    display: none;
+  }
+}
+
 .welcome__title {
   color: $header-color;
   font-size: 24px;

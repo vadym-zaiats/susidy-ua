@@ -1,7 +1,11 @@
 .purpose {
   overflow-y: auto;
   max-height: 72vh;
+  &--hide {
+    display: none;
+  }
 }
+
 .purpose__title {
   color: $header-color;
   font-size: 24px;

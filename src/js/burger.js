@@ -1,20 +1,20 @@
-const open = document.querySelector(".open");
-const close = document.querySelector(".close");
+const open = document.querySelector(".burger-menu__open");
+const close = document.querySelector(".burger-menu__close");
 const header = document.querySelector(".burger-menu__header");
 const burgerMenu = document.querySelector(".burger-menu__content");
 
 open.addEventListener("click", (e) => {
-  e.target.classList.add("hide");
-  close.classList.remove("hide");
-  header.classList.add("burger-active");
-  burgerMenu.classList.remove("hide");
+  e.target.classList.add("burger-menu__open--hide");
+  close.classList.remove("burger-menu__close--hide");
+  header.classList.add("burger-menu__header--active");
+  burgerMenu.classList.remove("burger-menu__content--hide");
 });
 
-document.querySelector(".close").addEventListener("click", (e) => {
-  e.target.classList.add("hide");
-  open.classList.remove("hide");
-  header.classList.remove("burger-active");
-  burgerMenu.classList.add("hide");
+close.addEventListener("click", (e) => {
+  e.target.classList.add("burger-menu__close--hide");
+  open.classList.remove("burger-menu__open--hide");
+  header.classList.remove("burger-menu__header--active");
+  burgerMenu.classList.add("burger-menu__content--hide");
 });
 
 // const burger = document.querySelector(".header__nav--list");
@@ -31,8 +31,8 @@ document.querySelector(".close").addEventListener("click", (e) => {
 // });
 
 window.addEventListener("resize", () => {
-  document.querySelector(".burger-menu__content").classList.add("hide");
-  open.classList.remove("hide");
-  close.classList.add("hide");
-  header.classList.remove("burger-active");
+  burgerMenu.classList.add("burger-menu__content--hide");
+  open.classList.remove("burger-menu__open--hide");
+  close.classList.add("burger-menu__open--hide");
+  header.classList.remove("burger-menu__header--active");
 });

@@ -1,3 +1,8 @@
+.general {
+  &--hide {
+    display: none;
+  }
+}
 .general__title {
   font-size: 12px;
   font-weight: 400;
@@ -65,8 +70,4 @@
     text-align: center;
     cursor: pointer;
   }
-}
-
-.hide {
-  display: none;
 }
