@@ -1,14 +1,18 @@
-<section class="burger-menu hide">
+<header class="burger-menu__header">
+  <h2 class="burger-menu__title">Сусіди UA</h2>
+  <!-- <button class="header__button"></button> -->
+  <img class="burger open" src="./img/burger-icon.png" alt="burger-icon" />
+  <img class="burger close hide" src="./img/close-icon.png" alt="close-icon" />
+  <img
+    class="burger close hide"
+    src="./img/back-arrow-icon.png"
+    alt="back-arrow-icon"
+  />
+</header>
+<section class="burger-menu__content">
   @@include('./start.html') @@include('./general.html')
   @@include('./about.html') @@include('./how-it-works.html')
   @@include('./purpose.html') @@include('./about-integral.html')
   @@include('./partners.html') @@include('./welcome.html')
-  <div class="burger-menu__footer">
-    <p class="burger-menu__politic">
-      <a href="#1">Політика збору та обробки даних</a>
-    </p>
-    <p class="burger-menu__agreement">
-      <a href="#2">Договір публічної оферти</a>
-    </p>
-  </div>
+  @@include('./menu-footer.html')
 </section>

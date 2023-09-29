@@ -3,11 +3,29 @@
   font-weight: 400;
   &--text {
     margin-top: 10px;
+    & span {
+      display: none;
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
+    }
+  }
+  &--greeting {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  &--main {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      color: $header-color;
+      font-size: 64.681px;
+    }
   }
 }
 
 .general__list {
-  width: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
