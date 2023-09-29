@@ -1,38 +1,38 @@
-.menu {
+.nav {
   display: none;
   overflow-y: auto;
-  max-height: 85%;
+  // max-height: 85%;
   @media (min-width: 768px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
     z-index: 100;
     background-color: $burger-menu-color;
-    border-radius: 50px;
+    border-radius: 50px 50px 0 0;
     position: absolute;
     right: 40px;
     top: 50px;
     margin-left: 40px;
     max-width: 420px;
-    padding: 30px 25px;
+    padding: 30px 39px;
   }
   @media (min-width: 1200px) {
   }
 }
 
-.menu__nav {
+.nav {
   font-size: 15px;
   text-decoration-line: underline;
 }
 
-.menu__list {
+.nav__list {
   display: flex;
   & :first-child {
-    margin-bottom: 7px;
+    margin-bottom: 12px;
   }
 }
 
-.menu__item {
+.nav__item {
   &:not(:last-child) {
-    display: flex;
     margin-right: 30px;
   }
 }
