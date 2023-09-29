@@ -4,14 +4,15 @@
   a {
     color: #111111;
   }
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     display: flex;
+    margin-top: 15px;
   }
 }
 
 .menu-footer__agreement {
   margin-top: 5px;
-  @media (min-width: 480px) {
-    margin: 0 0 0 30px;
+  @media (min-width: 768px) {
+    margin: 0 0 0 10px;
   }
 }

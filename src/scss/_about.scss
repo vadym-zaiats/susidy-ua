@@ -4,6 +4,9 @@
 }
 .about__content {
   margin: 12px 0;
+  @media (min-width: 768px) {
+    padding-right: 80px;
+  }
 }
 .about__text {
   font-size: 12px;
@@ -11,4 +14,10 @@
 
 .about__text:not(:last-child) {
   margin-bottom: 13px;
+}
+
+.about__text:first-child {
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+  }
 }

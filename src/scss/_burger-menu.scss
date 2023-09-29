@@ -9,7 +9,7 @@
   border-radius: 24px;
   padding: 0px 21px;
   @include display-flex($jc: "space-between");
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -36,7 +36,7 @@
   border-radius: 0 0 23px 23px;
   opacity: 0.97;
   padding: 23px 21px;
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
