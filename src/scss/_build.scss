@@ -12,12 +12,19 @@
   width: 330px;
   left: 50%;
   transform: translateX(-50%);
+  @media (min-width: 768px) {
+    transform: translateX(-75%);
+    margin-bottom: -2px;
+    width: 530px;
+  }
 }
 
 .build__first-floor-img {
   max-width: 100%;
   height: auto;
-  z-index: 10;
+  @media (min-width: 768px) {
+    width: 530px;
+  }
 }
 
 .build__another-floors {
@@ -28,6 +35,10 @@
   grid-template-columns: 72.1% 27.9%;
   position: relative;
   bottom: -1px;
+  @media (min-width: 768px) {
+    width: 520px;
+    height: 105px;
+  }
 }
 
 .build__balcony-list-el {
@@ -39,6 +50,24 @@
 
   & > img {
     width: 80px;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 105px;
+    & > img {
+      width: 200px;
+      height: 100px;
+    }
+  }
+}
+
+.build__windows-img {
+  @media (min-width: 768px) {
+    width: fit-content;
+    height: 89px;
+    align-self: center;
+    justify-self: center;
   }
 }
 
@@ -60,26 +89,33 @@
   width: 100%;
   justify-content: space-between;
   margin-bottom: 8px;
+  @media (min-width: 768px) {
+    background-size: 465px 105px;
+    background-position: -7% center;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
 }
 
 .build__windows-el {
   width: 47px;
-  height: 55px;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.build__windows-el {
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 90%;
   padding-top: 5px;
   align-items: start;
 }
 
-.build__construction {
-  position: absolute;
+.build__construction-img {
+  position: relative;
   z-index: -1;
-  bottom: 54%;
-  left: 8%;
+  top: 8em;
+  right: 1%;
+  @media (min-width: 768px) {
+    top: 13em;
+    width: 450px;
+    height: 460px;
+  }
 }
