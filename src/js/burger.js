@@ -21,15 +21,6 @@ const purpose = document.querySelector(".start__link--purpose");
 const partners = document.querySelector(".start__link--partners");
 const aboutIntegral = document.querySelector(".start__link--about-integral");
 
-const listNav = document.querySelector(".nav");
-
-const generalNav = document.querySelector(".nav__link--general");
-const aboutNav = document.querySelector(".nav__link--about");
-const howItWorksNav = document.querySelector(".nav__link--how-it-works");
-const purposeNav = document.querySelector(".nav__link--purpose");
-const partnersNav = document.querySelector(".nav__link--partners");
-const aboutIntegralNav = document.querySelector(".nav__link--about-integral");
-
 function backToStartPage(elem, className) {
   if (!elem.classList.contains(className)) {
     elem.classList.add(className);
@@ -83,15 +74,10 @@ list.addEventListener("click", (e) => {
   openPage(e.target, aboutIntegral, aboutIntegralPage, "about-integral--hide");
 });
 
-// listNav.addEventListener("click", (e) => {
-// if (e.target === document.querySelector(".nav__link--about")) {
-//   document.querySelector(".general").classList.add("general--hide");
-//   document.querySelector(".about").classList.remove("about--hide");
-// }
-// });
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 768) {
+function removeClassOnResize() {
+  if (window.innerWidth < 767) {
+    generalPage.classList.add("general--hide");
+    startPage.classList.remove("start--hide");
     burgerMenu.classList.add("menu-content--hide");
     open.classList.remove("burger-menu__open--hide");
     close.classList.add("burger-menu__close--hide");
@@ -104,10 +90,11 @@ window.addEventListener("resize", () => {
     backToStartPage(partnersPage, "partners--hide");
     backToStartPage(aboutIntegralPage, "about-integral--hide");
   }
-  if (window.innerWidth < 768 && startPage.classList.contains("start--hide")) {
-    startPage.classList.remove("start--hide");
-  }
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 767) {
+    generalPage.classList.remove("general--hide");
     startPage.classList.add("start--hide");
   }
-});
+}
+
+window.addEventListener("load", removeClassOnResize);
+window.addEventListener("resize", removeClassOnResize);
