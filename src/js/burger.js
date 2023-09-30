@@ -82,11 +82,9 @@ list.addEventListener("click", (e) => {
 function removeClassOnload() {
   if (window.innerWidth < 768) {
     generalPage.classList.add("general--hide");
-    startPage.classList.remove("start--hide");
   }
   if (window.innerWidth > 768) {
     generalPage.classList.remove("general--hide");
-    startPage.classList.add("start--hide");
   }
 }
 
