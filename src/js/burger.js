@@ -127,6 +127,4 @@ function removeClassOnResize() {
     }
   }
 }
-
-window.addEventListener("load", removeClassOnload);
 window.addEventListener("resize", removeClassOnResize);
