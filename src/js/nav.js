@@ -1,21 +1,9 @@
 const nav = document.querySelector(".nav");
 const itemTypes = document.querySelectorAll(".nav__link");
+const menuСontent = document.querySelector(".menu-content");
+const items = [...menuСontent.children];
 
-const partnersElement = document.querySelector("#partners");
-const aboutElement = document.querySelector("#about");
-const aboutIntegralElement = document.querySelector("#about-integral");
-const generalElement = document.querySelector("#general");
-const howItWorksElement = document.querySelector("#how-it-works");
-const purposeElement = document.querySelector("#purpose");
-
-const items = [
-  partnersElement,
-  aboutElement,
-  aboutIntegralElement,
-  generalElement,
-  howItWorksElement,
-  purposeElement,
-];
+console.log(items);
 
 nav.addEventListener("click", (e) => {
   let currentItem = e.target;
