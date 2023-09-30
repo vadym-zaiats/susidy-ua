@@ -9,8 +9,9 @@
   border-radius: 16.9px;
   display: block;
   @media (min-width: 768px) {
+    margin: 27px auto;
     display: flex;
-    // width: 100%;
+    padding: 15px 70px;
     justify-content: center;
   }
 }

@@ -21,15 +21,6 @@ const purpose = document.querySelector(".start__link--purpose");
 const partners = document.querySelector(".start__link--partners");
 const aboutIntegral = document.querySelector(".start__link--about-integral");
 
-const listNav = document.querySelector(".nav");
-
-const generalNav = document.querySelector(".nav__link--general");
-const aboutNav = document.querySelector(".nav__link--about");
-const howItWorksNav = document.querySelector(".nav__link--how-it-works");
-const purposeNav = document.querySelector(".nav__link--purpose");
-const partnersNav = document.querySelector(".nav__link--partners");
-const aboutIntegralNav = document.querySelector(".nav__link--about-integral");
-
 function backToStartPage(elem, className) {
   if (!elem.classList.contains(className)) {
     elem.classList.add(className);
@@ -42,6 +33,11 @@ header.addEventListener("click", (e) => {
     close.classList.remove("burger-menu__close--hide");
     header.classList.add("burger-menu__header--active");
     burgerMenu.classList.remove("menu-content--hide");
+    if (startPage.classList.contains("start--hide")) {
+      close.classList.add("burger-menu__close--hide");
+      open.classList.add("burger-menu__open--hide");
+      back.classList.remove("burger-menu__back--hide");
+    }
   }
   if (e.target === close) {
     e.target.classList.add("burger-menu__close--hide");
@@ -83,31 +79,56 @@ list.addEventListener("click", (e) => {
   openPage(e.target, aboutIntegral, aboutIntegralPage, "about-integral--hide");
 });
 
-// listNav.addEventListener("click", (e) => {
-//   if (e.target === document.querySelector(".nav__link--about")) {
-//     document.querySelector(".general").classList.add("general--hide");
-//     document.querySelector(".about").classList.remove("about--hide");
-//   }
-// });
-
-window.addEventListener("resize", () => {
+function removeClassOnload() {
   if (window.innerWidth < 768) {
-    burgerMenu.classList.add("menu-content--hide");
-    open.classList.remove("burger-menu__open--hide");
-    close.classList.add("burger-menu__close--hide");
-    header.classList.remove("burger-menu__header--active");
-    backToStartPage(back, "burger-menu__back--hide");
-    backToStartPage(generalPage, "general--hide");
-    backToStartPage(aboutPage, "about--hide");
-    backToStartPage(howItWorksPage, "how-it-works--hide");
-    backToStartPage(purposePage, "purpose--hide");
-    backToStartPage(partnersPage, "partners--hide");
-    backToStartPage(aboutIntegralPage, "about-integral--hide");
-  }
-  if (window.innerWidth < 768 && startPage.classList.contains("start--hide")) {
+    generalPage.classList.add("general--hide");
     startPage.classList.remove("start--hide");
   }
   if (window.innerWidth > 768) {
+    generalPage.classList.remove("general--hide");
     startPage.classList.add("start--hide");
   }
-});
+}
+
+function removeClassOnResize() {
+  if (window.innerWidth < 768) {
+    items.forEach((item) => {
+      if (!item.classList.contains(`${item.id}--hide`)) {
+        itemTypes.forEach((itemType) => {
+          itemType.classList.remove("nav__link--active");
+          if (itemType.getAttribute("data-item") === item.id) {
+            itemType.classList.add("nav__link--active");
+          }
+        });
+      }
+      if (startPage.classList.contains("start--hide")) {
+        header.classList.add("burger-menu__header--active");
+        burgerMenu.classList.remove("menu-content--hide");
+        close.classList.add("burger-menu__close--hide");
+        open.classList.add("burger-menu__open--hide");
+        back.classList.remove("burger-menu__back--hide");
+      }
+    });
+  }
+  if (window.innerWidth > 768) {
+    if (!startPage.classList.contains("start--hide")) {
+      startPage.classList.add("start--hide");
+      generalPage.classList.remove("general--hide");
+    } else {
+      items.forEach((item) => {
+        if (!item.classList.contains(`${item.id}--hide`)) {
+          itemTypes.forEach((itemType) => {
+            itemType.classList.remove("nav__link--active");
+
+            if (itemType.getAttribute("data-item") === item.id) {
+              itemType.classList.add("nav__link--active");
+            }
+          });
+        }
+      });
+    }
+  }
+}
+
+window.addEventListener("load", removeClassOnload);
+window.addEventListener("resize", removeClassOnResize);
