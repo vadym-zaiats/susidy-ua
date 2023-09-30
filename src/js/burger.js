@@ -33,6 +33,11 @@ header.addEventListener("click", (e) => {
     close.classList.remove("burger-menu__close--hide");
     header.classList.add("burger-menu__header--active");
     burgerMenu.classList.remove("menu-content--hide");
+    if (startPage.classList.contains("start--hide")) {
+      close.classList.add("burger-menu__close--hide");
+      open.classList.add("burger-menu__open--hide");
+      back.classList.remove("burger-menu__back--hide");
+    }
   }
   if (e.target === close) {
     e.target.classList.add("burger-menu__close--hide");
@@ -74,27 +79,56 @@ list.addEventListener("click", (e) => {
   openPage(e.target, aboutIntegral, aboutIntegralPage, "about-integral--hide");
 });
 
-function removeClassOnResize() {
-  if (window.innerWidth < 767) {
+function removeClassOnload() {
+  if (window.innerWidth < 768) {
     generalPage.classList.add("general--hide");
     startPage.classList.remove("start--hide");
-    burgerMenu.classList.add("menu-content--hide");
-    open.classList.remove("burger-menu__open--hide");
-    close.classList.add("burger-menu__close--hide");
-    header.classList.remove("burger-menu__header--active");
-    backToStartPage(back, "burger-menu__back--hide");
-    backToStartPage(generalPage, "general--hide");
-    backToStartPage(aboutPage, "about--hide");
-    backToStartPage(howItWorksPage, "how-it-works--hide");
-    backToStartPage(purposePage, "purpose--hide");
-    backToStartPage(partnersPage, "partners--hide");
-    backToStartPage(aboutIntegralPage, "about-integral--hide");
   }
-  if (window.innerWidth > 767) {
+  if (window.innerWidth > 768) {
     generalPage.classList.remove("general--hide");
     startPage.classList.add("start--hide");
   }
 }
 
-window.addEventListener("load", removeClassOnResize);
+function removeClassOnResize() {
+  if (window.innerWidth < 768) {
+    items.forEach((item) => {
+      if (!item.classList.contains(`${item.id}--hide`)) {
+        itemTypes.forEach((itemType) => {
+          itemType.classList.remove("nav__link--active");
+          if (itemType.getAttribute("data-item") === item.id) {
+            itemType.classList.add("nav__link--active");
+          }
+        });
+      }
+      if (startPage.classList.contains("start--hide")) {
+        header.classList.add("burger-menu__header--active");
+        burgerMenu.classList.remove("menu-content--hide");
+        close.classList.add("burger-menu__close--hide");
+        open.classList.add("burger-menu__open--hide");
+        back.classList.remove("burger-menu__back--hide");
+      }
+    });
+  }
+  if (window.innerWidth > 768) {
+    if (!startPage.classList.contains("start--hide")) {
+      startPage.classList.add("start--hide");
+      generalPage.classList.remove("general--hide");
+    } else {
+      items.forEach((item) => {
+        if (!item.classList.contains(`${item.id}--hide`)) {
+          itemTypes.forEach((itemType) => {
+            itemType.classList.remove("nav__link--active");
+
+            if (itemType.getAttribute("data-item") === item.id) {
+              itemType.classList.add("nav__link--active");
+            }
+          });
+        }
+      });
+    }
+  }
+}
+
+window.addEventListener("load", removeClassOnload);
 window.addEventListener("resize", removeClassOnResize);

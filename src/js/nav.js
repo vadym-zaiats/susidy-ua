@@ -1,5 +1,5 @@
 const nav = document.querySelector(".nav");
-const itemType = document.querySelectorAll(".nav__link");
+const itemTypes = document.querySelectorAll(".nav__link");
 
 const partnersElement = document.querySelector("#partners");
 const aboutElement = document.querySelector("#about");
@@ -21,10 +21,9 @@ nav.addEventListener("click", (e) => {
   let currentItem = e.target;
   let itemId = currentItem.getAttribute("data-item");
   let currentTab = document.querySelector(`#${itemId}`);
-
   if (!currentItem.classList.contains("nav__link--active")) {
     if (currentItem.classList.contains("nav__link")) {
-      itemType.forEach((item) => {
+      itemTypes.forEach((item) => {
         item.classList.remove("nav__link--active");
       });
       items.forEach((item) => {
