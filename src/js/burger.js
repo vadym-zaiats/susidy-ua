@@ -84,10 +84,10 @@ list.addEventListener("click", (e) => {
 });
 
 // listNav.addEventListener("click", (e) => {
-//   if (e.target === document.querySelector(".nav__link--about")) {
-//     document.querySelector(".general").classList.add("general--hide");
-//     document.querySelector(".about").classList.remove("about--hide");
-//   }
+// if (e.target === document.querySelector(".nav__link--about")) {
+//   document.querySelector(".general").classList.add("general--hide");
+//   document.querySelector(".about").classList.remove("about--hide");
+// }
 // });
 
 window.addEventListener("resize", () => {
