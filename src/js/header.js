@@ -42,18 +42,12 @@ list.addEventListener("click", (e) => {
   let currentItem = e.target;
   let itemId = currentItem.getAttribute("data-nav");
   let currentTab = document.querySelector(`#${itemId}`);
-  if (!currentItem.classList.contains("start__link--active")) {
-    if (currentItem.classList.contains("start__link")) {
-      itemTypes.forEach((item) => {
-        item.classList.remove("start__link--active");
-      });
-      items.forEach((item) => {
-        item.classList.add(`${item.id}--hide`);
-      });
-      currentItem.classList.add("start__link--active");
-      currentTab.classList.remove(`${itemId}--hide`);
-      startPage.classList.add("start--hide");
-    }
+  if (currentItem.classList.contains("start__link")) {
+    items.forEach((item) => {
+      item.classList.add(`${item.id}--hide`);
+    });
+    currentTab.classList.remove(`${itemId}--hide`);
+    startPage.classList.add("start--hide");
   }
   if (startPage.classList.contains("start--hide")) {
     close.classList.add("burger-menu__close--hide");
