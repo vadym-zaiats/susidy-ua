@@ -1,6 +1,8 @@
 .menu-content {
+  overflow-y: auto;
+  max-height: 85vh;
   position: absolute;
-  top: 71px;
+  top: 70px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 99;
@@ -13,12 +15,13 @@
     display: none;
   }
   @media (min-width: 768px) {
-    left: 74.7%;
-    right: 100%;
+    overflow-y: none;
+    max-height: none;
     display: block;
-    border-radius: 0 0 50px 50px;
-    top: 162px;
-    margin-left: 40px;
+    border-radius: 50px;
+    top: 40px;
+    // right: 200px;
+    transform: none;
     max-width: 420px;
     padding: 0px 25px 30px;
   }
