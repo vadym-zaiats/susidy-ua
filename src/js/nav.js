@@ -1,8 +1,7 @@
 const nav = document.querySelector(".nav");
 const itemTypes = document.querySelectorAll(".nav__link");
 const menuСontent = document.querySelector(".menu-content");
-const items = [...menuСontent.children];
-
+const items = [...menuСontent.children].slice(2, -1);
 console.log(items);
 
 nav.addEventListener("click", (e) => {
