@@ -4,5 +4,8 @@
   background-color: #797D7E;
   height: 25px;
   z-index: 0;
+  @media (min-width: 768px) {
+    height: 39px;
+  }
 }
 
