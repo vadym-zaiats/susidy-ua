@@ -15,7 +15,7 @@
     display: none;
   }
   @media (min-width: 768px) {
-    overflow-y: none;
+    overflow-y: visible;
     max-height: none;
     display: block;
     border-radius: 50px;
