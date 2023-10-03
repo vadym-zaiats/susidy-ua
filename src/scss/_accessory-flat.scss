@@ -17,7 +17,7 @@
 .accessories-flat__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px 26px;
+  gap: 15px 21px;
 }
 
 .accessories-flat__item {
@@ -32,6 +32,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.accessories-flat__type {
+  position: relative;
+  left: -45px;
 }
 
 .accessories-flat__input {
