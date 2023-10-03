@@ -1,0 +1,56 @@
+.window-list {
+  margin: 30px 0 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item3"
+    "item3 item3";
+  & li:nth-child(2) .form__item--image__wrapper {
+    // padding: 10px 2px 10px 8px;
+  }
+}
+
+.window-list__item {
+  border-radius: 13.208px;
+  background-color: rgb(236, 236, 236);
+  &--window {
+    grid-area: item1;
+  }
+  &--window-balcony {
+    grid-area: item2;
+  }
+  &--terrace {
+    grid-area: item3;
+  }
+  &--price {
+    border: none;
+    border-radius: 0px 0px 13.208px 13.208px;
+    background: #f80000;
+    color: #fff;
+    font-size: 12.679px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+  }
+  &--paragraph {
+    text-align: start;
+    margin-bottom: 5px;
+  }
+}
+
+.window-list__item--image__wrapper {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  & p {
+    font-size: 9.509px;
+  }
+  &--balcony {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,40 +1,54 @@
-<form>
-    <ul class="general__list">
-        <li class="general__item general__item--window">
-            <div class="general__item--image__wrapper">
-                <p>Квартира</p>
-                <img src="./img/simple-windows-types/simple-window.svg" width="49" height="62" alt="Квартира"/>
-            </div>
-            <button type="submit" name="selected_option" value="Квартира" class="general__item--button">від 200 грн
-            </button>
-        </li>
-        <li class="general__item general__item--window-balcony">
-            <div class="general__item--image__wrapper">
-                <p>Квартира з балконом</p>
-                <img
-                        src="./img/windows-with-balcony-types/window-with-balcony-simple.svg"
-                        width="71"
-                        height="62"
-                        alt="Квартира з балконом"
-                />
-            </div>
-            <button type="submit" name="selected_option" value="Квартира с балконом" class="general__item--button">від
-                250 грн
-            </button>
-        </li>
-        <li class="general__item general__item--window-balcony-cat">
-            <div class="general__item--image__wrapper general__item--image__wrapper--balcony">
-                <p class="general__item--paragraph">Квартира з функціональною терасою</p>
-                <img
-                        src="./img/big-balcony-types/big-balcony-simple.svg"
-                        width="81"
-                        height="72"
-                        alt="Квартира з функціональною терасою"
-                />
-            </div>
-            <button type="submit" name="selected_option" value="Квартира с функциональной террасой"
-                    class="general__item--button">від 500 грн
-            </button>
-        </li>
-    </ul>
-</form>
+@@include('./susidy-title.html')
+<ul class="window-list">
+  <li class="window-list__item window-list__item--window">
+    <label class="window-list__label">
+      <div class="window-list__item--image__wrapper">
+        <p>Квартира</p>
+        <input
+          type="image"
+          src="./img/flat.svg"
+          alt="Квартира"
+          width="49"
+          height="62"
+        />
+      </div>
+      <p class="window-list__item--price">від 250 грн</p>
+    </label>
+  </li>
+  <li class="window-list__item window-list__item--window-balcony">
+    <label class="window-list__label">
+      <div class="window-list__item--image__wrapper">
+        <p>Квартира з балконом</p>
+        <input
+          type="image"
+          src="./img/flat-with-balcony.svg"
+          alt="Квартира з балконом"
+          width="49"
+          height="62"
+        />
+      </div>
+      <p class="window-list__item--price">від 200 грн</p>
+    </label>
+  </li>
+  <li class="window-list__item window-list__item--terrace">
+    <label class="window-list__label">
+      <div
+        class="window-list__item--image__wrapper window-list__item--image__wrapper--balcony"
+      >
+        <p class="window-list__item--paragraph">
+          Квартира з функціональною терасою
+        </p>
+
+        <input
+          type="image"
+          src="./img/big-balcony.svg"
+          alt="Квартира з функціональною терасою"
+          width="81"
+          height="72"
+        />
+      </div>
+
+      <p class="window-list__item--price">від 500 грн</p>
+    </label>
+  </li>
+</ul>

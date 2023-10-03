@@ -1,1 +1,44 @@
-
+<div class="buyer">
+  @@include('./susidy-title.html')
+  <div class="buyer__header">
+    <img
+      class="buyer__back"
+      width="35"
+      height="35"
+      src="../img/back-black.svg"
+      alt="back"
+    />
+    <div class="buyer__back-text">Придбати квартиру з балконом та котиком</div>
+  </div>
+  <div class="buyer__form" id="buyer__form">
+    <input
+      class="buyer__name"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Ваше ім’я"
+    />
+    <input
+      class="buyer__email"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Ваш E-mail"
+    />
+    <input
+      class="buyer__text"
+      type="text"
+      id="balconyText"
+      name="balconyText"
+      placeholder="Надпис на вашому балконі"
+    />
+    <input
+      class="buyer__sum"
+      type="text"
+      id="donationAmount"
+      name="donationAmount"
+      placeholder="Сума донату (не менше 500 грн)"
+    />
+    <button class="buyer__button" type="submit">Задонатити</button>
+  </div>
+</div>

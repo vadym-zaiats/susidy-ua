@@ -1,0 +1,50 @@
+.accessories-balcony {
+  display: none;
+}
+
+.accessories-balcony__title {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    color: #f80000;
+    font-size: 64.681px;
+  }
+}
+
+.accessories-balcony__text {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.accessories-balcony__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 21px;
+}
+
+.accessories-balcony__item {
+  border-radius: 23.411px;
+  background: #efefef;
+  padding: 0;
+}
+
+.accessories-balcony__label {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.accessories-balcony__type {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+}
+
+.accessories-balcony__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 10px 10px;
+}

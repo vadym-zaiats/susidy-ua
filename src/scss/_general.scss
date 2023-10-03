@@ -109,18 +109,7 @@
 .general__item--image__wrapper {
   padding: 10px 20px;
   display: flex;
-  justify-content: space-around;
-}
-
-.general__item--image__wrapper--balcony {
-  width: 100%;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-
-.general__item--paragraph {
-  text-align: start;
-  width: 100%;
-}
-
