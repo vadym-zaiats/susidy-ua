@@ -8,6 +8,7 @@
 .buyer__header {
   display: flex;
   align-items: center;
+  margin-top: 15px;
 }
 
 .buyer__back {
@@ -21,7 +22,7 @@
 }
 
 .buyer__form {
-  margin: 10px 0;
+  margin: 15px 0 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
