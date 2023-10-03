@@ -1,7 +1,7 @@
-.accessories-flat {
+.accessories-balcony {
 }
 
-.accessories-flat__title {
+.accessories-balcony__title {
   display: none;
   @media (min-width: 768px) {
     display: block;
@@ -10,23 +10,23 @@
   }
 }
 
-.accessories-flat__text {
+.accessories-balcony__text {
   font-size: 14px;
   margin: 10px 0;
 }
-.accessories-flat__list {
+.accessories-balcony__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px 21px;
 }
 
-.accessories-flat__item {
+.accessories-balcony__item {
   border-radius: 23.411px;
   background: #efefef;
   padding: 0;
 }
 
-.accessories-flat__label {
+.accessories-balcony__label {
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -35,13 +35,13 @@
   position: relative;
 }
 
-.accessories-flat__type {
+.accessories-balcony__type {
   position: absolute;
   left: 15px;
   top: 12px;
 }
 
-.accessories-flat__input {
+.accessories-balcony__input {
   display: flex;
   justify-content: center;
   align-items: center;
