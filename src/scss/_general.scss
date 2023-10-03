@@ -2,6 +2,10 @@
   &--hide {
     display: none;
   }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .general__title {
@@ -9,7 +13,17 @@
   font-weight: 400;
   &--text {
     margin-top: 10px;
-
+    @media (min-width: 480px) {
+      font-size: 14px;
+    }
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 1024px) {
+    }
+    @media (min-width: 1200px) {
+    }
+    @media (min-width: 1440px) {
+    }
     & span {
       display: none;
       @media (min-width: 768px) {

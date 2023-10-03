@@ -1,4 +1,4 @@
-.form__list {
+.window-list {
   margin: 30px 0;
   display: grid;
   grid-template-rows: 1fr 1fr 0.1fr;
@@ -13,7 +13,7 @@
   }
 }
 
-.form__item {
+.window__item {
   border-radius: 13.208px;
   background-color: rgb(236, 236, 236);
   max-height: 120px;
@@ -47,7 +47,7 @@
   }
 }
 
-.form__item--image__wrapper {
+.window__item--image__wrapper {
   padding: 10px 0;
   display: flex;
   justify-content: space-around;
