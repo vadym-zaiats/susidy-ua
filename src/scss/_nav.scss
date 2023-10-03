@@ -1,30 +1,36 @@
 .nav {
   display: none;
-  overflow-y: auto;
   font-size: 15px;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
     z-index: 100;
-    padding: 30px 0 0 10px;
+    padding: 30px 0 0 0;
   }
 }
 
 .nav__list {
   display: flex;
-  & :first-child {
-    margin-bottom: 12px;
-  }
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .nav__item {
-  &:not(:last-child) {
-    margin-right: 30px;
+  margin-bottom: 10px;
+  &:first-child {
+    width: 25%;
+  }
+  &:nth-child(2) {
+    width: 35%;
+  }
+  &:nth-child(3) {
+    width: 40%;
   }
 }
 
 .nav__link {
   text-decoration: underline;
+  width: 100%;
   &:hover {
     cursor: pointer;
     color: $header-color;

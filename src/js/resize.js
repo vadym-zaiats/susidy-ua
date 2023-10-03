@@ -30,9 +30,8 @@ function removeClassOnResize() {
       if (startPage.classList.contains("start--hide")) {
         header.classList.add("burger-menu__header--active");
         burgerMenu.classList.remove("menu-content--hide");
-        close.classList.add("burger-menu__close--hide");
-        open.classList.add("burger-menu__open--hide");
-        back.classList.remove("burger-menu__back--hide");
+        button.classList.add("burger-menu__button--back");
+        button.classList.remove("burger-menu__button--open");
       }
     });
   }
@@ -40,12 +39,13 @@ function removeClassOnResize() {
     if (!startPage.classList.contains("start--hide")) {
       startPage.classList.add("start--hide");
       generalPage.classList.remove("general--hide");
+      button.classList.add("burger-menu__button--back");
+      button.classList.remove("burger-menu__button--open");
     } else {
       items.forEach((item) => {
         if (!item.classList.contains(`${item.id}--hide`)) {
           itemTypes.forEach((itemType) => {
             itemType.classList.remove("nav__link--active");
-
             if (itemType.getAttribute("data-item") === item.id) {
               itemType.classList.add("nav__link--active");
             }

@@ -28,6 +28,21 @@
   border: none;
   background-color: transparent;
   background-size: cover;
+  &--open {
+    background-image: url("../img/burger-icon.png");
+    width: 28px;
+    height: 14px;
+  }
+  &--close {
+    background-image: url("../img/close-icon.png");
+    width: 17px;
+    height: 19px;
+  }
+  &--back {
+    background-image: url("../img/back-arrow-icon.png");
+    width: 35px;
+    height: 20px;
+  }
 }
 
 .burger-menu__open {
