@@ -15,8 +15,8 @@
     display: none;
   }
   @media (min-width: 768px) {
-    overflow-y: visible;
-    max-height: none;
+    overflow-y: auto;
+    max-height: 90vh;
     display: block;
     border-radius: 50px;
     top: 35px;

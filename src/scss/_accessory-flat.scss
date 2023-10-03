@@ -2,11 +2,41 @@
 }
 
 .accessories-flat__title {
-  color: #f80000;
-  font-size: 64.681px;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    color: #f80000;
+    font-size: 64.681px;
+  }
 }
 
 .accessories-flat__text {
   font-size: 14px;
   margin: 10px 0;
+}
+.accessories-flat__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 26px;
+}
+
+.accessories-flat__item {
+  border-radius: 23.411px;
+  background: #efefef;
+  padding: 0;
+}
+
+.accessories-flat__label {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.accessories-flat__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
