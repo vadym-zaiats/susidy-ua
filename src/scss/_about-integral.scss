@@ -1,8 +1,19 @@
 .about-integral {
-  overflow-y: auto;
+  display: none;
   max-height: 72vh;
-  &--hide {
+  &--show_1 {
+    display: block;
+  }
+  &--hide{
     display: none;
+  }
+  @media (min-width: 768px) {
+    &--show_1{
+      display: none;
+    }
+    &--show {
+      display: block;
+    }
   }
 }
 .about-integral__title {

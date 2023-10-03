@@ -21,6 +21,8 @@ header.addEventListener("click", (e) => {
     t.classList.remove("burger-menu__button--close");
     header.classList.remove("burger-menu__header--active");
     burgerMenu.classList.add("menu-content--hide");
+
+
   } else if (t.classList.contains("burger-menu__button--back")) {
     t.classList.add("burger-menu__button--close");
     t.classList.remove("burger-menu__button--back");
@@ -33,13 +35,13 @@ header.addEventListener("click", (e) => {
 
 list.addEventListener("click", (e) => {
   let t = e.target;
+  console.log(t)
   let itemId = t.getAttribute("data-nav");
   let currentTab = document.querySelector(`#${itemId}`);
+  console.log(currentTab)
   if (t.classList.contains("start__link")) {
-    items.forEach((item) => {
-      item.classList.add(`${item.id}--hide`);
-    });
     currentTab.classList.remove(`${itemId}--hide`);
+    currentTab.classList.add(`${itemId}--show_1`);
     startPage.classList.add("start--hide");
   }
   if (startPage.classList.contains("start--hide")) {
@@ -47,3 +49,9 @@ list.addEventListener("click", (e) => {
     button.classList.add("burger-menu__button--back");
   }
 });
+
+
+
+
+
+

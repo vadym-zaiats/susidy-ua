@@ -61,25 +61,3 @@
   }
 }
 
-.menu-content {
-  position: absolute;
-  top: 71px;
-  z-index: 99;
-  width: 95%;
-  background-color: $burger-menu-color;
-  border-radius: 0 0 23px 23px;
-  opacity: 0.98;
-  padding: 23px 21px;
-  &--hide {
-    display: none;
-  }
-  @media (min-width: 768px) {
-    display: block;
-    border-radius: 50px;
-    right: 40px;
-    top: 50px;
-    margin-left: 40px;
-    max-width: 420px;
-    padding: 30px 25px;
-  }
-}

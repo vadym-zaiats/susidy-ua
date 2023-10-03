@@ -1,6 +1,7 @@
 .menu-content {
   overflow-y: auto;
-  max-height: 85vh;
+  max-height: 90vh;
+  overflow-y: auto;
   position: absolute;
   top: 70px;
   right: 50%;
@@ -15,14 +16,18 @@
     display: none;
   }
   @media (min-width: 768px) {
-    overflow-y: visible;
-    max-height: none;
+    max-height: 80vh;
+    overflow-y: auto;
     display: block;
     border-radius: 50px;
     top: 35px;
-    right: 30px;
+    right: 25px;
     transform: none;
-    max-width: 420px;
+    max-width: 370px;
     padding: 0px 25px 30px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 420px;
+
   }
 }
