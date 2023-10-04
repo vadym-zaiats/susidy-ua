@@ -1,4 +1,4 @@
-<div class="flat-type">
+<div class="flat-type page" id="page1">
   @@include('./susidy-title.html')
   <ul class="flat-type__list">
     <li class="flat-type__item flat-type__item--window">
@@ -8,9 +8,11 @@
           <img src="./img/flat.svg" width="71" height="62" alt="Квартира" />
         </div>
         <input
-          class="flat-type__item--price"
           type="text"
+          name="flatType"
           value="до 200 грн"
+          onclick="nextPage()"
+          class="flat-type__item--price"
           readonly
         />
       </label>
@@ -27,9 +29,11 @@
           />
         </div>
         <input
-          class="flat-type__item--price"
           type="text"
+          name="flatType"
           value="до 250 грн"
+          onclick="nextPage()"
+          class="flat-type__item--price"
           readonly
         />
       </label>
@@ -50,9 +54,11 @@
           />
         </div>
         <input
-          class="flat-type__item--price"
           type="text"
+          name="flatType"
           value="до 500 грн"
+          onclick="nextPage()"
+          class="flat-type__item--price"
           readonly
         />
       </label>
