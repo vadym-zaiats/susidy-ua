@@ -44,7 +44,7 @@ function toBuyerData(event) {
   console.log(flat, accessoryType);
 }
 
-function toFlatType(event) {
+function backToFlatType(event) {
   event.preventDefault();
   accessoriesItems.forEach((item) => {
     if (!item.classList.contains(`${item.id}--hide`)) {
@@ -57,42 +57,3 @@ function toFlatType(event) {
   accessoryType = null;
   console.log(flat, accessoryType);
 }
-
-// function nextFurniturePage(furnitureType) {
-//   nextPage();
-
-//   // Additional logic specific to the furniture type can be added here
-// }
-
-// function submitForm(event) {
-//   event.preventDefault(); // Prevent form submission
-
-//   // Collect customer data
-//   const customerData = {
-//     name: document.getElementById("name").value,
-//     email: document.getElementById("email").value,
-//     roomChoice: document.querySelector('input[name="roomType"]:checked').value,
-//     furnitureChoice: getSelectedFurniture(),
-//   };
-
-//   // TODO: Send customerData to your backend using an AJAX request
-
-//   console.log("Customer Data:", customerData); // For demonstration purposes, log the data
-// }
-
-// function getSelectedFurniture() {
-//   const roomType = document.querySelector(
-//     'input[name="roomType"]:checked'
-//   ).value;
-//   const furnitureOptions = document.querySelectorAll(
-//     `input[name="furnitureType${capitalizeFirstLetter(roomType)}"]:checked`
-//   );
-//   const selectedFurniture = Array.from(furnitureOptions).map(
-//     (option) => option.value
-//   );
-//   return selectedFurniture;
-// }
-
-// function capitalizeFirstLetter(string) {
-//   return string.charAt(0).toUpperCase() + string.slice(1);
-// }
