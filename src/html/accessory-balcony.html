@@ -17,6 +17,7 @@
           width="91"
           height="57"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
         />
       </label>
     </li>
@@ -32,6 +33,7 @@
           width="91"
           height="57"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
         />
       </label>
     </li>
@@ -47,6 +49,7 @@
           width="91"
           height="57"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
         />
       </label>
     </li>
@@ -61,6 +64,7 @@
           src="./img/balcony-accessories/cond.svg"
           alt="Кондиціонер"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -76,6 +80,7 @@
           src="./img/balcony-accessories/curtains.svg"
           alt="Штори"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -91,6 +96,7 @@
           src="./img/balcony-accessories/chairs.svg"
           alt="Крісла"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -106,6 +112,7 @@
           src="./img/balcony-accessories/garden.svg"
           alt="Садок"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -121,6 +128,7 @@
           src="./img/balcony-accessories/lights.svg"
           alt="Ліхтарики"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -136,6 +144,7 @@
           src="./img/balcony-accessories/flags.svg"
           alt="Прапори"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -151,6 +160,7 @@
           src="./img/balcony-accessories/plants.svg"
           alt="Квіти в горшечку"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -166,6 +176,7 @@
           src="./img/balcony-accessories/plants2.svg"
           alt="Вазон"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -181,6 +192,7 @@
           src="./img/balcony-accessories/plants3.svg"
           alt="Вазон на підставці"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -196,6 +208,7 @@
           src="./img/balcony-accessories/plants4.svg"
           alt="Рослинність"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
@@ -211,12 +224,21 @@
           src="./img/balcony-accessories/plants5.svg"
           alt="Три горшечки"
           class="accessories-balcony__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeBalcony"
         />
       </label>
     </li>
     <li class="accessories-balcony__item">
-      <label class="accessories-balcony__label">Залишити без прикрас</label>
+      <label class="accessories-balcony__label">
+        <p class="accessories-balcony__type">Залишити <br />без прикрас</p>
+        <input
+          value="none"
+          name="furnitureTypeBalcony"
+          class="accessories-balcony__input accessories-balcony__input--none"
+          onclick="toBuyerData(event)"
+        />
+      </label>
     </li>
   </ul>
 </div>

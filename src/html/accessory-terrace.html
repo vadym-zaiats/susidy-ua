@@ -16,6 +16,7 @@
           src="./img/terrace-accessories/flags.svg"
           alt="Прапор"
           class="accessories-terrace__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeTerrace"
         />
       </label>
@@ -31,6 +32,7 @@
           src="./img/terrace-accessories/bicycle.svg"
           alt="Велосипед"
           class="accessories-terrace__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeTerrace"
         />
       </label>
@@ -46,6 +48,7 @@
           src="./img/terrace-accessories/flags2.svg"
           alt="Прапорці"
           class="accessories-terrace__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeTerrace"
         />
       </label>
@@ -61,6 +64,7 @@
           src="./img/terrace-accessories/garden.svg"
           alt="Садок"
           class="accessories-terrace__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeTerrace"
         />
       </label>
@@ -76,6 +80,7 @@
           src="./img/terrace-accessories/garden2.svg"
           alt="Квіти"
           class="accessories-terrace__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeTerrace"
         />
       </label>
@@ -91,6 +96,7 @@
           src="./img/terrace-accessories/garden3.svg"
           alt="Виноград"
           class="accessories-terrace__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeTerrace"
         />
       </label>
@@ -106,12 +112,23 @@
           src="./img/terrace-accessories/lights.svg"
           alt="Ліхтарі"
           class="accessories-terrace__input"
+          onclick="toBuyerData(event)"
           name="furnitureTypeTerrace"
         />
       </label>
     </li>
     <li class="accessories-terrace__item">
-      <label class="accessories-terrace__label">Залишити без прикрас</label>
+      <label class="accessories-terrace__label">
+        <p class="accessories-terrace__type">
+          Залишити <br />
+          без прикрас
+        </p>
+        <input
+          value="none"
+          name="furnitureTypeTerrace"
+          class="accessories-terrace__input accessories-terrace__input--none"
+          onclick="toBuyerData(event)"
+      /></label>
     </li>
   </ul>
 </div>
