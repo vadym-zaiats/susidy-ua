@@ -26,6 +26,28 @@ function nextPage(event) {
       break;
   }
 }
+function toBuyerData(event) {
+  event.preventDefault();
+  const accessoryType = event.target.value;
+  console.log(accessoryType);
+  // switch (roomType) {
+  //   case "до 200 грн":
+  //     flat = roomType;
+  //     flatType.classList.add("flat-type--hide");
+  //     flatAccessories.classList.remove("accessories-flat--hide");
+  //     break;
+  //   case "до 250 грн":
+  //     flat = roomType;
+  //     flatType.classList.add("flat-type--hide");
+  //     balconyAccessories.classList.remove("accessories-balcony--hide");
+  //     break;
+  //   case "до 500 грн":
+  //     flat = roomType;
+  //     flatType.classList.add("flat-type--hide");
+  //     terraceAccessories.classList.remove("accessories-terrace--hide");
+  //     break;
+  // }
+}
 
 // function nextFurniturePage(furnitureType) {
 //   nextPage();
