@@ -1,3 +1,8 @@
+.flat-type {
+  &--hide {
+    display: none;
+  }
+}
 .flat-type__list {
   margin: 30px 0 0;
   display: grid;

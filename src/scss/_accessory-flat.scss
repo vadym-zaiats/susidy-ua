@@ -1,5 +1,7 @@
 .accessories-flat {
-  display: none;
+  &--hide {
+    display: none;
+  }
 }
 
 .accessories-flat__title {
