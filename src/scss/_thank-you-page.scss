@@ -1,5 +1,7 @@
 .thank-you-page {
-  display: none; /* !!!! */
+  &--hide {
+    display: none;
+  }
 }
 .thank-you-page__title {
   color: $header-color;

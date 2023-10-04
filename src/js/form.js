@@ -4,6 +4,7 @@ let buyerData = null;
 const flatType = document.querySelector(".flat-type");
 
 const buyerPage = document.querySelector(".buyer");
+const thankYouPagePage = document.querySelector(".thank-you-page");
 
 const accessoriesСontent = document.querySelector(".accessory-type");
 const accessoriesItems = [...accessoriesСontent.children];
@@ -14,6 +15,7 @@ const terraceAccessories = document.querySelector(".accessories-terrace");
 
 function toAccessoriesPage(event) {
   const roomType = event.target.value;
+
   switch (roomType) {
     case "до 200 грн":
       flat = roomType;
@@ -34,16 +36,18 @@ function toAccessoriesPage(event) {
 }
 function toBuyerData(event) {
   event.preventDefault();
+
   accessoryType = event.target.value;
+
   accessoriesItems.forEach((item) => {
     if (!item.classList.contains(`${item.id}--hide`)) {
       item.classList.add(`${item.id}--hide`);
     }
   });
+
   buyerPage.classList.remove("buyer--hide");
   console.log(flat, accessoryType);
 }
-
 function backToFlatType(event) {
   event.preventDefault();
 
@@ -58,6 +62,16 @@ function backToFlatType(event) {
 
   flat = null;
   accessoryType = null;
-
-  console.log(flat, accessoryType);
+}
+function submitForm(event) {
+  event.preventDefault();
+  buyerData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    email: document.getElementById("balconyText").value,
+    donate: document.getElementById("donationAmount").value,
+  };
+  buyerPage.classList.add("buyer--hide");
+  thankYouPagePage.classList.remove("thank-you-page--hide");
+  console.log(flat, accessoryType, buyerData);
 }
