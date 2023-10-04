@@ -46,14 +46,18 @@ function toBuyerData(event) {
 
 function backToFlatType(event) {
   event.preventDefault();
+
   accessoriesItems.forEach((item) => {
     if (!item.classList.contains(`${item.id}--hide`)) {
       item.classList.add(`${item.id}--hide`);
     }
   });
+
   buyerPage.classList.add("buyer--hide");
   flatType.classList.remove("flat-type--hide");
+
   flat = null;
   accessoryType = null;
+
   console.log(flat, accessoryType);
 }
