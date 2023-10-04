@@ -1,13 +1,15 @@
-<div class="buyer">
+<div class="buyer buyer--hide">
   @@include('./susidy-title.html')
   <div class="buyer__header">
-    <img
-      class="buyer__back"
-      width="35"
-      height="35"
-      src="../img/back-black.svg"
-      alt="back"
-    />
+    <button class="buyer__back" onclick="toFlatType(event)">
+      <img
+        class="buyer__img"
+        width="25"
+        height="25"
+        src="../img/back-black.svg"
+        alt="back"
+      />
+    </button>
     <div class="buyer__back-text">Придбати квартиру з балконом та котиком</div>
   </div>
   <div class="buyer__form" id="buyer__form">

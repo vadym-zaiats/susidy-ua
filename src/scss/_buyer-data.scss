@@ -4,7 +4,9 @@
   flex-direction: column;
   align-items: center;
   max-width: 400px;
-  display: none; /* !!!! */
+  &--hide {
+    display: none;
+  }
 }
 .buyer__header {
   display: flex;
@@ -13,10 +15,19 @@
 }
 
 .buyer__back {
-  padding: 8px;
   border: 1px solid black;
   border-radius: 100%;
+  background-color: transparent;
   cursor: pointer;
+  @media (min-width: 768px) {
+    zoom: 1.4;
+  }
+}
+.buyer__img {
+  padding: 8px 4px 3px 4px;
+  @media (min-width: 768px) {
+    zoom: 1.1;
+  }
 }
 .buyer__back-text {
   text-align: center;
@@ -37,6 +48,10 @@
     text-align: center;
     &:not(:last-child) {
       margin-bottom: 5px;
+    }
+    @media (min-width: 768px) {
+      font-size: 14px;
+      padding: 16px 0;
     }
   }
 }
