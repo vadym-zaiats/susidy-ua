@@ -1,4 +1,4 @@
-.window-list {
+.flat-type__list {
   margin: 30px 0 0;
   display: grid;
   grid-template-rows: 1fr 1fr 0.1fr;
@@ -8,12 +8,9 @@
     "item1 item2"
     "item3 item3"
     "item3 item3";
-  & li:nth-child(2) .form__item--image__wrapper {
-    // padding: 10px 2px 10px 8px;
-  }
 }
 
-.window-list__item {
+.flat-type__item {
   border-radius: 13.208px;
   background-color: rgb(236, 236, 236);
   &--window {
@@ -42,7 +39,7 @@
   }
 }
 
-.window-list__label {
+.flat-type__label {
   font-family: "TT Firs Neue Trl", sans-serif;
   display: flex;
   height: 100%;
@@ -50,7 +47,7 @@
   justify-content: space-between;
 }
 
-.window-list__item--image__wrapper {
+.flat-type__item--image__wrapper {
   padding: 10px 5px 0;
   display: flex;
   justify-content: space-around;
