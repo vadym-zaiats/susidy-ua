@@ -1,4 +1,9 @@
-.window-list {
+.flat-type {
+  &--hide {
+    display: none;
+  }
+}
+.flat-type__list {
   margin: 30px 0 0;
   display: grid;
   grid-template-rows: 1fr 1fr 0.1fr;
@@ -8,12 +13,9 @@
     "item1 item2"
     "item3 item3"
     "item3 item3";
-  & li:nth-child(2) .form__item--image__wrapper {
-    // padding: 10px 2px 10px 8px;
-  }
 }
 
-.window-list__item {
+.flat-type__item {
   border-radius: 13.208px;
   background-color: rgb(236, 236, 236);
   &--window {
@@ -26,6 +28,7 @@
     grid-area: item3;
   }
   &--price {
+    width: 100%;
     border: none;
     border-radius: 0px 0px 13.208px 13.208px;
     background: #f80000;
@@ -41,14 +44,25 @@
   }
 }
 
-.window-list__item--image__wrapper {
-  padding: 10px 0;
+.flat-type__label {
+  font-family: "TT Firs Neue Trl", sans-serif;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flat-type__item--image__wrapper {
+  padding: 10px 5px 0;
   display: flex;
   justify-content: space-around;
+  @media (min-width: 768px) {
+    padding: 10px 20px 0;
+  }
   & p {
     font-size: 9.509px;
   }
-  &--balcony {
+  &--terrace {
     flex-direction: column;
     justify-content: center;
     align-items: center;
