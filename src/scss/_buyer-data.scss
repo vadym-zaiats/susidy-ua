@@ -31,6 +31,9 @@
 }
 .buyer__back-text {
   text-align: center;
+  @media (min-width: 1024px) {
+    margin-left: 20px;
+  }
 }
 
 .buyer__form {

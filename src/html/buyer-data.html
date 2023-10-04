@@ -10,7 +10,7 @@
         alt="back"
       />
     </button>
-    <div class="buyer__back-text">Придбати квартиру з балконом та котиком</div>
+    <div class="buyer__back-text"></div>
   </div>
   <div class="buyer__form" id="buyer__form">
     <input
@@ -19,6 +19,7 @@
       id="name"
       name="name"
       placeholder="Ваше ім’я"
+      required
     />
     <input
       class="buyer__email"
@@ -26,6 +27,7 @@
       id="email"
       name="email"
       placeholder="Ваш E-mail"
+      required
     />
     <input
       class="buyer__text"
@@ -33,13 +35,14 @@
       id="balconyText"
       name="balconyText"
       placeholder="Надпис на вашому балконі"
+      required
     />
     <input
       class="buyer__sum"
-      type="text"
+      type="number"
       id="donationAmount"
       name="donationAmount"
-      placeholder="Сума донату (не менше 500 грн)"
+      required
     />
     <button class="buyer__button" type="submit">Задонатити</button>
   </div>

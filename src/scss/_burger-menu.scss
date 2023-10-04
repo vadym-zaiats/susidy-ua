@@ -12,6 +12,10 @@
     border-radius: 24px 24px 0 0;
   }
   @include display-flex($jc: "space-between");
+
+  @media (min-width: 420px) {
+    max-width: 420px;
+  }
   @media (min-width: 768px) {
     display: none;
   }
@@ -60,4 +64,3 @@
     display: none;
   }
 }
-

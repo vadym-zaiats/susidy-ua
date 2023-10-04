@@ -2,6 +2,13 @@
   &--hide {
     display: none;
   }
+  @media (min-width: 480px) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    max-width: 100%;
+  }
 }
 .flat-type__list {
   margin: 30px 0 0;
@@ -37,6 +44,9 @@
     padding: 8px;
     text-align: center;
     cursor: pointer;
+    @media (min-width: 768px) {
+      font-size: 17.679px;
+    }
   }
   &--paragraph {
     text-align: start;
@@ -57,10 +67,24 @@
   display: flex;
   justify-content: space-around;
   @media (min-width: 768px) {
-    padding: 10px 20px 0;
+    padding: 10px 10px 0;
   }
   & p {
     font-size: 9.509px;
+    @media (min-width: 768px) {
+      font-size: 14.509px;
+    }
+    @media (min-width: 768px) {
+      font-size: 15.509px;
+    }
+  }
+  & img {
+    @media (min-width: 768px) {
+      zoom: 1.2;
+    }
+    @media (min-width: 1024px) {
+      zoom: 1.4;
+    }
   }
   &--terrace {
     flex-direction: column;
