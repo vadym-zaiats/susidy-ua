@@ -1,4 +1,4 @@
-<div class="flat-type page" id="page1">
+<div class="flat-type">
   @@include('./susidy-title.html')
   <ul class="flat-type__list">
     <li class="flat-type__item flat-type__item--window">
@@ -11,7 +11,7 @@
           type="text"
           name="flatType"
           value="до 200 грн"
-          onclick="nextPage()"
+          onclick="nextPage(event)"
           class="flat-type__item--price"
           readonly
         />
@@ -32,7 +32,7 @@
           type="text"
           name="flatType"
           value="до 250 грн"
-          onclick="nextPage()"
+          onclick="nextPage(event)"
           class="flat-type__item--price"
           readonly
         />
@@ -57,7 +57,7 @@
           type="text"
           name="flatType"
           value="до 500 грн"
-          onclick="nextPage()"
+          onclick="nextPage(event)"
           class="flat-type__item--price"
           readonly
         />

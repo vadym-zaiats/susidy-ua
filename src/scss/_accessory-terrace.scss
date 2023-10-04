@@ -1,5 +1,7 @@
 .accessories-terrace {
-  display: none;
+  &--hide {
+    display: none;
+  }
 }
 
 .accessories-terrace__title {

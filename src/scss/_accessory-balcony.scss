@@ -1,5 +1,7 @@
 .accessories-balcony {
-  display: none;
+  &--hide {
+    display: none;
+  }
 }
 
 .accessories-balcony__title {
