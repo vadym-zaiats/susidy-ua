@@ -1,7 +1,7 @@
 .nav {
   display: none;
   font-size: 15px;
-  @media (min-width: 768px) {
+  @media (min-width: 896px) {
     display: flex;
     flex-direction: column;
     z-index: 100;
@@ -46,4 +46,5 @@
     color: $header-color;
     text-decoration: none;
   }
+  font-size: 19px;
 }

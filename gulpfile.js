@@ -113,7 +113,7 @@ function styles() {
     )
     .pipe(
       autoprefixer({
-        cascade: false,
+        cascade: true,
       })
     )
     .pipe(cssmin())
@@ -140,7 +140,6 @@ function images() {
       .pipe(gulp.dest(path.dist.img))
       .pipe(icoFilter.restore)
       .pipe(filter(["**", "!**/*.svg", "!**/*.ico"]))
-      // .pipe(gulpAvif())
       .pipe(
         imagesmin([
           imagesmin.gifsicle({ interlaced: true }),

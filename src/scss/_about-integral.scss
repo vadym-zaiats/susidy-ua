@@ -25,12 +25,15 @@
 }
 .about-integral__about {
   font-size: 12px;
-  margin: 15px 0;
   & :first-child {
     margin-bottom: 15px;
   }
   @media (min-width: 768px) {
+    margin-top: 20px;
     font-size: 18px;
-    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    max-width: 320px;
   }
 }

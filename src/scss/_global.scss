@@ -6,6 +6,11 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .outer {

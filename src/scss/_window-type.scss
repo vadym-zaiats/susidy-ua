@@ -69,21 +69,13 @@
   @media (min-width: 768px) {
     padding: 10px 10px 0;
   }
-  & p {
+  &>p {
     font-size: 9px;
     @media (min-width: 768px) {
       font-size: 14px;
     }
     @media (min-width: 768px) {
       font-size: 15px;
-    }
-  }
-  & img {
-    @media (min-width: 768px) {
-      zoom: 1.2;
-    }
-    @media (min-width: 1024px) {
-      zoom: 1.4;
     }
   }
   &--terrace {
