@@ -19,7 +19,6 @@
       display: block;
     }
   }
-
 }
 
 .general__title {
@@ -48,7 +47,7 @@
     @media (min-width: 768px) {
       display: block;
       color: $header-color;
-      font-size: 64.681px;
+      font-size: 64px;
     }
   }
 }
@@ -66,7 +65,7 @@
 }
 
 .general__item {
-  border-radius: 13.208px;
+  border-radius: 13px;
   background-color: rgb(236, 236, 236);
   max-height: 120px;
 
@@ -87,14 +86,14 @@
   }
 
   & > :first-child {
-    font-size: 9.509px;
+    font-size: 9px;
   }
 
   & > :last-child {
-    border-radius: 0px 0px 13.208px 13.208px;
+    border-radius: 0px 0px 13px 13px;
     background: #f80000;
     color: #fff;
-    font-size: 12.679px;
+    font-size: 12px;
     padding: 8px;
     width: 100%;
     text-align: center;
