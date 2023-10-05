@@ -3,7 +3,7 @@
   &--show_1 {
     display: block;
   }
-  &--hide{
+  &--hide {
     display: none;
   }
   @media (min-width: 768px) {
@@ -13,7 +13,6 @@
     &--show {
       display: block;
     }
-
   }
 }
 
@@ -35,15 +34,12 @@
   &:not(:last-child) {
     margin-bottom: 13px;
   }
-  @media (min-width: 768px) {
-    font-size: 18px;
-  }
-}
-
-.about__text {
   & :first-child {
     @media (min-width: 768px) {
       margin-bottom: 0;
     }
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
   }
 }

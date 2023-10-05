@@ -23,7 +23,7 @@
 }
 
 .flat-type__item {
-  border-radius: 13.208px;
+  border-radius: 13px;
   background-color: rgb(236, 236, 236);
   &--window {
     grid-area: item1;
@@ -37,14 +37,14 @@
   &--price {
     width: 100%;
     border: none;
-    border-radius: 0px 0px 13.208px 13.208px;
+    border-radius: 0px 0px 13px 13px;
     background: #f80000;
     color: #fff;
     font-size: 12.679px;
     padding: 8px;
     text-align: center;
     @media (min-width: 768px) {
-      font-size: 17.679px;
+      font-size: 17px;
     }
   }
   &--paragraph {
@@ -70,12 +70,12 @@
     padding: 10px 10px 0;
   }
   & p {
-    font-size: 9.509px;
+    font-size: 9px;
     @media (min-width: 768px) {
-      font-size: 14.509px;
+      font-size: 14px;
     }
     @media (min-width: 768px) {
-      font-size: 15.509px;
+      font-size: 15px;
     }
   }
   & img {
