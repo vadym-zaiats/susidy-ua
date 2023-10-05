@@ -4,10 +4,8 @@ const menuСontent = document.querySelector(".menu-content");
 const items = [...menuСontent.children].slice(2, -2);
 
 nav.addEventListener("click", (e) => {
-  console.log(e.target);
   let currentItem = e.target;
   let itemId = currentItem.getAttribute("data-item");
-  console.log(currentItem);
   let currentTab = document.querySelector(`#${itemId}`);
   if (!currentItem.classList.contains("nav__link--general")) {
     let general = document.getElementById("general");
@@ -28,3 +26,7 @@ nav.addEventListener("click", (e) => {
     }
   }
 });
+
+function goToDonte(event) {
+  // event.preventDefault();
+}

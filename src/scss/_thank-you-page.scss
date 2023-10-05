@@ -43,7 +43,7 @@
   border: 0;
   background-color: $header-color;
   color: #fff;
-  border-radius: 16.9px;
+  border-radius: 17px;
   display: block;
   @media (min-width: 768px) {
     font-size: 16px;
@@ -51,24 +51,6 @@
     padding: 15px 50px;
   }
 }
-
-// .donation-button {
-//   margin: 14px auto;
-//   padding: 12px 46px;
-//   font-size: 18px;
-//   font-weight: 200;
-//   border: 0;
-//   background-color: $header-color;
-//   color: #fff;
-//   border-radius: 16.9px;
-//   display: block;
-//   @media (min-width: 768px) {
-//     margin: 27px auto;
-//     display: flex;
-//     padding: 15px 70px;
-//     justify-content: center;
-//   }
-// }
 
 .donation-button__arrow {
   display: none;
