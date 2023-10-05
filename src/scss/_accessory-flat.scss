@@ -11,7 +11,7 @@
   }
 }
 
-.accessories-flat__title {
+.accessories-styles__title {
   display: none;
   @media (min-width: 768px) {
     display: block;
@@ -20,23 +20,23 @@
   }
 }
 
-.accessories-flat__text {
+.accessories-styles__text {
   font-size: 14px;
   margin: 10px 0 20px;
 }
-.accessories-flat__list {
+.accessories-styles__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 15px;
 }
 
-.accessories-flat__item {
+.accessories-styles__item {
   border-radius: 23.411px;
   background: #efefef;
   padding: 0;
 }
 
-.accessories-flat__label {
+.accessories-styles__label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,7 @@
   position: relative;
 }
 
-.accessories-flat__type {
+.accessories-styles__type {
   position: absolute;
   left: 15px;
   top: 12px;
@@ -57,7 +57,7 @@
   }
 }
 
-.accessories-flat__input {
+.accessories-styles__input {
   display: flex;
   justify-content: center;
   align-items: center;
