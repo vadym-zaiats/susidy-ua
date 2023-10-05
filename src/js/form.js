@@ -16,6 +16,7 @@ const terraceAccessories = document.querySelector(".accessories-terrace");
 const buyerBackText = document.querySelector(".buyer__back-text");
 const donateSum = document.querySelector(".buyer__sum");
 
+const form = document.querySelector(".general__form");
 const certificatePage = document.querySelector(".certificate");
 
 function toAccessoriesPage(event) {
@@ -100,6 +101,7 @@ function submitForm(event) {
   thankYouPagePage.classList.remove("thank-you-page--hide");
   console.log(flat, accessoryType, buyerData);
 }
+form.addEventListener("submit", submitForm);
 
 function certificateDownload() {
   thankYouPagePage.classList.add("thank-you-page--hide");
