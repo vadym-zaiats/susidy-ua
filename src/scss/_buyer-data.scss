@@ -19,15 +19,9 @@
   border-radius: 100%;
   background-color: transparent;
   cursor: pointer;
-  @media (min-width: 768px) {
-    zoom: 1.4;
-  }
 }
 .buyer__img {
   padding: 8px 4px 3px 4px;
-  @media (min-width: 768px) {
-    zoom: 1.1;
-  }
 }
 .buyer__back-text {
   text-align: center;

@@ -1,14 +1,13 @@
 .menu-footer-list {
-  margin-top: 20px;
+  padding-top: 20px;
   font-size: 10px;
   font-weight: 400;
-  margin-top: 20px;
   a {
     color: #111111;
   }
   @media (min-width: 768px) {
     display: flex;
-    margin-top: 25px;
+    padding-top: 25px;
   }
 }
 

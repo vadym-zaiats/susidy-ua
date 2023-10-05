@@ -43,33 +43,48 @@
 .partners__charity {
   &--img {
     margin-top: 10px;
-    zoom: 0.6;
-    @media (min-width: 768px) {
-      zoom: 0.8;
-    }
   }
 }
 
 .partners__nomenclature {
   &--list {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    zoom: 0.62;
-    & :not(:last-child) {
-      margin-right: 20px;
-    }
-    @media (min-width: 768px) {
-      zoom: 0.82;
-    }
+    max-width: 200px;
   }
+}
+.partners__item{
+  &:nth-child(3) {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+  &:nth-child(2) {
+ &>img{
+   height: 60px;
+ }
+  }
+  &:first-child {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+
+.partners-item__img{
+  width: 110px;
+  height: 50px;
 }
 
 .partners__design {
   &--img {
-    zoom: 0.8;
     @media (min-width: 768px) {
-      zoom: 1;
       margin-bottom: 30px;
     }
   }

@@ -41,9 +41,6 @@
 .purpose__img {
   margin: 0 auto;
   display: block;
-  @media (min-width: 768px) {
-    zoom: 1.54;
-  }
 }
 
 .purpose__bar {
@@ -56,7 +53,6 @@
   overflow: hidden;
   display: block;
   @media (min-width: 768px) {
-    zoom: 1.5;
     width: 100%;
   }
 }
@@ -82,7 +78,6 @@
 }
 
 .purpose__statistics {
-  display: flex;
   flex-direction: row;
   margin: 30px 15px 40px;
   display: grid;

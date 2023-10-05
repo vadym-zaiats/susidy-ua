@@ -14,9 +14,9 @@
   @include display-flex($jc: "space-between");
 
   @media (min-width: 420px) {
-    max-width: 420px;
+    max-width: 520px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 895px) {
     display: none;
   }
 }
@@ -32,20 +32,21 @@
   border: none;
   background-color: transparent;
   background-size: cover;
+  cursor: pointer;
   &--open {
     background-image: url("../img/burger-icon.png");
     width: 28px;
     height: 14px;
   }
   &--close {
-    background-image: url("../img/close-icon.png");
+    background-image: url("../img/close-icon.svg");
     width: 17px;
     height: 19px;
   }
   &--back {
-    background-image: url("../img/back-arrow-icon.png");
-    width: 35px;
-    height: 20px;
+    background-image: url("../img/back-arrow-icon.svg");
+    width: 25px;
+    height: 15px;
   }
 }
 
