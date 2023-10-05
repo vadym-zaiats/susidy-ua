@@ -17,7 +17,9 @@ const buyerBackText = document.querySelector(".buyer__back-text");
 const donateSum = document.querySelector(".buyer__sum");
 
 const form = document.querySelector(".general__form");
+
 const certificatePage = document.querySelector(".certificate");
+const qwe = document.querySelector(".certificate__button");
 
 function toAccessoriesPage(event) {
   const roomType = event.target.value;
@@ -103,7 +105,12 @@ function submitForm(event) {
 }
 form.addEventListener("submit", submitForm);
 
-function certificateDownload() {
+function toCertificatePage() {
   thankYouPagePage.classList.add("thank-you-page--hide");
   certificatePage.classList.remove("certificate--hide");
+}
+
+function downloadCertificate(event) {
+  event.preventDefault();
+  alert("Тут має початись скачування сертифікату");
 }

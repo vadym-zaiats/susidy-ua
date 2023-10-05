@@ -43,7 +43,6 @@
     font-size: 12.679px;
     padding: 8px;
     text-align: center;
-    cursor: pointer;
     @media (min-width: 768px) {
       font-size: 17.679px;
     }
@@ -60,6 +59,7 @@
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .flat-type__item--image__wrapper {
