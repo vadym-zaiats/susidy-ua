@@ -50,9 +50,11 @@
   margin: 27px 0px 6px;
   width: 52px;
   height: 53px;
+
   &--none {
     z-index: -1;
   }
+
   @media (min-width: 768px) {
     margin: 30px 0px 18px;
     width: 90px;
