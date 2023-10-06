@@ -1,6 +1,7 @@
 const list = document.querySelector(".start__list");
 const title = document.querySelectorAll(".start__link");
 const startPage = document.querySelector(".start");
+const generalPageMenu = document.getElementById("general");
 
 const button = document.querySelector(".burger-menu__button");
 const open = document.querySelector(".burger-menu__button--open");
@@ -16,6 +17,9 @@ header.addEventListener("click", (e) => {
     t.classList.add("burger-menu__button--close");
     header.classList.add("burger-menu__header--active");
     burgerMenu.classList.remove("menu-content--hide");
+    startPage.classList.remove("start--hide")
+    generalPageMenu.classList.remove("general--show")
+    generalPageMenu.classList.add("general--hide")
   } else if (t.classList.contains("burger-menu__button--close")) {
     t.classList.add("burger-menu__button--open");
     t.classList.remove("burger-menu__button--close");
