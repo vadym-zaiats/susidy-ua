@@ -2,6 +2,7 @@
   &--hide {
     display: none;
   }
+
   @media (min-width: 480px) {
     max-width: 90%;
     margin: 0 auto;
@@ -10,6 +11,7 @@
     max-width: 100%;
   }
 }
+
 .flat-type__list {
   margin: 30px 0 0;
   display: grid;
@@ -25,15 +27,19 @@
 .flat-type__item {
   border-radius: 13px;
   background-color: rgb(236, 236, 236);
+
   &--window {
     grid-area: item1;
   }
+
   &--window-balcony {
     grid-area: item2;
   }
+
   &--terrace {
     grid-area: item3;
   }
+
   &--price {
     width: 100%;
     border: none;
@@ -47,9 +53,24 @@
       font-size: 17px;
     }
   }
-  &--paragraph {
-    text-align: start;
-    margin-bottom: 5px;
+}
+
+.flat-type__item--paragraph {
+  text-align: start;
+  margin-bottom: 5px;
+}
+
+.flat-type__item--price {
+  width: 100%;
+  border: none;
+  border-radius: 0px 0px 13px 13px;
+  background: #f80000;
+  color: #fff;
+  font-size: 12.679px;
+  padding: 8px;
+  text-align: center;
+  @media (min-width: 768px) {
+    font-size: 17px;
   }
 }
 
@@ -69,7 +90,8 @@
   @media (min-width: 768px) {
     padding: 10px 10px 0;
   }
-  &>p {
+
+  & > p {
     font-size: 9px;
     @media (min-width: 768px) {
       font-size: 14px;
@@ -78,6 +100,7 @@
       font-size: 15px;
     }
   }
+
   &--terrace {
     flex-direction: column;
     justify-content: center;

@@ -1,11 +1,14 @@
 .general {
   display: none;
+
   &--show_1 {
     display: block;
   }
+
   &--hide {
     display: none;
   }
+
   @media (min-width: 896px) {
     display: block;
     &--show_1 {
@@ -24,31 +27,31 @@
 .general__title {
   font-size: 17px;
   font-weight: 400;
+}
 
-  &--text {
-    margin-top: 10px;
-
-    & span {
-      display: none;
-      @media (min-width: 768px) {
-        display: inline-block;
-      }
-    }
+.general__title--greeting {
+  @media (min-width: 768px) {
+    display: none;
   }
+}
 
-  &--greeting {
-    @media (min-width: 768px) {
-      display: none;
-    }
-  }
+.general__title--text {
+  margin-top: 10px;
 
-  &--main {
+  & > span {
     display: none;
     @media (min-width: 768px) {
-      display: block;
-      color: $header-color;
-      font-size: 64px;
+      display: inline-block;
     }
+  }
+}
+
+.general__title--main {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    color: $header-color;
+    font-size: 64px;
   }
 }
 
@@ -69,22 +72,6 @@
   background-color: rgb(236, 236, 236);
   max-height: 120px;
 
-  &--window {
-    grid-area: item1;
-  }
-
-  &--window-balcony {
-    grid-area: item2;
-  }
-
-  &--window-balcony-cat {
-    grid-area: item3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   & > :first-child {
     font-size: 9px;
   }
@@ -99,6 +86,22 @@
     text-align: center;
     cursor: pointer;
   }
+}
+
+.general__item--window {
+  grid-area: item1;
+}
+
+.general__item--window-balcony {
+  grid-area: item2;
+}
+
+.general__item--window-balcony-cat {
+  grid-area: item3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .general__item--button {

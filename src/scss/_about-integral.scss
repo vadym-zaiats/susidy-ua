@@ -1,14 +1,16 @@
 .about-integral {
   display: none;
-  max-height: 72vh;
+
   &--show_1 {
     display: block;
   }
-  &--hide{
+
+  &--hide {
     display: none;
   }
-  @media (min-width: 768px) {
-    &--show_1{
+
+  @media (min-width: 896px) {
+    &--show_1 {
       display: none;
     }
     &--show {
@@ -16,18 +18,23 @@
     }
   }
 }
+
 .about-integral__title {
   color: $header-color;
   font-size: 24px;
+  margin-bottom: 15px;
   @media (min-width: 768px) {
     font-size: 43px;
   }
 }
+
 .about-integral__about {
   font-size: 12px;
+
   & :first-child {
     margin-bottom: 15px;
   }
+
   @media (min-width: 768px) {
     margin-top: 20px;
     font-size: 18px;
