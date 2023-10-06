@@ -4,7 +4,7 @@ const menuСontent = document.querySelector(".menu-content");
 const items = [...menuСontent.children].slice(2, -2);
 const donationButtons = document.getElementsByClassName("donation-button");
 const generalPage = document.getElementById("general");
-const mobileMenuPage = document.getElementById("start");
+const menuPage = document.getElementById("start");
 
 nav.addEventListener("click", (e) => {
     let currentItem = e.target;
@@ -42,7 +42,7 @@ function hideAllPages() {
 function menuPageHideAndShowDonationPage() {
     generalPage.classList.remove("general--hide");
     generalPage.classList.add("general--show");
-    mobileMenuPage.classList.add("start--hide");
+    menuPage.classList.add("start--hide");
 }
 
 function handleButtonClick() {
