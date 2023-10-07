@@ -66,37 +66,39 @@ form.addEventListener("click", (event) => {
       }
     });
   }
+  console.log(flat);
+  console.log(accessoryType);
 });
 
-function toBuyerData(event) {
-  event.preventDefault();
+// function toBuyerData(event) {
+//   event.preventDefault();
 
-  accessoriesItems.forEach((item) => {
-    if (!item.classList.contains(`${item.id}--hide`)) {
-      item.classList.add(`${item.id}--hide`);
-    }
-  });
+//   accessoriesItems.forEach((item) => {
+//     if (!item.classList.contains(`${item.id}--hide`)) {
+//       item.classList.add(`${item.id}--hide`);
+//     }
+//   });
 
-  buyerPage.classList.remove("buyer--hide");
+//   buyerPage.classList.remove("buyer--hide");
 
-  switch (flat) {
-    case "до 200 грн":
-      donateSum.min = 200;
-      donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
-      buyerBackText.innerText = "Придбати квартиру з балконом та котиком";
-      break;
-    case "до 250 грн":
-      donateSum.min = 250;
-      donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
-      buyerBackText.innerText = "Придбати квартиру з функціональною терасою";
-      break;
-    case "до 500 грн":
-      donateSum.min = 500;
-      donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
-      buyerBackText.innerText = "Придбати іншу квартиру";
-      break;
-  }
-}
+//   switch (flat) {
+//     case "до 200 грн":
+//       donateSum.min = 200;
+//       donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
+//       buyerBackText.innerText = "Придбати квартиру з балконом та котиком";
+//       break;
+//     case "до 250 грн":
+//       donateSum.min = 250;
+//       donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
+//       buyerBackText.innerText = "Придбати квартиру з функціональною терасою";
+//       break;
+//     case "до 500 грн":
+//       donateSum.min = 500;
+//       donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
+//       buyerBackText.innerText = "Придбати іншу квартиру";
+//       break;
+//   }
+// }
 
 // function backToFlatType(event) {
 //   event.preventDefault();
