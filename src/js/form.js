@@ -27,7 +27,6 @@ form.addEventListener("click", (event) => {
 
   const eventTargetValue = event.target.value;
   const eventTargetParent = event.target.parentElement;
-  console.log(event.target);
 
   switch (eventTargetValue) {
     case "flat":
@@ -65,39 +64,7 @@ form.addEventListener("click", (event) => {
       }
     });
   }
-  console.log(flat);
-  console.log(accessoryType);
 });
-
-// function toBuyerData(event) {
-//   event.preventDefault();
-
-//   accessoriesItems.forEach((item) => {
-//     if (!item.classList.contains(`${item.id}--hide`)) {
-//       item.classList.add(`${item.id}--hide`);
-//     }
-//   });
-
-//   buyerPage.classList.remove("buyer--hide");
-
-//   switch (flat) {
-//     case "до 200 грн":
-//       donateSum.min = 200;
-//       donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
-//       buyerBackText.innerText = "Придбати квартиру з балконом та котиком";
-//       break;
-//     case "до 250 грн":
-//       donateSum.min = 250;
-//       donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
-//       buyerBackText.innerText = "Придбати квартиру з функціональною терасою";
-//       break;
-//     case "до 500 грн":
-//       donateSum.min = 500;
-//       donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
-//       buyerBackText.innerText = "Придбати іншу квартиру";
-//       break;
-//   }
-// }
 
 // function backToFlatType(event) {
 //   event.preventDefault();
@@ -115,19 +82,20 @@ form.addEventListener("click", (event) => {
 //   accessoryType = null;
 // }
 
-// function submitForm(event) {
-//   event.preventDefault();
-//   buyerData = {
-//     name: document.getElementById("name").value,
-//     email: document.getElementById("email").value,
-//     email: document.getElementById("balconyText").value,
-//     donate: document.getElementById("donationAmount").value,
-//   };
-//   buyerPage.classList.add("buyer--hide");
-//   thankYouPagePage.classList.remove("thank-you-page--hide");
-//   console.log(flat, accessoryType, buyerData);
-// }
-// form.addEventListener("submit", submitForm);
+function submitForm() {
+  buyerData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    text: document.getElementById("balconyText").value,
+    donate: document.getElementById("donationAmount").value,
+  };
+  buyerPage.classList.add("buyer--hide");
+  thankYouPagePage.classList.remove("thank-you-page--hide");
+  console.log(flat, accessoryType, buyerData);
+  // Надсилаємо данні на сервер
+}
+
+form.addEventListener("submit", submitForm);
 
 // function toCertificatePage() {
 //   thankYouPagePage.classList.add("thank-you-page--hide");
