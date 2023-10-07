@@ -8,15 +8,17 @@
   z-index: 100;
   border-radius: 24px;
   padding: 0 21px;
+
   &--active {
     border-radius: 24px 24px 0 0;
   }
+
   @include display-flex($jc: "space-between");
 
   @media (min-width: 420px) {
     max-width: 520px;
   }
-  @media (min-width: 895px) {
+  @media (min-width: 896px) {
     display: none;
   }
 }
@@ -33,16 +35,19 @@
   background-color: transparent;
   background-size: cover;
   cursor: pointer;
+
   &--open {
     background-image: url("../img/burger-icon.png");
     width: 28px;
     height: 14px;
   }
+
   &--close {
     background-image: url("../img/close-icon.svg");
     width: 17px;
     height: 19px;
   }
+
   &--back {
     background-image: url("../img/back-arrow-icon.svg");
     width: 25px;
@@ -50,18 +55,14 @@
   }
 }
 
-.burger-menu__open {
-  &--hide {
-    display: none;
-  }
+.burger-menu__open--hide {
+  display: none;
 }
-.burger-menu__close {
-  &--hide {
-    display: none;
-  }
+
+.burger-menu__close--hide {
+  display: none;
 }
-.burger-menu__back {
-  &--hide {
-    display: none;
-  }
+
+.burger-menu__back--hide {
+  display: none;
 }

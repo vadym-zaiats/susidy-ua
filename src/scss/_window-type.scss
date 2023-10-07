@@ -2,6 +2,7 @@
   &--hide {
     display: none;
   }
+
   @media (min-width: 480px) {
     max-width: 90%;
     margin: 0 auto;
@@ -10,6 +11,7 @@
     max-width: 100%;
   }
 }
+
 .flat-type__list {
   margin: 30px 0 0;
   display: grid;
@@ -30,12 +32,15 @@
   &--window {
     grid-area: item1;
   }
+
   &--window-balcony {
     grid-area: item2;
   }
+
   &--terrace {
     grid-area: item3;
   }
+
   &--price {
     width: 100%;
     border: none;
@@ -49,6 +54,7 @@
       font-size: 17px;
     }
   }
+
   &--input {
     width: 100%;
     height: 100%;
@@ -90,6 +96,7 @@
       font-size: 15px;
     }
   }
+
   &--terrace {
     flex-direction: column;
     justify-content: center;

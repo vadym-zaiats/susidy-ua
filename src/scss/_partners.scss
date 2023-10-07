@@ -1,12 +1,15 @@
 .partners {
   display: none;
+
   &--show_1 {
     display: block;
   }
-  &--hide{
+
+  &--hide {
     display: none;
   }
-  @media (min-width: 768px) {
+
+  @media (min-width: 896px) {
     &--show_1 {
       display: none;
     }
@@ -23,6 +26,7 @@
     font-size: 43px;
   }
 }
+
 .partners__about {
   font-size: 12px;
   margin: 15px 0;
@@ -33,59 +37,71 @@
 
 .partners__list {
   font-size: 13px;
-  & :not(:first-child) {
-    margin-top: 15px;
-  }
   @media (min-width: 768px) {
     font-size: 18px;
   }
 }
-.partners__charity {
-  &--img {
-    margin-top: 10px;
+
+.partners__charity--img {
+  width: 210px;
+  height: 80px;
+  @media (min-width: 768px) {
+    width: 300px;
+    height: 50px;
   }
 }
 
 .partners__nomenclature {
-  &--list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 200px;
-  }
+  margin-top: 15px;
 }
-.partners__item{
+
+.partners__nomenclature--list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
+}
+
+.partners__item {
   &:nth-child(3) {
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: end;
+    justify-content: center;
   }
+
   &:nth-child(2) {
- &>img{
-   height: 60px;
- }
+    & > img {
+      height: 60px;
+    }
   }
+
   &:first-child {
     height: 70px;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: end;
-  }
-}
-
-
-.partners-item__img{
-  width: 110px;
-  height: 50px;
-}
-
-.partners__design {
-  &--img {
+    justify-content: center;
     @media (min-width: 768px) {
-      margin-bottom: 30px;
+      justify-content: center;
     }
   }
 }
+
+.partners-item__img {
+  width: 80px;
+  height: 40px;
+  @media (min-width: 768px) {
+    width: 110px;
+    height: 50px;
+  }
+}
+
+.partners__design--img {
+  margin-top: 15px;
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+

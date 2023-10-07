@@ -23,12 +23,15 @@
 
 .nav__item {
   margin-bottom: 10px;
+
   &:first-child {
     width: 25%;
   }
+
   &:nth-child(2) {
     width: 35%;
   }
+
   &:nth-child(3) {
     width: 40%;
   }
@@ -37,14 +40,17 @@
 .nav__link {
   text-decoration: underline;
   width: 100%;
+
   &:hover {
     cursor: pointer;
     color: $header-color;
     text-decoration: none;
   }
+
   &--active {
     color: $header-color;
     text-decoration: none;
   }
+
   font-size: 19px;
 }

@@ -1,5 +1,5 @@
 .menu-content {
-  max-height: 90vh;
+  max-height: calc(100vh - 100px);
   overflow-y: auto;
   position: absolute;
   top: 70px;
@@ -7,6 +7,7 @@
   transform: translate(50%, 0);
   z-index: 99;
   width: 95%;
+  max-width: 520px;
   background-color: $burger-menu-color;
   border-radius: 0 0 23px 23px;
   opacity: 0.98;
@@ -16,22 +17,20 @@
     display: none;
   }
 
-  @media (min-width: 420px) {
-    max-width: 520px;
-  }
-  @media (min-width: 768px) {
-
-  }
-  @media (min-width: 895px) {
+  @media (min-width: 896px) {
     overflow-y: auto;
     max-height: 90vh;
     display: block;
     border-radius: 50px;
     top: 35px;
-    right: 25px;
+    right: 10px;
     transform: none;
-    max-width: 450px;
+    max-width: 435px;
     padding: 30px 36px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 450px;
+    right: 20px;
   }
   @media (min-width: 1440px) {
     display: block;
@@ -48,8 +47,5 @@
   @media (min-width: 1024px) {
     width: 160px;
     height: 50px;
-  }
-  @media (min-width: 1440px) {
-
   }
 }
