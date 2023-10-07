@@ -8,7 +8,7 @@
 @mixin hover($ml: 0, $color: $header-color) {
   cursor: pointer;
   transition-property: all;
-  transition: all ease 0.3s;
+  transition: color ease 0.3s;
   &:hover {
     color: $color;
     transition: 0.3s;

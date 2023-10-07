@@ -1,4 +1,5 @@
 .certificate {
+  position: relative;
   &--hide {
     display: none;
   }
@@ -47,17 +48,12 @@
 
 .certificate__cat {
   position: absolute;
-  bottom: 65px;
+  width: 100%;
+  bottom: -10px;
   left: 50%;
   transform: translate(-50%, 0);
-  @media (min-width: 420px) {
-    bottom: 52px;
-  }
   @media (min-width: 768px) {
-    bottom: 57px;
-  }
-  @media (min-width: 1024px) {
-    bottom: 52px;
+    width: 100%;
   }
 }
 
