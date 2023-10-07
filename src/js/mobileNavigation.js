@@ -31,6 +31,14 @@ function backToNavigation(target) {
     target.classList.remove("burger-menu__button--back");
     startPage.classList.remove("start--hide");
     document.getElementById("general").classList.add(`show__general__desktop`);
+    Array.from(menuLinksDesktop).forEach((el)=>{
+        const navElementAttribute = el.getAttribute("data-item");
+        if(navElementAttribute !== "general"){
+            el.classList.remove("nav__link--active");
+        }else{
+            el.classList.add("nav__link--active");
+        }
+    })
 }
 
 function updateNavElements(action) {
