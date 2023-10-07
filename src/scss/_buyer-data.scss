@@ -71,3 +71,13 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+.buyer__sum::-webkit-inner-spin-button,
+.buyer__sum::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.buyer__sum {
+  -moz-appearance: textfield;
+}
