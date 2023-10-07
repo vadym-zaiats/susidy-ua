@@ -26,6 +26,7 @@
   border-radius: 13px;
   background-color: rgb(236, 236, 236);
   position: relative;
+  cursor: pointer;
   &--window {
     grid-area: item1;
   }
@@ -56,6 +57,7 @@
     background: transparent;
     border: none;
     color: transparent;
+    cursor: pointer;
   }
   &--paragraph {
     text-align: start;

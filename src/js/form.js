@@ -27,8 +27,7 @@ form.addEventListener("click", (event) => {
 
   const eventTargetValue = event.target.value;
   const eventTargetParent = event.target.parentElement;
-  // console.log(eventTargetValue);
-  // console.log(eventTargetParent);
+  console.log(event.target);
 
   switch (eventTargetValue) {
     case "flat":

@@ -67,4 +67,20 @@
   background: transparent;
   border: none;
   color: transparent;
+  cursor: pointer;
+}
+
+.accessories-styles__input-none {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 86px;
+  background: transparent;
+  border: none;
+  color: transparent;
+  width: 100%;
+  @media (min-width: 768px) {
+    height: 123px;
+  }
 }
