@@ -1,7 +1,6 @@
 let flat = null;
 let accessoryType = null;
 let buyerData = null;
-let originalHTML;
 
 const form = document.querySelector(".general__form");
 
@@ -21,7 +20,6 @@ const buyerBackText = document.querySelector(".buyer__back-text");
 const donateSum = document.querySelector(".buyer__sum");
 
 const certificatePage = document.querySelector(".certificate");
-const qwe = document.querySelector(".certificate__button");
 
 function buyText() {
   switch (flat) {
@@ -151,7 +149,6 @@ function formActions(event) {
         flatAccessories.classList.remove("accessories-flat--hide");
         donateSum.min = 200;
         donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
-        originalHTML = form.innerHTML;
         break;
       case "balcony":
         flat = eventTargetValue;
@@ -193,21 +190,30 @@ function handleSubmit(event) {
   thankYouPagePage.classList.remove("thank-you-page--hide");
   console.log(flat, accessoryType, buyerData);
 }
-form.addEventListener("click", formActions);
-form.addEventListener("submit", handleSubmit);
-
 function toCertificatePage() {
   thankYouPagePage.classList.add("thank-you-page--hide");
   certificatePage.classList.remove("certificate--hide");
 }
-
 function backToAccessoriesType(event) {
   event.preventDefault();
-  form.innerHTML = originalHTML;
   accessoryType = null;
+  buyerPage.classList.add("buyer--hide");
+  switch (flat) {
+    case "flat":
+      flatAccessories.classList.remove("accessories-flat--hide");
+      break;
+    case "balcony":
+      balconyAccessories.classList.remove("accessories-balcony--hide");
+      break;
+    case "terrace":
+      terraceAccessories.classList.remove("accessories-terrace--hide");
+      break;
+  }
 }
-
 function downloadCertificate(event) {
   event.preventDefault();
   alert("Тут має початись скачування сертифікату");
 }
+
+form.addEventListener("click", formActions);
+form.addEventListener("submit", handleSubmit);
