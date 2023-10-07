@@ -27,7 +27,8 @@
 .flat-type__item {
   border-radius: 13px;
   background-color: rgb(236, 236, 236);
-
+  position: relative;
+  cursor: pointer;
   &--window {
     grid-area: item1;
   }
@@ -53,24 +54,20 @@
       font-size: 17px;
     }
   }
-}
 
-.flat-type__item--paragraph {
-  text-align: start;
-  margin-bottom: 5px;
-}
-
-.flat-type__item--price {
-  width: 100%;
-  border: none;
-  border-radius: 0px 0px 13px 13px;
-  background: #f80000;
-  color: #fff;
-  font-size: 12.679px;
-  padding: 8px;
-  text-align: center;
-  @media (min-width: 768px) {
-    font-size: 17px;
+  &--input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+  }
+  &--paragraph {
+    text-align: start;
+    margin-bottom: 5px;
   }
 }
 
@@ -90,7 +87,6 @@
   @media (min-width: 768px) {
     padding: 10px 10px 0;
   }
-
   & > p {
     font-size: 9px;
     @media (min-width: 768px) {
