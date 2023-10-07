@@ -1,6 +1,7 @@
 let flat = null;
 let accessoryType = null;
 let buyerData = null;
+let originalHTML;
 
 const form = document.querySelector(".general__form");
 
@@ -22,6 +23,121 @@ const donateSum = document.querySelector(".buyer__sum");
 const certificatePage = document.querySelector(".certificate");
 const qwe = document.querySelector(".certificate__button");
 
+function buyText() {
+  switch (flat) {
+    case "flat":
+      switch (accessoryType) {
+        case "cat":
+          buyerBackText.innerText = "Придбати квартиру з котиком";
+          break;
+        case "curtains":
+          buyerBackText.innerText = "Придбати квартиру зі шторами";
+          break;
+        case "blinds":
+          buyerBackText.innerText = "Придбати квартиру з ролетами";
+          break;
+        case "flower":
+          buyerBackText.innerText = "Придбати квартиру з квіткою";
+          break;
+        case "shrub":
+          buyerBackText.innerText = "Придбати квартиру з кущем";
+          break;
+        case "vase":
+          buyerBackText.innerText = "Придбати квартиру з вазою";
+          break;
+        case "without":
+          buyerBackText.innerText = "Придбати квартиру";
+          break;
+      }
+      break;
+    case "balcony":
+      switch (accessoryType) {
+        case "uaFlag":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та прапорами України";
+          break;
+        case "bike":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та велосипедом";
+          break;
+        case "clothes":
+          buyerBackText.innerText = "Придбати квартиру з балконом та речами";
+          break;
+        case "cond":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та кондиціонером";
+          break;
+        case "curtains":
+          buyerBackText.innerText = "Придбати квартиру з балконом та шторами";
+          break;
+        case "chairs":
+          buyerBackText.innerText = "Придбати квартиру з балконом та кріслами";
+          break;
+        case "garden":
+          buyerBackText.innerText = "Придбати квартиру з балконом та садком";
+          break;
+        case "lights":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та ліхтариками";
+          break;
+        case "flags":
+          buyerBackText.innerText = "Придбати квартиру з балконом та прапорами";
+          break;
+        case "plants":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та квітами в горшечку";
+          break;
+        case "plants2":
+          buyerBackText.innerText = "Придбати квартиру з балконом та вазоном";
+          break;
+        case "plants3":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та вазоном на підставці";
+          break;
+        case "plants4":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та рослинністю";
+          break;
+        case "plants5":
+          buyerBackText.innerText =
+            "Придбати квартиру з балконом та трьома горшечками";
+          break;
+        case "without":
+          buyerBackText.innerText = "Придбати квартиру з балконом";
+          break;
+      }
+      break;
+    case "terrace":
+      switch (accessoryType) {
+        case "flags":
+          buyerBackText.innerText = "Придбати терасу з прапорами";
+          break;
+        case "bicycle":
+          buyerBackText.innerText = "Придбати терасу з велосипедом";
+          break;
+        case "flags2":
+          buyerBackText.innerText = "Придбати терасу з прапорцями";
+          break;
+        case "garden":
+          buyerBackText.innerText = "Придбати терасу з садком";
+          break;
+        case "garden2":
+          buyerBackText.innerText = "Придбати терасу з квітами";
+          break;
+        case "grape":
+          buyerBackText.innerText = "Придбати терасу з виноградом";
+          break;
+        case "lights":
+          buyerBackText.innerText = "Придбати терасу з ліхтарями";
+          break;
+        case "without":
+          buyerBackText.innerText = "Придбати терасу";
+          break;
+      }
+      break;
+  }
+}
+
 function formActions(event) {
   if (event.target.type !== "submit") {
     event.preventDefault();
@@ -35,7 +151,7 @@ function formActions(event) {
         flatAccessories.classList.remove("accessories-flat--hide");
         donateSum.min = 200;
         donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
-        buyerBackText.innerText = "Придбати квартиру з балконом та котиком";
+        originalHTML = form.innerHTML;
         break;
       case "balcony":
         flat = eventTargetValue;
@@ -43,7 +159,6 @@ function formActions(event) {
         balconyAccessories.classList.remove("accessories-balcony--hide");
         donateSum.min = 250;
         donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
-        buyerBackText.innerText = "Придбати квартиру з функціональною терасою";
         break;
       case "terrace":
         flat = eventTargetValue;
@@ -51,7 +166,6 @@ function formActions(event) {
         terraceAccessories.classList.remove("accessories-terrace--hide");
         donateSum.min = 500;
         donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
-        buyerBackText.innerText = "Придбати іншу квартиру";
         break;
     }
 
@@ -63,6 +177,7 @@ function formActions(event) {
           item.classList.add(`${item.id}--hide`);
         }
       });
+      buyText();
     }
   }
 }
@@ -86,23 +201,13 @@ function toCertificatePage() {
   certificatePage.classList.remove("certificate--hide");
 }
 
-// function backToFlatType(event) {
-//   event.preventDefault();
+function backToAccessoriesType(event) {
+  event.preventDefault();
+  form.innerHTML = originalHTML;
+  accessoryType = null;
+}
 
-//   accessoriesItems.forEach((item) => {
-//     if (!item.classList.contains(`${item.id}--hide`)) {
-//       item.classList.add(`${item.id}--hide`);
-//     }
-//   });
-
-//   buyerPage.classList.add("buyer--hide");
-//   flatType.classList.remove("flat-type--hide");
-
-//   flat = null;
-//   accessoryType = null;
-// }
-
-// function downloadCertificate(event) {
-//   event.preventDefault();
-//   alert("Тут має початись скачування сертифікату");
-// }
+function downloadCertificate(event) {
+  event.preventDefault();
+  alert("Тут має початись скачування сертифікату");
+}
