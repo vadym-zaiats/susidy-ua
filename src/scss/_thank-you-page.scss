@@ -15,11 +15,20 @@
 .thank-you-page__text {
   margin: 15px 0;
   font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .thank-you-page__cat {
   display: block;
-  margin: 70px auto 15px;
+  width: 265px;
+  margin: 15px auto -10px;
+  @media (min-width: 768px) {
+    display: block;
+    width: 300px;
+    margin: 50px auto 0px;
+  }
 }
 
 .thank-you-page__download {

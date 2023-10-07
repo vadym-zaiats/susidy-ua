@@ -81,6 +81,11 @@ function handleSubmit(event) {
 form.addEventListener("click", formActions);
 form.addEventListener("submit", handleSubmit);
 
+function toCertificatePage() {
+  thankYouPagePage.classList.add("thank-you-page--hide");
+  certificatePage.classList.remove("certificate--hide");
+}
+
 // function backToFlatType(event) {
 //   event.preventDefault();
 
@@ -95,26 +100,6 @@ form.addEventListener("submit", handleSubmit);
 
 //   flat = null;
 //   accessoryType = null;
-// }
-
-// function submitForm() {
-//   buyerData = {
-//     name: document.getElementById("name").value,
-//     email: document.getElementById("email").value,
-//     text: document.getElementById("balconyText").value,
-//     donate: document.getElementById("donationAmount").value,
-//   };
-//   buyerPage.classList.add("buyer--hide");
-//   thankYouPagePage.classList.remove("thank-you-page--hide");
-//   console.log(flat, accessoryType, buyerData);
-//   // Надсилаємо данні на сервер
-// }
-
-// form.addEventListener("submit", submitForm);
-
-// function toCertificatePage() {
-//   thankYouPagePage.classList.add("thank-you-page--hide");
-//   certificatePage.classList.remove("certificate--hide");
 // }
 
 // function downloadCertificate(event) {
