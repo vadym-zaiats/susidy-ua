@@ -210,6 +210,14 @@ function backToAccessoriesType(event) {
       break;
   }
 }
+function backToFlatType(event) {
+  event.preventDefault();
+  flat = null;
+  flatType.classList.remove("flat-type--hide");
+  event.target.parentElement.classList.add(
+    `${event.target.parentElement.id}--hide`
+  );
+}
 function downloadCertificate(event) {
   event.preventDefault();
   alert("Тут має початись скачування сертифікату");
