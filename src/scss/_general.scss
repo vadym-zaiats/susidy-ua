@@ -1,29 +1,29 @@
 .general {
   display: none;
 
-  &--show_1 {
-    display: block;
-  }
-
   &--hide {
     display: none;
   }
+  &--show {
+    display: block;
+  }
 
   @media (min-width: 896px) {
-    display: block;
-    &--show_1 {
-      display: none;
+    display: none;
+    &--show {
+      display: block;
     }
     &--hide {
       display: none;
     }
-
-    &--show {
-      display: block;
-    }
   }
 }
+.show__general__desktop{
+  @media (min-width: 896px) {
+    display: block;
+  }
 
+}
 .general__title {
   font-size: 17px;
   font-weight: 400;

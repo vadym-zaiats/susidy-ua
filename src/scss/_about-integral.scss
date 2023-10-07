@@ -1,18 +1,13 @@
 .about-integral {
   display: none;
 
-  &--show_1 {
-    display: block;
-  }
-
   &--hide {
     display: none;
   }
-
+  &--show {
+    display: block;
+  }
   @media (min-width: 896px) {
-    &--show_1 {
-      display: none;
-    }
     &--show {
       display: block;
     }
