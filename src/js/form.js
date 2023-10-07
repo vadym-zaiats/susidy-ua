@@ -59,6 +59,7 @@ form.addEventListener("click", (event) => {
 
   if (eventTargetParent.classList.contains("accessories-styles__label")) {
     accessoryType = eventTargetValue;
+    buyerPage.classList.remove("buyer--hide");
     accessoriesItems.forEach((item) => {
       if (!item.classList.contains(`${item.id}--hide`)) {
         item.classList.add(`${item.id}--hide`);
