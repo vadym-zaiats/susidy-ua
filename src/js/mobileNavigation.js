@@ -53,7 +53,6 @@ function showNavElement(navElement, navElementAttribute) {
 
 button.addEventListener("click", (event) => {
     const target = event.target;
-
     if (target.classList.contains("burger-menu__button--open")) {
         openMobileMenu(target);
         updateNavElements(hideNavElement);
@@ -91,7 +90,6 @@ Array.from(menuLinks).forEach((navElement) => {
                 el.classList.remove("nav__link--active");
             }
         });
-        console.log(navElementAttribute);
         button.classList.remove("burger-menu__button--close");
         button.classList.add("burger-menu__button--back");
     });
