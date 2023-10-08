@@ -1,6 +1,6 @@
-let flat = null;
-let accessoryType = null;
-let buyerData = null;
+let flat = null,
+  accessoryType = null,
+  buyerData = null;
 
 const form = document.querySelector(".general__form");
 
