@@ -7,7 +7,7 @@ const form = document.querySelector(".general__form");
 const flatType = document.querySelector(".flat-type");
 
 const buyerPage = document.querySelector(".buyer");
-const thankYouPagePage = document.querySelector(".thank-you-page");
+const thankYouPagePage = document.getElementById("thank-you-page");
 
 const accessoriesСontent = document.querySelector(".accessory-type");
 const accessoriesItems = [...accessoriesСontent.children];
@@ -20,6 +20,7 @@ const buyerBackText = document.querySelector(".buyer__back-text");
 const donateSum = document.querySelector(".buyer__sum");
 
 const certificatePage = document.querySelector(".certificate");
+const certificateButton = document.getElementById("download-certificate-button")
 
 function buyText() {
   switch (flat) {
@@ -187,13 +188,21 @@ function handleSubmit(event) {
     donate: document.getElementById("donationAmount").value,
   };
   buyerPage.classList.add("buyer--hide");
-  thankYouPagePage.classList.remove("thank-you-page--hide");
-  console.log(flat, accessoryType, buyerData);
+  if(!event.submitter.classList.contains("thank-you-page__download")){
+    thankYouPagePage.classList.remove("thank-you-page--hide");
+  }
 }
+
+
+
 function toCertificatePage() {
   thankYouPagePage.classList.add("thank-you-page--hide");
   certificatePage.classList.remove("certificate--hide");
 }
+
+
+
+
 function backToAccessoriesType(event) {
   event.preventDefault();
   accessoryType = null;
@@ -223,5 +232,7 @@ function downloadCertificate(event) {
   alert("Тут має початись скачування сертифікату");
 }
 
+certificateButton.addEventListener("click", toCertificatePage)
 form.addEventListener("click", formActions);
 form.addEventListener("submit", handleSubmit);
+
