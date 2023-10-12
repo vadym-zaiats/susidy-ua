@@ -108,9 +108,14 @@ function handleSubmit(event) {
   accessoryType = null;
   buyerData = null;
 }
-function toCertificatePage() {
-  thankYouPagePage.classList.add("thank-you-page--hide");
-  certificatePage.classList.remove("certificate--hide");
+function toCertificatePage(event) {
+  if (event.target.classList.contains("thank-you-page__download")) {
+    thankYouPagePage.classList.add("thank-you-page--hide");
+    certificatePage.classList.remove("certificate--hide");
+  }
+  if (event.target.classList.contains("thank-you-page__to-flat")) {
+    alert("Ще не придумали");
+  }
 }
 function downloadCertificate(event) {
   event.preventDefault();
@@ -120,6 +125,6 @@ function downloadCertificate(event) {
 flatTypeList.addEventListener("click", flatTypeVar);
 accessoryTypeList.addEventListener("click", accessoriesTypeVar);
 buyerPage.addEventListener("click", backToAccessoriesType);
-toDownloadButton.addEventListener("click", toCertificatePage);
+thankYouPagePage.addEventListener("click", toCertificatePage);
 toCertificateButton.addEventListener("click", downloadCertificate);
 form.addEventListener("submit", handleSubmit);
