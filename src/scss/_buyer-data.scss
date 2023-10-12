@@ -1,18 +1,19 @@
 .buyer {
-  margin: 15px;
+  margin: 15px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 400px;
-
   &--hide {
     display: none;
   }
 }
 
 .buyer__header {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 15px;
 }
 
@@ -29,10 +30,6 @@
 
 .buyer__back-text {
   text-align: center;
-  margin-left: 5px;
-  @media (min-width: 1024px) {
-    margin-left: 20px;
-  }
 }
 
 .buyer__form {
