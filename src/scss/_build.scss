@@ -20,15 +20,16 @@
     width: 530px;
   }
   @media (min-width: 896px) {
-    transform: translateX(-85%);
+    max-width: 540px;
+    transform: translateX(-87%);
   }
   @media (min-width: 1024px) {
-    transform: translateX(-60%);
-    width: 610px;
+    transform: translateX(-70%);
+    width: 590px;
   }
   @media (min-width: 1200px) {
-    transform: translateX(-50%);
-    width: 410px;
+    transform: translateX(-85%);
+    max-width: 650px;
   }
   @media (min-width: 1440px) {
     transform: translateX(-75%);
@@ -43,7 +44,7 @@
     width: 470px;
   }
   @media (min-width: 768px) {
-    width: 530px;
+    width: 521px;
   }
   @media (min-width: 1024px) {
     width: 610px;
@@ -58,12 +59,13 @@
 
 .build__another-floors {
   max-width: 100%;
-  width: 100%;
+  width: 320px;
   height: 100%;
   display: grid;
   grid-template-columns: 72.1% 27.9%;
   @media (min-width: 480px) {
     width: 470px;
+    max-width: 100%;
   }
   @media (min-width: 768px) {
     width: 520px;
@@ -97,7 +99,7 @@
     width: 113px;
     height: 97px;
     & > img {
-      width: 120px;
+      width: 129px;
       height: 105px;
     }
   }
@@ -119,12 +121,12 @@
   @media (min-width: 1200px) {
     height: 160px;
     & > img {
-      width: 204px;
+      width: 187px;
       height: 180px;
     }
   }
   @media (min-width: 1440px) {
-    height: 185px;
+    height: 181px;
     & > img {
       width: 243px;
       height: 185px;
@@ -179,34 +181,10 @@
   }
 }
 
-.build__windows-img {
-  @media (min-width: 480px) {
-    width: fit-content;
-    align-self: center;
-    justify-self: center;
-    height: 72px;
-  }
-  @media (min-width: 768px) {
-    width: fit-content;
-    height: 90px;
-    align-self: center;
-    justify-self: center;
-  }
-  @media (min-width: 1024px) {
-    height: 105px;
-  }
-  @media (min-width: 1200px) {
-    height: 135px;
-  }
-  @media (min-width: 1440px) {
-    height: 165px;
-    width: 150px;
-  }
-}
 
 .build__balcony-list {
   height: 100%;
-  width: 90%;
+  width: 92%;
   background-color: #A23840;
   display: flex;
   flex-direction: column-reverse;
@@ -217,28 +195,103 @@
   width: 74.5px;
 }
 
-.build__window-list {
-  //display: grid;
-  //grid-template-columns: 1fr 1fr 1fr 1fr;
-  //grid-template-rows: 1fr 1fr 1fr 1fr;
+.build__window-container {
   background-color: #E13030;
-  display: grid;
-  grid-template-columns: 166px 143px 155px 140px;
-  grid-auto-rows: 177px;
-  justify-items: center;
-  grid-auto-flow: row;
   background-image: url("../img/floors-with-simple-windows.svg");
   background-repeat: repeat;
-  background-size: 895px 181px;
-  background-position: 5% top;
+  background-size: 329px 65px;
+  background-position: 6% bottom;
   height: 100%;
   max-width: 100%;
+  @media (min-width: 480px) {
+    background-size: 484px 96px;
+    background-position: 7% bottom;
+  }
+  @media (min-width: 768px) {
+    background-size: 541px 113px;
+    background-position: 5% bottom
+  }
+  @media (min-width: 1024px) {
+    background-size: 531px 126px;
+    background-position: -4% bottom;
+  }
+  @media (min-width: 1200px) {
+    background-size: 645px 159px;
+    background-position: -3% bottom;
+  }
+  @media (min-width: 1440px) {
+    background-size: 895px 181px;
+    background-position: 6% bottom;
+  }
+}
+
+.build__window-list {
+  align-content: start;
+  align-items: center;
+  display: grid;
+  transform: scaleY(-1);
+  grid-template-columns: 64px 54px 53px 54px;
+  grid-auto-rows: 65px;
+  grid-column: 2 / -2;
+  justify-items: end;
+  grid-auto-flow: row;
+  height: 100%;
+  max-width: 100%;
+
+  @media (min-width: 480px) {
+    grid-template-columns: 82px 85px 75px 78px;
+    grid-auto-rows: 96px;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: 86px 95px 93px 92px;
+    grid-auto-rows: 113px;
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: 94px 102px 93px 96px;
+    grid-auto-rows: 127px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 115px 114px 123px 114px;
+    grid-auto-rows: 160px;
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: 154px 152px 148px 148px;
+    grid-auto-rows: 181px;
+  }
 }
 
 .build__windows-el {
-  padding-top: 8px;
   position: relative;
+  display: flex;
+  transform: scaleY(-1);
 }
+
+.build__windows-img {
+  @media (min-width: 480px) {
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    height: 82px;
+  }
+  @media (min-width: 768px) {
+    width: fit-content;
+    height: 96px;
+    align-self: center;
+    justify-self: center;
+  }
+  @media (min-width: 1024px) {
+    height: 105px;
+  }
+  @media (min-width: 1200px) {
+    width: 112px;
+    height: 120px;
+  }
+  @media (min-width: 1440px) {
+    height: 151px;
+    width: 138px;
+  }
+}
+
 
 .build__construction-img {
   position: relative;
