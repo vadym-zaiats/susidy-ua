@@ -6,8 +6,7 @@ const menuLinks = document.querySelectorAll(".start__link");
 const menuLinksDesktop = document.querySelectorAll(".nav__link");
 
 const button = document.querySelector(".burger-menu__button");
-const close = document.querySelector(".burger-menu__button--close");
-const back = document.querySelector(".burger-menu__button--back");
+const back = document.querySelector(".burger-menu__back");
 const header = document.querySelector(".burger-menu__header");
 const burgerMenu = document.querySelector(".menu-content");
 
@@ -29,8 +28,8 @@ function closeMobileMenu(target) {
 }
 
 function backToNavigation(target) {
-  target.classList.add("burger-menu__button--close");
-  target.classList.remove("burger-menu__button--back");
+  button.classList.remove("burger-menu__button--hide");
+  back.classList.add("burger-menu__back--hide");
   startPage.classList.remove("start--hide");
   document.getElementById("general").classList.add(`show__general__desktop`);
   Array.from(menuLinksDesktop).forEach((el) => {
@@ -69,7 +68,7 @@ function showNavElement(navElement, navElementAttribute) {
   navElement.classList.add(`${navElementAttribute}--show`);
 }
 
-button.addEventListener("click", (event) => {
+header.addEventListener("click", (event) => {
   const target = event.target;
   if (target.classList.contains("burger-menu__button--open")) {
     openMobileMenu(target);
@@ -83,7 +82,7 @@ button.addEventListener("click", (event) => {
         showNavElement(navElement, navElementAttribute);
       }
     });
-  } else if (target.classList.contains("burger-menu__button--back")) {
+  } else if (target.classList.contains("burger-menu__back")) {
     backToNavigation(target);
     updateNavElements((navElement, navElementAttribute) => {
       navElement.classList.remove(
@@ -116,7 +115,7 @@ Array.from(menuLinks).forEach((navElement) => {
         el.classList.remove("nav__link--active");
       }
     });
-    button.classList.remove("burger-menu__button--close");
-    button.classList.add("burger-menu__button--back");
+    button.classList.add("burger-menu__button--hide");
+    back.classList.remove("burger-menu__back--hide");
   });
 });
