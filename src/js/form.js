@@ -25,55 +25,50 @@ const toDownloadButton = document.querySelector(".thank-you-page__download");
 const toCertificateButton = document.querySelector(".certificate__button");
 
 function flatTypeVar(event) {
-  if (event.target.type !== "submit") {
-    event.preventDefault();
-    const eventTargetValue = event.target.value;
-
-    switch (eventTargetValue) {
-      case "flat":
-        flat = eventTargetValue;
-        flatType.classList.add("flat-type--hide");
-        flatAccessories.classList.remove("accessories-styles--hide");
-        donateSum.min = 200;
-        donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
-        break;
-      case "balcony":
-        flat = eventTargetValue;
-        flatType.classList.add("flat-type--hide");
-        balconyAccessories.classList.remove("accessories-styles--hide");
-        donateSum.min = 250;
-        donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
-        break;
-      case "terrace":
-        flat = eventTargetValue;
-        flatType.classList.add("flat-type--hide");
-        terraceAccessories.classList.remove("accessories-styles--hide");
-        donateSum.min = 500;
-        donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
-        break;
-    }
+  event.preventDefault();
+  const eventTargetValue = event.target.value;
+  switch (eventTargetValue) {
+    case "flat":
+      flat = eventTargetValue;
+      flatType.classList.add("flat-type--hide");
+      flatAccessories.classList.remove("accessories-styles--hide");
+      donateSum.min = 200;
+      donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
+      break;
+    case "balcony":
+      flat = eventTargetValue;
+      flatType.classList.add("flat-type--hide");
+      balconyAccessories.classList.remove("accessories-styles--hide");
+      donateSum.min = 250;
+      donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
+      break;
+    case "terrace":
+      flat = eventTargetValue;
+      flatType.classList.add("flat-type--hide");
+      terraceAccessories.classList.remove("accessories-styles--hide");
+      donateSum.min = 500;
+      donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
+      break;
   }
 }
 function accessoriesTypeVar(event) {
-  if (event.target.type !== "submit") {
-    event.preventDefault();
-    const eventTargetValue = event.target.value;
-    const eventTargetParent = event.target.parentElement;
-    if (eventTargetParent.classList.contains("accessories-styles__label")) {
-      accessoryType = eventTargetValue;
-      buyerPage.classList.remove("buyer--hide");
-      accessoriesItems.forEach((item) => {
-        if (!item.classList.contains("accessories-styles--hide")) {
-          item.classList.add("accessories-styles--hide");
-        }
-      });
-      buyerBackText.innerText = event.target.getAttribute("data-text");
-    }
-    if (event.target.classList.contains("back-button")) {
-      flat = null;
-      flatType.classList.remove("flat-type--hide");
-      event.target.parentElement.classList.add("accessories-styles--hide");
-    }
+  event.preventDefault();
+  const eventTargetValue = event.target.value;
+  const eventTargetParent = event.target.parentElement;
+  if (eventTargetParent.classList.contains("accessories-styles__label")) {
+    accessoryType = eventTargetValue;
+    buyerPage.classList.remove("buyer--hide");
+    accessoriesItems.forEach((item) => {
+      if (!item.classList.contains("accessories-styles--hide")) {
+        item.classList.add("accessories-styles--hide");
+      }
+    });
+    buyerBackText.innerText = event.target.getAttribute("data-text");
+  }
+  if (event.target.classList.contains("back-button")) {
+    flat = null;
+    flatType.classList.remove("flat-type--hide");
+    event.target.parentElement.classList.add("accessories-styles--hide");
   }
 }
 function backToAccessoriesType(event) {
