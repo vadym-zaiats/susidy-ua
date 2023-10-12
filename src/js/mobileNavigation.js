@@ -70,11 +70,9 @@ function updateNavElements(action) {
 
 function hideNavElement(navElement, navElementAttribute) {
   navElement.classList.remove(`${navElementAttribute}--show`);
-  navElement.classList.add(`${navElementAttribute}--hide`);
 }
 
 function showNavElement(navElement, navElementAttribute) {
-  navElement.classList.remove(`${navElementAttribute}--hide`);
   navElement.classList.add(`${navElementAttribute}--show`);
 }
 

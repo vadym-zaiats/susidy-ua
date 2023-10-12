@@ -24,13 +24,11 @@ function deactivateLinks(menuLinks) {
 }
 
 function showElement(elementId) {
-    document.getElementById(elementId).classList.remove(`${elementId}--hide`);
     document.getElementById(elementId).classList.add(`${elementId}--show`);
 }
 
 function hideElements(elementId) {
     document.getElementById(elementId).classList.remove(`${elementId}--show`);
-    document.getElementById(elementId).classList.add(`${elementId}--hide`);
     document.getElementById("general").classList.remove(`show__general__desktop`);
 }
 

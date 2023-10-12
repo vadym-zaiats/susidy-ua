@@ -1,16 +1,7 @@
 .how-it-works {
   display: none;
-
-  &--hide {
-    display: none;
-  }
   &--show {
     display: block;
-  }
-  @media (min-width: 896px) {
-    &--show {
-      display: block;
-    }
   }
 }
 
