@@ -13,13 +13,6 @@ const burgerMenu = document.querySelector(".menu-content");
 
 const thankYouPage = document.querySelector(".thank-you-page");
 
-function valuesReset() {
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("balconyText").value = "";
-  document.getElementById("donationAmount").value = "";
-}
-
 function openMobileMenu(target) {
   startPage.classList.remove("start--hide");
   target.classList.remove("burger-menu__button--open");
@@ -51,12 +44,10 @@ function backToNavigation(target) {
   if (!thankYouPage.classList.contains("thank-you-page--hide")) {
     thankYouPage.classList.add("thank-you-page--hide");
     flatType.classList.remove("flat-type--hide");
-    valuesReset();
   }
   if (!certificatePage.classList.contains("certificate--hide")) {
     certificatePage.classList.add("certificate--hide");
     flatType.classList.remove("flat-type--hide");
-    valuesReset();
   }
 }
 
