@@ -11,6 +11,8 @@ function activateLink(target) {
   startPageMobile.classList.add("start--hide");
   mobileHeaderMenu.classList.add("burger-menu__header--active");
   buttonMobile.classList.add("burger-menu__button--hide");
+  buttonMobile.classList.remove("burger-menu__button--open");
+  buttonMobile.classList.add("burger-menu__button--close");
   buttonMobileBack.classList.remove("burger-menu__back--hide");
   burgerMenu.classList.remove("menu-content--hide");
 }
