@@ -76,15 +76,14 @@
   grid-template-columns: 1fr 1fr;
 }
 
-
-.purpose__rating--title {
+.purpose__rait {
   font-size: 37px;
   @media (min-width: 1200px) {
     font-size: 45px;
   }
 }
 
-.purpose__rating--text {
+.purpose__text {
   font-size: 12px;
   @media (min-width: 768px) {
     font-size: 18px;
