@@ -12,9 +12,9 @@ const thankYouPagePage = document.getElementById("thank-you-page");
 const accessoriesСontent = document.querySelector(".accessory-type");
 const accessoriesItems = [...accessoriesСontent.children];
 
-const flatAccessories = document.querySelector(".accessories-flat");
-const balconyAccessories = document.querySelector(".accessories-balcony");
-const terraceAccessories = document.querySelector(".accessories-terrace");
+const flatAccessories = document.getElementById("accessories-flat");
+const balconyAccessories = document.getElementById("accessories-balcony");
+const terraceAccessories = document.getElementById("accessories-terrace");
 
 const buyerBackText = document.querySelector(".buyer__back-text");
 const donateSum = document.querySelector(".buyer__sum");
@@ -149,21 +149,21 @@ function formActions(event) {
       case "flat":
         flat = eventTargetValue;
         flatType.classList.add("flat-type--hide");
-        flatAccessories.classList.remove("accessories-flat--hide");
+        flatAccessories.classList.remove("accessories-styles--hide");
         donateSum.min = 200;
         donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
         break;
       case "balcony":
         flat = eventTargetValue;
         flatType.classList.add("flat-type--hide");
-        balconyAccessories.classList.remove("accessories-balcony--hide");
+        balconyAccessories.classList.remove("accessories-styles--hide");
         donateSum.min = 250;
         donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
         break;
       case "terrace":
         flat = eventTargetValue;
         flatType.classList.add("flat-type--hide");
-        terraceAccessories.classList.remove("accessories-terrace--hide");
+        terraceAccessories.classList.remove("accessories-styles--hide");
         donateSum.min = 500;
         donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
         break;
@@ -173,8 +173,8 @@ function formActions(event) {
       accessoryType = eventTargetValue;
       buyerPage.classList.remove("buyer--hide");
       accessoriesItems.forEach((item) => {
-        if (!item.classList.contains(`${item.id}--hide`)) {
-          item.classList.add(`${item.id}--hide`);
+        if (!item.classList.contains("accessories-styles--hide")) {
+          item.classList.add("accessories-styles--hide");
         }
       });
       buyText();
@@ -208,13 +208,13 @@ function backToAccessoriesType(event) {
   buyerPage.classList.add("buyer--hide");
   switch (flat) {
     case "flat":
-      flatAccessories.classList.remove("accessories-flat--hide");
+      flatAccessories.classList.remove("accessories-styles--hide");
       break;
     case "balcony":
-      balconyAccessories.classList.remove("accessories-balcony--hide");
+      balconyAccessories.classList.remove("accessories-styles--hide");
       break;
     case "terrace":
-      terraceAccessories.classList.remove("accessories-terrace--hide");
+      terraceAccessories.classList.remove("accessories-styles--hide");
       break;
   }
 }
@@ -223,9 +223,7 @@ function backToFlatType(event) {
   event.preventDefault();
   flat = null;
   flatType.classList.remove("flat-type--hide");
-  event.target.parentElement.classList.add(
-    `${event.target.parentElement.id}--hide`
-  );
+  event.target.parentElement.classList.add("accessories-styles--hide");
 }
 
 function downloadCertificate(event) {
