@@ -12,6 +12,7 @@ const burgerMenu = document.querySelector(".menu-content");
 
 const thankYouPage = document.querySelector(".thank-you-page");
 
+
 function openMobileMenu(target) {
   startPage.classList.remove("start--hide");
   target.classList.remove("burger-menu__button--open");
