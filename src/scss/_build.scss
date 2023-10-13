@@ -4,35 +4,38 @@
   flex-grow: 3;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-  position: absolute;
+  position: relative;
   align-self: flex-end;
   margin-bottom: -1px;
-  z-index: 15;
-  width: 330px;
+  z-index: 100;
+  width: 300px;
+  max-width: 300px;
   left: 50%;
   transform: translateX(-50%);
   @media (min-width: 480px) {
     width: 470px;
+    max-width: 470px;
   }
   @media (min-width: 768px) {
-    transform: translateX(-50%);
     margin-bottom: -2px;
     width: 530px;
+    max-width: 530px;
   }
   @media (min-width: 896px) {
-    transform: translateX(-85%);
+    max-width: 540px;
+    transform: translateX(-83%);
   }
   @media (min-width: 1024px) {
-    width: 610px;
+    width: 590px;
+    max-width: 590px;
   }
   @media (min-width: 1200px) {
-    transform: translateX(-75%);
-    width: 800px;
+    transform: translateX(-85%);
+    max-width: 650px;
   }
   @media (min-width: 1440px) {
-    transform: translateX(-70%);
-    width: 950px;
+    transform: translateX(-80%);
+    max-width: 850px;
   }
 }
 
@@ -43,7 +46,7 @@
     width: 470px;
   }
   @media (min-width: 768px) {
-    width: 530px;
+    width: 521px;
   }
   @media (min-width: 1024px) {
     width: 610px;
@@ -58,16 +61,13 @@
 
 .build__another-floors {
   max-width: 100%;
-  width: 100%;
+  width: 320px;
   height: 100%;
   display: grid;
   grid-template-columns: 72.1% 27.9%;
-  &>ul{
-    display: flex;
-    flex-direction: column;
-  }
   @media (min-width: 480px) {
     width: 470px;
+    max-width: 100%;
   }
   @media (min-width: 768px) {
     width: 520px;
@@ -95,115 +95,97 @@
 
   & > img {
     width: 85px;
+    @media (min-width: 480px) {
+      width: 129px;
+      height: 105px;
+    }
+    @media (min-width: 768px) {
+      width: 143px;
+      height: 115px;
+    }
+    @media (min-width: 1024px) {
+      width: 182px;
+      height: 135px;
+    }
+    @media (min-width: 1200px) {
+      width: 187px;
+      height: 180px;
+    }
+    @media (min-width: 1440px) {
+      width: 243px;
+      height: 185px;
+    }
   }
 
   @media (min-width: 480px) {
     width: 113px;
     height: 97px;
-    & > img {
-      width: 120px;
-      height: 105px;
-    }
   }
   @media (min-width: 768px) {
     width: 100%;
     height: 114px;
-    & > img {
-      width: 143px;
-      height: 115px;
-    }
   }
   @media (min-width: 1024px) {
     height: 130px;
-    & > img {
-      width: 182px;
-      height: 135px;
-    }
   }
   @media (min-width: 1200px) {
     height: 160px;
-    & > img {
-      width: 204px;
-      height: 180px;
-    }
   }
   @media (min-width: 1440px) {
-    height: 185px;
-    & > img {
-      width: 243px;
-      height: 185px;
-    }
+    height: 181px;
   }
 }
 
 .build__paragraph {
   display: inline-block;
   position: absolute;
-  bottom: 1px;
-  color: #ffffff;
+  bottom: 0;
+  color: #fff;
   background-color: #4a4646;
   padding: 3px 1px;
   text-align: center;
   min-width: 50px;
-  max-width: 50px;
   font-size: 5px;
+  left: 7px;
   @media (min-width: 480px) {
-    bottom: 4px;
-    padding: 5px 1px;
-    min-width: 65px;
-    max-width: 65px;
+    left: 0;
+    padding: 6px 1px;
+    min-width: 73px;
     font-size: 6px;
   }
   @media (min-width: 768px) {
-    bottom: 5px;
-    min-width: 80px;
-    max-width: 80px;
+    left: 1px;
+    min-width: 84px;
     font-size: 7px;
   }
   @media (min-width: 1024px) {
-    bottom: 3px;
-    padding: 6px 1px;
-    min-width: 90px;
-    max-width: 90px;
+    left: 2px;
+    padding: 7px 1px;
+    min-width: 87px;
     font-size: 8px;
   }
   @media (min-width: 1200px) {
+    left: 5px;
     padding: 8px 1px;
-    min-width: 120px;
-    max-width: 120px;
+    min-width: 108px;
     font-size: 11px;
+    bottom: 0;
   }
   @media (min-width: 1440px) {
-    bottom: 0;
-    padding: 9px 6px;
-    min-width: 140px;
-    max-width: 140px;
+    bottom: -3px;
+    left: -1px;
+    padding: 10px 6px;
+    min-width: 142px;
     font-size: 13px;
   }
 }
 
-.build__windows-img {
-  @media (min-width: 480px) {
-    width: fit-content;
-    align-self: center;
-    justify-self: center;
-    height: 72px;
-  }
-  @media (min-width: 768px) {
-    width: fit-content;
-    height: 90px;
-    align-self: center;
-    justify-self: center;
-  }
-  @media (min-width: 1024px) {
-    height: 105px;
-  }
-  @media (min-width: 1200px) {
-    height: 135px;
-  }
-  @media (min-width: 1440px) {
-    height: 160px;
-  }
+.build__balcony-list {
+  height: 100%;
+  width: 92%;
+  background-color: #A23840;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .build__balcony {
@@ -211,63 +193,107 @@
   width: 74.5px;
 }
 
-.build__windows-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  background-color: #e13030;
+.build__window-container {
+  background-color: #E13030;
   background-image: url("../img/floors-with-simple-windows.svg");
-  background-size: 290px 65px;
-  background-repeat: no-repeat;
-  padding: 0 2px;
+  background-repeat: repeat;
+  background-size: 329px 65px;
+  background-position: 11% bottom;
   height: 100%;
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  max-width: 100%;
   @media (min-width: 480px) {
-    background-size: 405px 105px;
-    background-position: -10% center;
-    padding: 0 10px;
-    margin-bottom: 20px;
+    background-size: 484px 96px;
+    background-position: 7% bottom;
   }
   @media (min-width: 768px) {
-    background-size: 465px 105px;
-    background-position: -7% center;
-    padding: 0 10px;
-    margin-bottom: 20px;
+    background-size: 541px 113px;
+    background-position: 5% bottom
   }
   @media (min-width: 1024px) {
-    background-size: 645px 120px;
-    background-position: 16% center;
+    background-size: 531px 126px;
+    background-position: -20% bottom;
   }
   @media (min-width: 1200px) {
-    background-size: 720px 191px;
-    background-position: -8% center;
+    background-size: 645px 159px;
+    background-position: -3% bottom;
   }
   @media (min-width: 1440px) {
-    background-size: 875px 220px;
-    background-position: -6% center;
+    background-size: 895px 181px;
+    background-position: 6% bottom;
+  }
+}
+
+.build__window-list {
+  align-content: start;
+  align-items: center;
+  display: grid;
+  transform: scaleY(-1);
+  grid-template-columns: 58px 55px 53px 54px;
+  grid-auto-rows: 65px;
+  grid-column: 2 / -2;
+  justify-items: end;
+  grid-auto-flow: row;
+  height: 100%;
+  max-width: 100%;
+
+  @media (min-width: 480px) {
+    grid-template-columns: 84px 82px 79px 80px;
+    grid-auto-rows: 96px;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: 89px 95px 93px 92px;
+    grid-auto-rows: 113px;
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: 110px 102px 93px 96px;
+    grid-auto-rows: 127px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 119px 114px 117px 114px;
+    grid-auto-rows: 160px;
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: 154px 152px 148px 148px;
+    grid-auto-rows: 181px;
   }
 }
 
 .build__windows-el {
-  width: 47px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  height: 90%;
-  padding-top: 5px;
   position: relative;
-  align-items: start;
+  display: flex;
+  transform: scaleY(-1);
+}
+
+.build__windows-img {
+  @media (min-width: 480px) {
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    height: 82px;
+  }
+  @media (min-width: 768px) {
+    height: 96px;
+  }
+  @media (min-width: 1024px) {
+    height: 102px;
+  }
+  @media (min-width: 1200px) {
+    width: 112px;
+    height: 120px;
+  }
+  @media (min-width: 1440px) {
+    height: 151px;
+    width: 138px;
+  }
 }
 
 .build__construction-img {
   position: relative;
   z-index: -1;
   top: 8em;
-  right: 1%;
+  left: -5px;
   @media (min-width: 480px) {
+    left: -10px;
     top: 13em;
     width: 400px;
     height: 460px;
@@ -282,18 +308,18 @@
   }
   @media (min-width: 1200px) {
     top: 20em;
-    width: 680px;
+    width: 600px;
     height: 710px;
   }
   @media (min-width: 1440px) {
     top: 24em;
-    width: 840px;
+    width: 785px;
     height: 870px;
   }
 }
 
-.floor-el__wrapper{
-    height: 66px;
+.floor-el__wrapper {
+  height: 66px;
   @media (min-width: 480px) {
     height: 97px;
   }

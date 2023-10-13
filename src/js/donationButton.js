@@ -1,4 +1,5 @@
 const donationButtons = document.getElementsByClassName("donation-button");
+const generalPage = document.getElementById("general");
 
 function hideAllPages() {
     let navElements = document.getElementsByClassName("start__link");
@@ -14,7 +15,7 @@ function menuPageHideAndShowDonationPage() {
     Array.from(menuLinks).forEach((element) => {
         element.classList.remove("nav__link--active");
         const navElementAttribute = element.getAttribute("data-item");
-        if(navElementAttribute === "general"){
+        if (navElementAttribute === "general") {
             element.classList.add("nav__link--active");
         }
     });
