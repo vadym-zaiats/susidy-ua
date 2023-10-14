@@ -23,7 +23,11 @@
   }
   @media (min-width: 896px) {
     max-width: 540px;
-    transform: translateX(-83%);
+    transform: translateX(-85%);
+  }
+  @media (min-width: 992px) {
+    max-width: 540px;
+    transform: translateX(-87%);
   }
   @media (min-width: 1024px) {
     width: 590px;
@@ -183,7 +187,7 @@
 .build__balcony-list {
   height: 100%;
   width: 92%;
-  background-color: #A23840;
+  background-color: #a23840;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -194,7 +198,7 @@
 }
 
 .build__window-container {
-  background-color: #E13030;
+  background-color: #e13030;
   background-image: url("../img/floors-with-simple-windows.svg");
   background-repeat: repeat;
   background-size: 329px 65px;
@@ -207,7 +211,7 @@
   }
   @media (min-width: 768px) {
     background-size: 541px 113px;
-    background-position: 5% bottom
+    background-position: 5% bottom;
   }
   @media (min-width: 1024px) {
     background-size: 531px 126px;
