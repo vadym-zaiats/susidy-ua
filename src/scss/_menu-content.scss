@@ -16,7 +16,8 @@
   &--hide {
     display: none;
   }
-
+  @media (min-width: 768px) {
+  }
   @media (min-width: 896px) {
     overflow-y: auto;
     max-height: 90vh;
@@ -25,14 +26,15 @@
     top: 35px;
     right: 10px;
     transform: none;
-    max-width: 435px;
-    padding: 30px 36px;
+    max-width: 382px;
+    padding: 30px 25px;
   }
   @media (min-width: 1024px) {
-    max-width: 450px;
+    max-width: 425px;
     right: 20px;
   }
   @media (min-width: 1440px) {
+    padding: 30px 36px;
     display: block;
     border-radius: 50px;
     top: 35px;
