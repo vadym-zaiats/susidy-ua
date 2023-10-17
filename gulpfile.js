@@ -130,30 +130,28 @@ function images() {
   const svgFilter = filter("**/*.svg", { restore: true });
   const icoFilter = filter("**/*.ico", { restore: true });
 
-  return (
-    gulp
-      .src(`${path.src.img}/**/*.{png,jpg,jpeg,svg,ico}`)
-      .pipe(svgFilter)
-      .pipe(gulp.dest(path.dist.img))
-      .pipe(svgFilter.restore)
-      .pipe(icoFilter)
-      .pipe(gulp.dest(path.dist.img))
-      .pipe(icoFilter.restore)
-      .pipe(filter(["**", "!**/*.svg", "!**/*.ico"]))
-      .pipe(
-        imagesmin([
-          imagesmin.gifsicle({ interlaced: true }),
-          imagesmin.mozjpeg({ quality: 75, progressive: true }),
-          imagesmin.optipng({ optimizationLevel: 5 }),
-        ])
-      )
-      .pipe(
-        size({
-          showFiles: true,
-        })
-      )
-      .pipe(gulp.dest(path.dist.img))
-  );
+  return gulp
+    .src(`${path.src.img}/**/*.{png,jpg,jpeg,svg,ico}`)
+    .pipe(svgFilter)
+    .pipe(gulp.dest(path.dist.img))
+    .pipe(svgFilter.restore)
+    .pipe(icoFilter)
+    .pipe(gulp.dest(path.dist.img))
+    .pipe(icoFilter.restore)
+    .pipe(filter(["**", "!**/*.svg", "!**/*.ico"]))
+    .pipe(
+      imagesmin([
+        imagesmin.gifsicle({ interlaced: true }),
+        imagesmin.mozjpeg({ quality: 75, progressive: true }),
+        imagesmin.optipng({ optimizationLevel: 5 }),
+      ])
+    )
+    .pipe(
+      size({
+        showFiles: true,
+      })
+    )
+    .pipe(gulp.dest(path.dist.img));
 }
 
 function clean() {
@@ -202,6 +200,7 @@ function watch() {
     server: {
       baseDir: path.dist.html,
     },
+    open: false,
   });
 
   gulp.watch("./src/**/*.html", html).on("change", browsersync.reload);
