@@ -2,6 +2,12 @@ let flat = null,
   accessoryType = null,
   buyerData = null;
 
+const targetSum = 10_000_000;
+let alreadyHave = 0;
+let percentage = alreadyHave / (targetSum / 100);
+const fillElement = document.querySelector(".purpose__fill");
+const countElement = document.querySelector(".purpose__count");
+
 const form = document.querySelector(".general__form");
 const flatType = document.querySelector(".flat-type");
 const flatTypeList = document.querySelector(".flat-type__list");
@@ -27,28 +33,19 @@ const toCertificateButton = document.querySelector(".certificate__button");
 function flatTypeVar(event) {
   event.preventDefault();
   const eventTargetValue = event.target.value;
-  switch (eventTargetValue) {
-    case "flat":
-      flat = eventTargetValue;
-      flatType.classList.add("flat-type--hide");
-      flatAccessories.classList.remove("accessories-styles--hide");
-      donateSum.min = 200;
-      donateSum.setAttribute("placeholder", "Сума донату (не менше 200 грн)");
-      break;
-    case "balcony":
-      flat = eventTargetValue;
-      flatType.classList.add("flat-type--hide");
-      balconyAccessories.classList.remove("accessories-styles--hide");
-      donateSum.min = 250;
-      donateSum.setAttribute("placeholder", "Сума донату (не менше 250 грн)");
-      break;
-    case "terrace":
-      flat = eventTargetValue;
-      flatType.classList.add("flat-type--hide");
-      terraceAccessories.classList.remove("accessories-styles--hide");
-      donateSum.min = 500;
-      donateSum.setAttribute("placeholder", "Сума донату (не менше 500 грн)");
-      break;
+  const flatPrice = +event.target.getAttribute("data-flat-price");
+  const flatPlaceholder = event.target.getAttribute("data-flat-placeholder");
+
+  flat = eventTargetValue;
+  flatType.classList.add("flat-type--hide");
+  donateSum.min = flatPrice;
+  donateSum.setAttribute("placeholder", flatPlaceholder);
+  if (flat === "flat") {
+    balconyAccessories.classList.remove("accessories-styles--hide");
+  } else if (flat === "balcony") {
+    balconyAccessories.classList.remove("accessories-styles--hide");
+  } else if (flat === "terrace") {
+    terraceAccessories.classList.remove("accessories-styles--hide");
   }
 }
 function accessoriesTypeVar(event) {
@@ -104,6 +101,12 @@ function handleSubmit(event) {
     thankYouPagePage.classList.remove("thank-you-page--hide");
   }
   console.log(flat, accessoryType, buyerData);
+
+  alreadyHave += +document.getElementById("donationAmount").value;
+  percentage = alreadyHave / (targetSum / 100);
+  fillElement.style.width = `${percentage}%`;
+  countElement.textContent = `${alreadyHave} / ${targetSum}`;
+
   flat = null;
   accessoryType = null;
   buyerData = null;
@@ -128,3 +131,6 @@ buyerPage.addEventListener("click", backToAccessoriesType);
 thankYouPagePage.addEventListener("click", toCertificatePage);
 toCertificateButton.addEventListener("click", downloadCertificate);
 form.addEventListener("submit", handleSubmit);
+
+fillElement.style.width = `${percentage}%`;
+countElement.textContent = `${alreadyHave} / ${targetSum}`;
