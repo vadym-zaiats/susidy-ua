@@ -2,6 +2,12 @@ let flat = null,
   accessoryType = null,
   buyerData = null;
 
+const targetSum = 10_000_000;
+let alreadyHave = 0;
+let percentage = alreadyHave / (targetSum / 100);
+const fillElement = document.querySelector(".purpose__fill");
+const countElement = document.querySelector(".purpose__count");
+
 const form = document.querySelector(".general__form");
 const flatType = document.querySelector(".flat-type");
 const flatTypeList = document.querySelector(".flat-type__list");
@@ -104,6 +110,12 @@ function handleSubmit(event) {
     thankYouPagePage.classList.remove("thank-you-page--hide");
   }
   console.log(flat, accessoryType, buyerData);
+
+  alreadyHave += +document.getElementById("donationAmount").value;
+  percentage = alreadyHave / (targetSum / 100);
+  fillElement.style.width = `${percentage}%`;
+  countElement.textContent = `${alreadyHave} / ${targetSum}`;
+
   flat = null;
   accessoryType = null;
   buyerData = null;
@@ -128,3 +140,6 @@ buyerPage.addEventListener("click", backToAccessoriesType);
 thankYouPagePage.addEventListener("click", toCertificatePage);
 toCertificateButton.addEventListener("click", downloadCertificate);
 form.addEventListener("submit", handleSubmit);
+
+fillElement.style.width = `${percentage}%`;
+countElement.textContent = `${alreadyHave} / ${targetSum}`;
