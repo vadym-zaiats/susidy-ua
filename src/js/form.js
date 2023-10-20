@@ -35,7 +35,7 @@ function flatTypeVar(event) {
   donateSum.min = flatPrice;
   donateSum.setAttribute("placeholder", flatPlaceholder);
   if (flat === "flat") {
-    balconyAccessories.classList.remove("accessories-styles--hide");
+    flatAccessories.classList.remove("accessories-styles--hide");
   } else if (flat === "balcony") {
     balconyAccessories.classList.remove("accessories-styles--hide");
   } else if (flat === "terrace") {
