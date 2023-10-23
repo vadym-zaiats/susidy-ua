@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./dist/css/styles.min.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/tt-firs-neue-trl"
+      rel="stylesheet"
+    />
+    <script src="./dist/js/scripts.min.js" defer></script>
+    <title>Сусіди UA</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="burger-menu__header" id="header">
+  <h2 class="burger-menu__title">Сусіди UA</h2>
+  <button class="burger-menu__button burger-menu__button--open"></button>
+  <button class="burger-menu__back burger-menu__back--hide"></button>
+</header>
+
+      <section class="menu-content menu-content--hide">
+  <nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link nav__link--active" data-item="general">Головна</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" data-item="about">Про проект</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" data-item="how-it-works">Як це працює</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" data-item="purpose">Мета збору</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" data-item="partners">Партнери</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" data-item="about-integral">Про Інтергал-Буд</a>
+    </li>
+  </ul>
+</nav>
+ <section class="start" id="start">
+  <p class="start__title">
+    Привіт, сусіде! <br />
+    Ти у найвищому будинку в інтернеті. <br />
+    Його висота необмежена.
+  </p>
+  <nav class="start__nav">
+    <ul class="start__list">
+      <li class="start__item">
+        <a class="start__link start__link--general" data-nav="general"
+          >Головна</a
+        >
+      </li>
+      <li class="start__item">
+        <a class="start__link start__link--about" data-nav="about"
+          >Про проект</a
+        >
+      </li>
+      <li class="start__item">
+        <a class="start__link start__link--how-it-works" data-nav="how-it-works"
+          >Як це працює</a
+        >
+      </li>
+      <li class="start__item">
+        <a class="start__link start__link--purpose" data-nav="purpose"
+          >Мета збору</a
+        >
+      </li>
+      <li class="start__item">
+        <a class="start__link start__link--partners" data-nav="partners"
+          >Партнери</a
+        >
+      </li>
+      <li class="start__item">
+        <a
+          class="start__link start__link--about-integral"
+          data-nav="about-integral"
+          >Про Інтергал-Буд</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <ul class="start__lang">
+    <li class="start__lang start__lang--ua"><a>ua</a></li>
+    <li class="start__lang start__lang--eng"><a>eng</a></li>
+  </ul>
+  <button class="donation-button">
+  <span class="donation-button__arrow">←</span>Перейти до Донату
+</button>
+
+</section>
+ <section
+  class="general show__general__desktop"
+  id="general"
+>
+  <form class="general__form">
+    <div class="flat-type">
+  <div class="susidy-title">
+  <p class="susidy-title__main">Сусіди UA</p>
+  <p class="susidy-title__greeting">Привіт!</p>
+  <p class="susidy-title__text">
+    <span>Привіт!</span> Купуй квартиру у найвищому будинку та доєднуйся до
+    спільноти Сусідів, які підтримують Україну донатами.
+  </p>
+</div>
+
+  <ul class="flat-type__list">
+    <li class="flat-type__item">
+      <label class="flat-type__label">
+        <span class="flat-type__wrapper">
+          <span>Квартира</span>
+          <img
+            src="./dist/img/flat.svg"
+            width="71"
+            height="62"
+            alt="Квартира"
+          />
+        </span>
+        <span class="flat-type__price">від 200 грн</span>
+        <input
+          type="text"
+          value="flat"
+          class="flat-type__input"
+          data-flat-price="200"
+          data-flat-placeholder="Сума донату (не менше 200 грн)"
+        />
+      </label>
+    </li>
+    <li class="flat-type__item">
+      <label class="flat-type__label">
+        <span class="flat-type__wrapper">
+          <span>Квартира з балконом</span>
+          <img
+            src="./dist/img/flat-with-balcony.svg"
+            alt="Квартира з балконом"
+            width="71"
+            height="62"
+          />
+        </span>
+        <span class="flat-type__price">від 250 грн</span>
+        <input
+          type="text"
+          value="balcony"
+          class="flat-type__input"
+          data-flat-price="250"
+          data-flat-placeholder="Сума донату (не менше 250 грн)"
+        />
+      </label>
+    </li>
+    <li class="flat-type__item">
+      <label class="flat-type__label">
+        <span class="flat-type__wrapper flat-type__wrapper--terrace">
+          <span class="flat-type__item--paragraph">
+            Квартира з функціональною терасою
+          </span>
+          <img
+            src="./dist/img/big-balcony.svg"
+            alt="Квартира з функціональною терасою"
+            width="81"
+            height="72"
+          />
+        </span>
+        <span class="flat-type__price">від 500 грн</span>
+        <input
+          type="text"
+          value="terrace"
+          class="flat-type__input"
+          data-flat-price="500"
+          data-flat-placeholder="Сума донату (не менше 500 грн)"
+        />
+      </label>
+    </li>
+  </ul>
+</div>
+ <div class="accessory-type">
+  <div class="accessories-styles accessories-styles--hide" id="accessories-flat">
+  <p class="accessories-styles__title">Сусіди UA</p>
+  <p class="accessories-styles__text">Обрати прикрасу до свого балкончику:</p>
+  <ul class="accessories-styles__list">
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Кицька</span>
+        <img
+          src="./dist/img/flat-accessories/cat.svg"
+          alt="Кицька"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="cat"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з котиком"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Штори</span>
+        <img
+          src="./dist/img/flat-accessories/curtains.svg"
+          alt="Штори"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="curtains"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру зі шторами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Ролети</span>
+        <img
+          src="./dist/img/flat-accessories/curtains2.svg"
+          alt="Ролети"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="blinds"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з ролетами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Квітка</span>
+        <img
+          src="./dist/img/flat-accessories/plant.svg"
+          alt="Квітка"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="flower"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з квіткою"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Кущик</span>
+        <img
+          src="./dist/img/flat-accessories/plant2.svg"
+          alt="Кущик"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="shrub"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з кущем"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Ваза</span>
+        <img
+          src="./dist/img/flat-accessories/vase.svg"
+          alt="Ваза з квтами"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="vase"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з вазою"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Залишити <br />без прикрас</span>
+        <input
+          type="text"
+          value="without"
+          class="accessories-styles__input-none"
+          data-text="Придбати квартиру"
+        />
+      </label>
+    </li>
+  </ul>
+  <button class="back-button">
+  <span class="back-button__arrow">←</span>Обрати іншу опцію
+</button>
+
+</div>
+ <div
+  class="accessories-styles accessories-styles--hide"
+  id="accessories-balcony"
+>
+  <p class="accessories-styles__title">Сусіди UA</p>
+  <p class="accessories-styles__text">Обрати прикрасу до свого балкончику:</p>
+  <ul class="accessories-styles__list">
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Прапори України</span>
+        <img
+          src="./dist/img/balcony-accessories/ua-flag.svg"
+          alt="Прапори України"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="uaFlag"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та прапорами України"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Велосипед</span>
+        <img
+          src="./dist/img/balcony-accessories/bike.svg"
+          alt="Велосипед"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="bike"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та велосипедом"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Речі</span>
+        <img
+          src="./dist/img/balcony-accessories/clothes.svg"
+          alt="Речі"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="clothes"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та речами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Кондиціонер</span>
+        <img
+          src="./dist/img/balcony-accessories/cond.svg"
+          alt="Кондиціонер"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="cond"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та кондиціонером"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Штори</span>
+        <img
+          src="./dist/img/balcony-accessories/curtains.svg"
+          alt="Штори"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="curtains"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та шторами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Крісла</span>
+        <img
+          src="./dist/img/balcony-accessories/chairs.svg"
+          alt="Крісла"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="chairs"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та кріслами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Садок</span>
+        <img
+          src="./dist/img/balcony-accessories/garden.svg"
+          alt="Садок"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="garden"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та садком"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Ліхтарики</span>
+        <img
+          src="./dist/img/balcony-accessories/lights.svg"
+          alt="Ліхтарики"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="lights"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та ліхтарями"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Прапори</span>
+        <img
+          src="./dist/img/balcony-accessories/flags.svg"
+          alt="Прапори"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="flags"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та прапорами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Квіти в горшечку</span>
+        <img
+          src="./dist/img/balcony-accessories/plants.svg"
+          alt="Квіти в горшечку"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="plants"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та квітами в горшечку"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Вазон</span>
+        <img
+          src="./dist/img/balcony-accessories/plants2.svg"
+          alt="Вазон"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="plants2"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та вазонами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Вазон на підставці</span>
+        <img
+          src="./dist/img/balcony-accessories/plants3.svg"
+          alt="Вазон на підставці"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="plants3"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та вазонами на підставці"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Рослинність</span>
+        <img
+          src="./dist/img/balcony-accessories/plants4.svg"
+          alt="Рослинність"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="plants4"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та рослинністю"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Три горшечки</span>
+        <img
+          src="./dist/img/balcony-accessories/plants5.svg"
+          alt="Три горшечки"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="plants5"
+          class="accessories-styles__input"
+          data-text="Придбати квартиру з балконом та трьома горшечками"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Залишити <br />без прикрас</span>
+        <input
+          type="text"
+          value="without"
+          class="accessories-styles__input-none"
+          data-text="Придбати квартиру з балконом"
+        />
+      </label>
+    </li>
+  </ul>
+  <button class="back-button">
+  <span class="back-button__arrow">←</span>Обрати іншу опцію
+</button>
+
+</div>
+
+  <div
+  class="accessories-styles accessories-styles--hide"
+  id="accessories-terrace"
+>
+  <p class="accessories-styles__title">Сусіди UA</p>
+  <p class="accessories-styles__text">Обрати прикрасу до свого балкончику:</p>
+  <ul class="accessories-styles__list">
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Прапор</span>
+        <img
+          src="./dist/img/terrace-accessories/flags.svg"
+          alt="Прапор"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="flags"
+          class="accessories-styles__input"
+          data-text="Придбати терасу з прапорами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Велосипед</span>
+        <img
+          src="./dist/img/terrace-accessories/bicycle.svg"
+          alt="Велосипед"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="bicycle"
+          class="accessories-styles__input"
+          data-text="Придбати терасу з велосипедом"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Прапорці</span>
+        <img
+          src="./dist/img/terrace-accessories/flags2.svg"
+          alt="Прапорці"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="flags2"
+          class="accessories-styles__input"
+          data-text="Придбати терасу з прапорцями"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Садок</span>
+        <img
+          src="./dist/img/terrace-accessories/garden.svg"
+          alt="Садок"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="garden"
+          class="accessories-styles__input"
+          data-text="Придбати терасу з садком"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Квіти</span>
+        <img
+          src="./dist/img/terrace-accessories/garden2.svg"
+          alt="Квіти"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="garden2"
+          class="accessories-styles__input"
+          data-text="Придбати терасу з квітами"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Виноград</span>
+        <img
+          src="./dist/img/terrace-accessories/garden3.svg"
+          alt="Виноград"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="grape"
+          class="accessories-styles__input"
+          data-text="Придбати терасу з виноградом"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Ліхтарі</span>
+        <img
+          src="./dist/img/terrace-accessories/lights.svg"
+          alt="Ліхтарі"
+          width="91"
+          height="57"
+          class="accessories-styles__img"
+        />
+        <input
+          type="text"
+          value="lights"
+          class="accessories-styles__input"
+          data-text="Придбати терасу з ліхтарями"
+        />
+      </label>
+    </li>
+    <li class="accessories-styles__item">
+      <label class="accessories-styles__label">
+        <span class="accessories-styles__type">Залишити <br />без прикрас</span>
+        <input
+          type="text"
+          value="without"
+          class="accessories-styles__input-none"
+          data-text="Придбати терасу"
+        />
+      </label>
+    </li>
+  </ul>
+  <button class="back-button">
+  <span class="back-button__arrow">←</span>Обрати іншу опцію
+</button>
+
+</div>
+
+</div>
+
+    <div class="buyer buyer--hide">
+  <div class="susidy-title">
+  <p class="susidy-title__main">Сусіди UA</p>
+  <p class="susidy-title__greeting">Привіт!</p>
+  <p class="susidy-title__text">
+    <span>Привіт!</span> Купуй квартиру у найвищому будинку та доєднуйся до
+    спільноти Сусідів, які підтримують Україну донатами.
+  </p>
+</div>
+
+  <div class="buyer__header">
+    <button class="buyer__back">
+      <img
+        class="buyer__img"
+        width="25"
+        height="25"
+        src="../dist/img/back-black.svg"
+        alt="back"
+      />
+    </button>
+    <div class="buyer__back-text"></div>
+  </div>
+  <div class="buyer__form" id="buyer__form">
+    <input
+      class="buyer__name"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Ваше ім’я"
+      required
+    />
+    <input
+      class="buyer__email"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Ваш E-mail"
+      required
+    />
+    <input
+      class="buyer__text"
+      type="text"
+      id="balconyText"
+      name="balconyText"
+      placeholder="Надпис на вашому балконі"
+    />
+    <input
+      class="buyer__sum"
+      type="number"
+      id="donationAmount"
+      name="donationAmount"
+      required
+    />
+    <button class="buyer__button" type="submit">Задонатити</button>
+  </div>
+</div>
+
+  </form>
+  <section class="certificate certificate--hide" id="certificate">
+  <p class="certificate__title">Вітаємо, Сусіде!</p>
+  <div class="certificate__content">
+    <p class="certificate__web-site">sysidyua.com</p>
+    <p class="certificate__second-title">Сертифікат Сусіда</p>
+    <p class="certificate__text">
+      Цей Сертифікат підтверджує, що
+      <span class="certificate__text certificate__text--red">ХХХХХХХХХХХ</span>
+      зробив внесок у відновлення України в проєкті
+      <span class="certificate__text certificate__text--red">Сусіди UA</span> та
+      став власником квартири у найвищому будинку в інтернеті!
+    </p>
+    <img
+      class="certificate__logo"
+      src="./dist/img/logo.png"
+      width="116"
+      height="33"
+      alt="логотип"
+    />
+  </div>
+  <img
+    class="certificate__cat"
+    src="./dist/img/certificate-cat.svg"
+    width="258"
+    height="167"
+    alt="котик"
+  />
+  <button class="certificate__button">Завантажити Сертифікат</button>
+</section>
+
+  <section class="thank-you-page thank-you-page--hide" id="thank-you-page">
+  <p class="thank-you-page__title">Дякую, Сусіде!</p>
+  <p class="thank-you-page__text">
+    На твій e-mail ми надіслали подарунковий сертифікат Сусіда. Ми вдячні тобі
+    за внесок у відбудову України!
+  </p>
+  <img
+    class="thank-you-page__cat"
+    src="./dist/img/certificate-cat.svg"
+    alt="Котик"
+    width="444"
+    height="220"
+  />
+  <button class="thank-you-page__download" id="download-certificate-button">
+    Завантажити сертифікат
+  </button>
+  <button class="thank-you-page__to-flat">← Перейти до Власної Квартири</button>
+</section>
+
+</section>
+
+  <section class="about" id="about">
+  <p class="about__title">Про проєкт</p>
+  <div class="about__content">
+    <p class="about__text">Привіт, сусіде!</p>
+    <p class="about__text">
+      Ти у найвищому будинку в інтернеті. Його висота необмежена, а тому в ньому
+      знайдеться затишна оселя для кожного українця та українки.
+    </p>
+    <p class="about__text">
+      За квадратні метри розраховуйтеся довільним донатами на відбудову рідного
+      “дому” – України!
+    </p>
+    <p class="about__text">
+      Вибери будь-яке віконце, завантаж свою аватарку, привітай сусідів та
+      заселяйся. Ласкаво просимо!
+    </p>
+    <p class="about__text">Автори проєкту:</p>
+    <img
+      src="./dist/img/intergal-logo.svg"
+      width="116"
+      height="33"
+      alt="логотип"
+      class="about__intergal-logo"
+    />
+  </div>
+  <button class="donation-button">
+  <span class="donation-button__arrow">←</span>Перейти до Донату
+</button>
+
+</section>
+ <section class="how-it-works" id="how-it-works">
+  <p class="how-it-works__title">Як це працює?</p>
+  <div class="how-it-works__content">
+    <p class="how-it-works__text">
+      1 – Вибирайте будь-який вільний поверх, тип квартири та фішки до неї.
+    </p>
+    <p class="how-it-works__text">
+      2 – Донатьте будь-яким зручним способом зі вказаних на сайті.
+    </p>
+    <p class="how-it-works__text">
+      3 – Дочекайтеся підтверження покупки та оновіть сторінку.
+    </p>
+    <p class="how-it-works__text">
+      4 – Отримайте свідоцтво про віртуальне житло та статус почесного Сусіда
+      UA.
+    </p>
+    <p class="how-it-works__text">
+      5 – Зробіть репост у ваші соціальні мережі та розкажіть про це близьким.
+    </p>
+  </div>
+  <button class="donation-button">
+  <span class="donation-button__arrow">←</span>Перейти до Донату
+</button>
+
+</section>
+
+  <section class="purpose" id="purpose">
+  <p class="purpose__title">Мета збору</p>
+  <p class="purpose__text">
+    Ми збираємо на відновлення зруйнованого житлового фонду у невеличкому
+    прифронтовому місті Новгород-Сіверський.
+  </p>
+  <img
+    src="./dist/img/destroyed-building.png"
+    class="purpose__img"
+    width="233"
+    height="103"
+    alt="зруйнована будівля"
+  />
+  <div class="purpose__bar" data-fill="105550000">
+    <div class="purpose__fill"></div>
+    <div class="purpose__count"></div>
+  </div>
+  <div class="purpose__statistics">
+    <div class="purpose__rating">
+      <p class="purpose__rait">&#8470; 1</p>
+      <p class="purpose__text">серед київських приватних забудовників</p>
+    </div>
+    <div class="purpose__buildings">
+      <p class="purpose__rait">170</p>
+      <p class="purpose__text">житлових будинків зведено</p>
+    </div>
+  </div>
+  <button class="donation-button">
+  <span class="donation-button__arrow">←</span>Перейти до Донату
+</button>
+
+</section>
+ <section class="about-integral" id="about-integral">
+  <p class="about-integral__title">Інтергал-Буд</p>
+  <div class="about-integral__about">
+    <p>Інтергал-Буд — українська девелоперська компанія.</p>
+    <p>
+      Ми входимо в десятку найбільших інвестиційно-будівельних компаній країни.
+      Найкращий девелопер 2022 року за версію Конфедерації Будівельників
+      України.
+    </p>
+  </div>
+  <div class="purpose__statistics">
+    <div class="purpose__rating">
+      <p class="purpose__rait">&#8470; 1</p>
+      <p class="purpose__text">серед київських приватних забудовників</p>
+    </div>
+    <div class="purpose__buildings">
+      <p class="purpose__rait">170</p>
+      <p class="purpose__text">житлових будинків зведено</p>
+    </div>
+  </div>
+  <button class="donation-button">
+  <span class="donation-button__arrow">←</span>Перейти до Донату
+</button>
+
+</section>
+
+  <section class="partners" id="partners">
+  <p class="partners__title">Партнери</p>
+  <p class="partners__about">
+    Партнери проєкту – компанії та організації, завдяки яким найвищий будинок
+    став можливим.
+  </p>
+  <div class="partners__list">
+    <div class="partners__charity">
+      <p>Благодійна платформа</p>
+      <img
+        src="./dist/img/united24.svg"
+        class="partners__charity partners__charity--img"
+        width="397"
+        height="39"
+        alt="united24"
+      />
+    </div>
+    <div class="partners__media">
+      <p>Медіапартнери</p>
+      <ul class="partners__nomenclature partners__nomenclature--list">
+        <li class="partners__item">
+          <img
+            src="./dist/img/the-village.svg"
+            width="131"
+            height="51"
+            alt="the-village"
+            class="partners-item__img"
+          />
+        </li>
+        <li class="partners__item">
+          <img
+            src="./dist/img/new-voice.svg"
+            width="74"
+            height="75"
+            alt="new-voice"
+            class="partners-item__img"
+          />
+        </li>
+        <li class="partners__item">
+          <img
+            src="./dist/img/minfin.svg"
+            width="142"
+            height="35"
+            alt="Мінфін"
+            class="partners-item__img"
+          />
+        </li>
+      </ul>
+    </div>
+    <div class="partners__design">
+      <p>Дизайн-партнер</p>
+      <img
+        class="partners__design partners__design--img"
+        src="./dist/img/nf.svg"
+        width="82"
+        height="53"
+        alt="NF"
+      />
+    </div>
+  </div>
+  <button class="donation-button">
+  <span class="donation-button__arrow">←</span>Перейти до Донату
+</button>
+
+</section>
+ <ul class="menu-footer-list">
+  <li>
+    <a href="#1">Політика збору та обробки даних</a>
+  </li>
+  <li class="menu-footer-list__agreement">
+    <a href="#2">Договір публічної оферти</a>
+  </li>
+</ul>
+
+</section>
+
+      <main class="main"><section class="build">
+  <img
+    src="./dist/img/first-floor.svg"
+    alt="перший поверх"
+    class="build__first-floor-img"
+    width="320"
+    height="80"
+  />
+  <div class="build__another-floors">
+    <div class="build__another-floors-wrapper">
+      <div class="build__window-container">
+        <ul class="build__window-list">
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/simple-windows-types/simple-window-background.svg"
+              alt="просте вікно"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+            <p class="build__paragraph">Україна переможе!</p>
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/simple-windows-types/window-simple-cat.svg"
+              alt="вікно з котиком"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+            <p class="build__paragraph">Привіт з Херсону</p>
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/simple-windows-types/window-simple-plant.svg"
+              alt="вікно з квіткою"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+            <p class="build__paragraph">Привіт з Херсону</p>
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/windows-with-balcony-types/balcony-big-flower-in-pot.svg"
+              alt="вікно з квітами в горщику"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/windows-with-balcony-types/balcony-clothes.svg"
+              alt="вікно з одягом"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+            <p class="build__paragraph">Україна переможе!</p>
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/simple-windows-types/simple-window-background.svg"
+              alt="просте вікно"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/simple-windows-types/simple-window-background.svg"
+              alt="просте вікно"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+            <p class="build__paragraph">Слава Україні!</p>
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/windows-with-balcony-types/balcony-curtains-green.svg"
+              alt="вікно з шторами"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+          </li>
+          <li class="build__windows-el">
+            <img
+              src="./dist/img/simple-windows-types/simple-window-background.svg"
+              alt="просте вікно"
+              width="60"
+              height="53"
+              class="build__windows-img"
+            />
+            <p class="build__paragraph">Україна переможе!</p>
+          </li>
+        </ul>
+      </div>
+      <ul class="build__balcony-list">
+        <li class="build__balcony-list-el">
+          <img
+            src="./dist/img/big-balcony-types/big-balcony-flags.svg"
+            alt="балкон з терасою"
+            width="93"
+            height="71"
+          />
+        </li>
+        <li class="build__balcony-list-el">
+          <img
+            src="./dist/img/big-balcony-types/big-balcony-plants-in-pot.svg"
+            alt="балкон з терасою"
+            width="93"
+            height="71"
+          />
+        </li>
+        <li class="build__balcony-list-el">
+          <img
+            src="./dist/img/big-balcony-types/big-balcony-garland.svg"
+            alt="балкон з терасою"
+            width="93"
+            height="71"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <img
+    src="./dist/img/construction.svg"
+    alt="будівельна конструкція"
+    width="270"
+    height="291"
+    class="build__construction-img"
+  />
+  <img
+    src="./dist/img/mid-size-tree.svg"
+    alt="дерево"
+    class="outdoor-decor__mid-size-tree"
+    width="100"
+    height="100"
+  />
+  <img
+    src="./dist/img/mid-size-bush.svg"
+    alt="кущ"
+    class="outdoor-decor__mid-size-bush"
+    width="70"
+    height="50"
+  />
+  <img
+    src="./dist/img/bench.svg"
+    alt="лавочка"
+    class="outdoor-decor__bench-img"
+    width="80"
+    height="40"
+  />
+  <img
+    src="./dist/img/flashlight.svg"
+    alt="ліхтар"
+    class="outdoor-decor__flashlight"
+    width="28"
+    height="222"
+  />
+  <img
+    src="./dist/img/bush.svg"
+    alt="кущ"
+    class="outdoor-decor__bush-img"
+    width="43"
+    height="41"
+  />
+  <img
+    src="./dist/img/big-tree.svg"
+    alt="дерево"
+    width="110"
+    height="120"
+    class="outdoor-decor__big-tree"
+  />
+  <img
+    src="./dist/img/layer-bush.svg"
+    alt="кущ"
+    width="80"
+    height="30"
+    class="outdoor-decor__layer-bush"
+  />
+  <img
+    src="./dist/img/small-bush.svg"
+    alt="кущ"
+    width="55"
+    height="30"
+    class="outdoor-decor__small-bush"
+  />
+</section>
+</main>
+      <footer class="footer" id="bottom"></footer>
+    </div>
+  </body>
+</html>
