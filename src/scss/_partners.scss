@@ -1,5 +1,7 @@
 .partners {
   display: none;
+  overflow-y: auto;
+  max-height: calc(85vh - 100px);
   &--show {
     display: block;
   }
@@ -90,4 +92,3 @@
     margin-bottom: 30px;
   }
 }
-
