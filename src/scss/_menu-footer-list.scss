@@ -2,11 +2,6 @@
   padding-top: 20px;
   font-size: 10px;
   font-weight: 400;
-
-  & > a {
-    color: #111111;
-  }
-
   @media (min-width: 768px) {
     display: flex;
     padding-top: 25px;
@@ -18,4 +13,8 @@
   @media (min-width: 768px) {
     margin: 0 0 0 10px;
   }
+}
+
+.menu-footer-list__link {
+  color: #111111;
 }
