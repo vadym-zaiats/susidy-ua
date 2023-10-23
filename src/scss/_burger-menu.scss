@@ -16,7 +16,7 @@
   @include display-flex($jc: "space-between");
 
   @media (min-width: 420px) {
-    max-width: 520px;
+    max-width: 470px;
   }
   @media (min-width: 896px) {
     display: none;
