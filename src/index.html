@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./img/favicon.ico" />
-    <link rel="stylesheet" href="./css/styles.min.css" />
+    <link rel="stylesheet" href="./dist/css/styles.min.css" />
     <link
       href="https://fonts.cdnfonts.com/css/tt-firs-neue-trl"
       rel="stylesheet"
     />
-    <script src="./js/scripts.min.js" defer></script>
+    <script src="./dist/js/scripts.min.js" defer></script>
     <title>Сусіди UA</title>
   </head>
   <body>
-        <div class="wrapper">
-          @@include('./html/burger-header.html') @@include('./html/menu-content.html')
-          <main class="main">@@include('./html/build.html')</main>
-          <footer class="footer" id="bottom"></footer>
-        </div>
+    <div class="wrapper">
+      @@include('./html/burger-header.html')
+      @@include('./html/menu-content.html')
+      <main class="main">@@include('./html/build.html')</main>
+      <footer class="footer" id="bottom"></footer>
+    </div>
   </body>
 </html>

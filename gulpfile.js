@@ -19,7 +19,6 @@ const imagesmin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
-// const gulpAvif = require("gulp-avif");
 
 const path = {
   src: {
@@ -48,7 +47,7 @@ function html() {
         basepath: "@file",
       })
     )
-    .pipe(gulp.dest(path.dist.html))
+    .pipe(gulp.dest("./"))
     .pipe(browsersync.stream());
 }
 
@@ -130,30 +129,28 @@ function images() {
   const svgFilter = filter("**/*.svg", { restore: true });
   const icoFilter = filter("**/*.ico", { restore: true });
 
-  return (
-    gulp
-      .src(`${path.src.img}/**/*.{png,jpg,jpeg,svg,ico}`)
-      .pipe(svgFilter)
-      .pipe(gulp.dest(path.dist.img))
-      .pipe(svgFilter.restore)
-      .pipe(icoFilter)
-      .pipe(gulp.dest(path.dist.img))
-      .pipe(icoFilter.restore)
-      .pipe(filter(["**", "!**/*.svg", "!**/*.ico"]))
-      .pipe(
-        imagesmin([
-          imagesmin.gifsicle({ interlaced: true }),
-          imagesmin.mozjpeg({ quality: 75, progressive: true }),
-          imagesmin.optipng({ optimizationLevel: 5 }),
-        ])
-      )
-      .pipe(
-        size({
-          showFiles: true,
-        })
-      )
-      .pipe(gulp.dest(path.dist.img))
-  );
+  return gulp
+    .src(`${path.src.img}/**/*.{png,jpg,jpeg,svg,ico}`)
+    .pipe(svgFilter)
+    .pipe(gulp.dest(path.dist.img))
+    .pipe(svgFilter.restore)
+    .pipe(icoFilter)
+    .pipe(gulp.dest(path.dist.img))
+    .pipe(icoFilter.restore)
+    .pipe(filter(["**", "!**/*.svg", "!**/*.ico"]))
+    .pipe(
+      imagesmin([
+        imagesmin.gifsicle({ interlaced: true }),
+        imagesmin.mozjpeg({ quality: 75, progressive: true }),
+        imagesmin.optipng({ optimizationLevel: 5 }),
+      ])
+    )
+    .pipe(
+      size({
+        showFiles: true,
+      })
+    )
+    .pipe(gulp.dest(path.dist.img));
 }
 
 function clean() {
@@ -200,7 +197,7 @@ function stylesDev() {
 function watch() {
   browsersync.init({
     server: {
-      baseDir: path.dist.html,
+      baseDir: "./",
     },
   });
 
@@ -210,7 +207,7 @@ function watch() {
   gulp.watch(path.src.img, images).on("change", browsersync.reload);
 }
 
-const build = series(clean, html, styles, scripts, images, watch);
+const build = series(clean, html, styles, scripts, images);
 const dev = series(clean, html, stylesDev, scriptsDev, images, watch);
 
 exports.build = build;
