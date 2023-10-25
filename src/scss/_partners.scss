@@ -27,6 +27,13 @@
   }
 }
 .partners__charity {
+  margin-bottom: 12px;
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 1366px) {
+    margin-bottom: 28px;
+  }
   &--img {
     width: 210px;
     height: 80px;
@@ -37,16 +44,37 @@
   }
 }
 .partners__media {
-  margin-top: 10px;
+  margin: 12px 0;
+  @media (min-width: 768px) {
+    margin: 20px 0 7px;
+  }
+  @media (min-width: 1366px) {
+    margin: 28px 0 10px;
+  }
+}
+.partners__nomenclature {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
 }
 .partners__design {
-  margin-top: 10px;
-  &--img {
-    margin-top: 15px;
+  margin: 12px 0;
+  @media (min-width: 768px) {
+    margin: 20px 0;
+  }
+  @media (min-width: 1366px) {
+    margin: 20px 0;
   }
 }
 .partners__tech {
-  margin-top: 10px;
+  margin: 12px 0;
+  @media (min-width: 768px) {
+    margin: 20px 0;
+  }
+  @media (min-width: 1366px) {
+    margin: 28px 0;
+  }
   &--img {
     margin-top: 15px;
     width: 150px;
@@ -58,39 +86,8 @@
   width: 80px;
   height: 40px;
 }
-.partners__nomenclature {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 200px;
-}
-// .partners__item {
-//   &:nth-child(3) {
-//     height: 60px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: start;
-//     justify-content: center;
-//   }
-
-//   &:nth-child(2) {
-//     & > img {
-//       height: 60px;
-//     }
-//   }
-
-//   &:first-child {
-//     height: 70px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: start;
-//     justify-content: center;
-//     @media (min-width: 768px) {
-//       justify-content: center;
-//     }
-//   }
-// }
 .partners__united {
+  margin: 8px 0;
   display: block;
   width: 270px;
   height: 19px;
@@ -98,14 +95,19 @@
   background-position: left;
   background-repeat: no-repeat;
   background-size: 75%;
-  @media (min-width: 768px) {
-    background-size: 70%;
+  @media (min-width: 896px) {
+    width: 320px;
+    height: 28px;
+    background-size: 90%;
   }
   @media (min-width: 1366px) {
-    background-size: 80%;
+    width: 390px;
+    height: 42px;
+    background-size: 100%;
   }
 }
 .partners__village {
+  margin: 8px 0;
   display: block;
   width: 80px;
   height: 40px;
@@ -114,13 +116,16 @@
   background-repeat: no-repeat;
   background-size: 100%;
   @media (min-width: 768px) {
-    // background-size: 70%;
+    width: 115px;
+    height: 45px;
   }
   @media (min-width: 1366px) {
-    // background-size: 80%;
+    width: 150px;
+    height: 60px;
   }
 }
 .partners__new-voice {
+  margin: 8px 0 8px 12px;
   display: block;
   width: 60px;
   height: 60px;
@@ -129,13 +134,17 @@
   background-repeat: no-repeat;
   background-size: 100%;
   @media (min-width: 768px) {
-    // background-size: 70%;
+    width: 75px;
+    height: 75px;
   }
   @media (min-width: 1366px) {
-    // background-size: 80%;
+    width: 95px;
+    height: 95px;
+    margin: 8px 0 8px 24px;
   }
 }
 .partners__minfin {
+  margin: 8px 0 8px 12px;
   display: block;
   width: 80px;
   height: 40px;
@@ -144,39 +153,48 @@
   background-repeat: no-repeat;
   background-size: 100%;
   @media (min-width: 768px) {
-    // background-size: 70%;
+    width: 120px;
+    height: 40px;
   }
   @media (min-width: 1366px) {
-    // background-size: 80%;
+    width: 120px;
+    margin: 8px 0 8px 24px;
   }
 }
 .partners__nf {
+  margin: 8px 0;
   display: block;
   width: 80px;
-  height: 80px;
+  height: 48px;
   background-position: center;
   background-image: url("../../dist/img/nf.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 75%;
   @media (min-width: 768px) {
-    // background-size: 70%;
+    background-size: 110%;
+    width: 75px;
+    height: 66px;
   }
   @media (min-width: 1366px) {
-    // background-size: 80%;
+    width: 100px;
+    height: 97px;
   }
 }
 .partners__danit {
+  margin: 8px 0;
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 118px;
+  height: 34px;
   background-position: center;
   background-image: url("../../dist/img/dan-logo.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   @media (min-width: 768px) {
-    // background-size: 70%;
+    width: 150px;
+    height: 50px;
   }
   @media (min-width: 1366px) {
-    // background-size: 80%;
+    width: 180px;
+    height: 55px;
   }
 }
