@@ -24,6 +24,13 @@ const donateSum = document.querySelector(".buyer__sum");
 const toDownloadButton = document.querySelector(".thank-you-page__download");
 const toCertificateButton = document.querySelector(".certificate__button");
 
+function resetValues(element, value) {
+  document.getElementById(element).value = value;
+  flat = null;
+  accessoryType = null;
+  buyerData = null;
+}
+
 function flatTypeVar(event) {
   event.preventDefault();
   const eventTargetValue = event.target.value;
@@ -94,11 +101,16 @@ function handleSubmit(event) {
   if (!event.submitter.classList.contains("thank-you-page__download")) {
     thankYouPagePage.classList.remove("thank-you-page--hide");
   }
-  console.log(flat, accessoryType, buyerData);
-
-  flat = null;
-  accessoryType = null;
-  buyerData = null;
+  const { name, email, text, donate } = buyerData;
+  alert(
+    `${name}, ваша покупка ${flat} + ${accessoryType} ${
+      text !== "" ? text : ""
+    }, на сумму ${donate}грн створена та очікує оплати. Ваша пошта ${email}`
+  );
+  resetValues("name", "");
+  resetValues("email", "");
+  resetValues("balconyText", "");
+  resetValues("donationAmount", "");
 }
 function toCertificatePage(event) {
   if (event.target.classList.contains("thank-you-page__download")) {
@@ -106,12 +118,13 @@ function toCertificatePage(event) {
     certificatePage.classList.remove("certificate--hide");
   }
   if (event.target.classList.contains("thank-you-page__to-flat")) {
-    alert("Ще не придумали");
+    alert("перехід до кварти");
   }
 }
 function downloadCertificate(event) {
-  event.preventDefault();
   alert("Тут має початись скачування сертифікату");
+  flatType.classList.remove("flat-type--hide");
+  certificatePage.classList.add("certificate--hide");
 }
 
 flatTypeList.addEventListener("click", flatTypeVar);
