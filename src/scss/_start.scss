@@ -1,54 +1,63 @@
 .start {
-  margin: 0 auto;
-  &--hide {
-    display: none;
-  }
-  @media (min-width: 896px) {
-    display: none;
-  }
+	margin: 0 auto;
+	&--hide {
+		display: none;
+	}
+	@media (min-width: 896px) {
+		display: none;
+	}
 }
 
 .start__title {
-  font-size: 12px;
-  font-weight: 400;
-  @media (min-width: 768px) {
-    font-size: 17px;
-  }
+	font-size: 12px;
+	font-weight: 400;
+	@media (min-width: 768px) {
+		font-size: 17px;
+	}
 }
 
 .start__nav {
-  margin: 20px 0;
+	margin: 20px 0;
 }
 
 .start__list {
-  font-size: 18px;
-  font-weight: 400;
+	font-size: 18px;
+	font-weight: 400;
 }
 
 .start__item:not(:last-child) {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .start__link {
-  @include hover();
-  @media (min-width: 768px) {
-    font-size: 30px;
-  }
+	@include hover();
+	@media (min-width: 768px) {
+		font-size: 30px;
+	}
 }
 
-.start__lang {
-  display: flex;
-  text-transform: uppercase;
-  @media (min-width: 768px) {
-    font-size: 24px;
-  }
-  &--ua {
-    @include hover();
-    color: rgb(230, 48, 21);
-  }
-  &--eng {
-    @include hover();
-    color: rgb(241, 171, 168);
-    margin-left: 10px;
-  }
+.wpml-ls {
+	padding: 0 !important;
+
+	& ul {
+		width: max-content;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+
+.wpml-ls-link {
+	text-transform: uppercase;
+	@include hover();
+	color: rgb(241, 171, 168);
+
+	@media (min-width: 768px) {
+		font-size: 24px;
+	}
+}
+
+.wpml-ls-current-language {
+	& .wpml-ls-link {
+		color: rgb(230, 48, 21);
+	}
 }
